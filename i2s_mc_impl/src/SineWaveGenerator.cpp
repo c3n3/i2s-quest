@@ -1,6 +1,6 @@
 #include "SineWaveGenerator.hpp"
+#include <Arduino.h>
 #define PI 3.1415
-
 
 SineWaveGenerator::SineWaveGenerator(int freqKHz, int24_t amp) : freqKHz(freqKHz), amplitude(amp)
 {}
