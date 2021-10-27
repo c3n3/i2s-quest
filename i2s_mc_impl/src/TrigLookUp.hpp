@@ -1,5 +1,4 @@
 #pragma once
-#include "../types/typedef.h"
 
 /**
  * @brief This is an INTEGER sin lookup table that is generated on the basis of the template arguments. 
