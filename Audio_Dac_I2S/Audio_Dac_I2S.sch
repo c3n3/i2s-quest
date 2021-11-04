@@ -94,26 +94,6 @@ Wire Wire Line
 Wire Wire Line
 	8100 4150 7800 4150
 Connection ~ 7400 4150
-$Comp
-L Device:R R?
-U 1 1 617B596A
-P 8750 4500
-F 0 "R?" H 8820 4546 50  0000 L CNN
-F 1 "R" H 8820 4455 50  0000 L CNN
-F 2 "" V 8680 4500 50  0001 C CNN
-F 3 "~" H 8750 4500 50  0001 C CNN
-	1    8750 4500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8750 4350 8750 4150
-Wire Wire Line
-	8750 4150 8100 4150
-Connection ~ 8100 4150
-Wire Wire Line
-	8100 4800 8750 4800
-Wire Wire Line
-	8750 4800 8750 4650
 Connection ~ 8100 4800
 $Comp
 L Device:R R?
@@ -186,26 +166,7 @@ Wire Wire Line
 	7600 2200 7750 2200
 Wire Wire Line
 	7750 2200 7750 2450
-$Comp
-L Device:R R?
-U 1 1 617C0EC2
-P 8400 2600
-F 0 "R?" H 8470 2646 50  0000 L CNN
-F 1 "R" H 8470 2555 50  0000 L CNN
-F 2 "" V 8330 2600 50  0001 C CNN
-F 3 "~" H 8400 2600 50  0001 C CNN
-	1    8400 2600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7750 2200 8400 2200
-Wire Wire Line
-	8400 2200 8400 2450
 Connection ~ 7750 2200
-Wire Wire Line
-	8400 2750 8400 2900
-Wire Wire Line
-	8400 2900 7750 2900
 Wire Wire Line
 	6350 2900 6350 2750
 Wire Wire Line
@@ -227,7 +188,7 @@ L Device:C C?
 U 1 1 617CF16B
 P 6750 3650
 F 0 "C?" H 6635 3604 50  0000 R CNN
-F 1 "C" H 6635 3695 50  0000 R CNN
+F 1 "0.1u" H 6635 3695 50  0000 R CNN
 F 2 "" H 6788 3500 50  0001 C CNN
 F 3 "~" H 6750 3650 50  0001 C CNN
 	1    6750 3650
@@ -248,7 +209,7 @@ L Device:C C?
 U 1 1 617DB34F
 P 7300 3650
 F 0 "C?" H 7185 3604 50  0000 R CNN
-F 1 "C" H 7185 3695 50  0000 R CNN
+F 1 "1u" H 7185 3695 50  0000 R CNN
 F 2 "" H 7338 3500 50  0001 C CNN
 F 3 "~" H 7300 3650 50  0001 C CNN
 	1    7300 3650
@@ -324,15 +285,9 @@ Wire Wire Line
 Wire Wire Line
 	9200 3500 9200 4800
 Wire Wire Line
-	9200 4800 8750 4800
-Connection ~ 8750 4800
-Wire Wire Line
 	9550 3400 9200 3400
 Wire Wire Line
 	9200 3400 9200 2200
-Wire Wire Line
-	9200 2200 8400 2200
-Connection ~ 8400 2200
 Text GLabel 9650 3050 2    50   Input ~ 0
 GND
 Wire Wire Line
@@ -341,4 +296,64 @@ Wire Wire Line
 	9400 3050 9400 3300
 Wire Wire Line
 	9400 3300 9550 3300
+Text GLabel 4900 3400 0    50   Input ~ 0
+GND
+Wire Wire Line
+	5300 3400 4900 3400
+$Comp
+L CustomLib:FPGA U?
+U 1 1 6183A433
+P 3950 3150
+F 0 "U?" H 3950 3225 50  0000 C CNN
+F 1 "FPGA" H 3950 3134 50  0000 C CNN
+F 2 "" H 3950 3150 50  0001 C CNN
+F 3 "" H 3950 3150 50  0001 C CNN
+	1    3950 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 3600 5300 3600
+Wire Wire Line
+	4300 3450 4650 3450
+Wire Wire Line
+	4650 3450 4650 3500
+Wire Wire Line
+	4650 3500 5300 3500
+Wire Wire Line
+	4300 3300 5300 3300
+$Comp
+L Connector:Raspberry_Pi_2_3 J?
+U 1 1 61847C2B
+P 1800 3550
+F 0 "J?" H 1800 5031 50  0000 C CNN
+F 1 "Raspberry_Pi_2_3" H 1800 4940 50  0000 C CNN
+F 2 "" H 1800 3550 50  0001 C CNN
+F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 1800 3550 50  0001 C CNN
+	1    1800 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 3550 750  3550
+Wire Wire Line
+	750  3550 750  5150
+Wire Wire Line
+	750  5150 3200 5150
+Wire Wire Line
+	3200 5150 3200 3550
+Wire Wire Line
+	3200 3550 3600 3550
+Wire Wire Line
+	1000 3950 900  3950
+Wire Wire Line
+	900  3950 900  5000
+Wire Wire Line
+	900  5000 2950 5000
+Wire Wire Line
+	2950 5000 2950 3400
+Wire Wire Line
+	2950 3400 3600 3400
+Wire Wire Line
+	8100 4800 9200 4800
+Wire Wire Line
+	7750 2200 9200 2200
 $EndSCHEMATC
