@@ -1,7 +1,7 @@
 EESchema Schematic File Version 4
 EELAYER 30 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr E 44000 34000
 encoding utf-8
 Sheet 1 1
 Title ""
@@ -26,7 +26,6 @@ F 3 "~" H 6700 4500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6700 4350 6700 4150
-Connection ~ 6700 4150
 Wire Wire Line
 	6700 4800 6700 4650
 $Comp
@@ -94,26 +93,6 @@ Wire Wire Line
 Wire Wire Line
 	8100 4150 7800 4150
 Connection ~ 7400 4150
-$Comp
-L Device:R R?
-U 1 1 617B596A
-P 8750 4500
-F 0 "R?" H 8820 4546 50  0000 L CNN
-F 1 "R" H 8820 4455 50  0000 L CNN
-F 2 "" V 8680 4500 50  0001 C CNN
-F 3 "~" H 8750 4500 50  0001 C CNN
-	1    8750 4500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8750 4350 8750 4150
-Wire Wire Line
-	8750 4150 8100 4150
-Connection ~ 8100 4150
-Wire Wire Line
-	8100 4800 8750 4800
-Wire Wire Line
-	8750 4800 8750 4650
 Connection ~ 8100 4800
 $Comp
 L Device:R R?
@@ -186,26 +165,7 @@ Wire Wire Line
 	7600 2200 7750 2200
 Wire Wire Line
 	7750 2200 7750 2450
-$Comp
-L Device:R R?
-U 1 1 617C0EC2
-P 8400 2600
-F 0 "R?" H 8470 2646 50  0000 L CNN
-F 1 "R" H 8470 2555 50  0000 L CNN
-F 2 "" V 8330 2600 50  0001 C CNN
-F 3 "~" H 8400 2600 50  0001 C CNN
-	1    8400 2600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7750 2200 8400 2200
-Wire Wire Line
-	8400 2200 8400 2450
 Connection ~ 7750 2200
-Wire Wire Line
-	8400 2750 8400 2900
-Wire Wire Line
-	8400 2900 7750 2900
 Wire Wire Line
 	6350 2900 6350 2750
 Wire Wire Line
@@ -238,11 +198,7 @@ Wire Wire Line
 Wire Wire Line
 	6100 4800 6700 4800
 Wire Wire Line
-	6250 4150 6250 3500
-Wire Wire Line
 	6250 3500 6100 3500
-Wire Wire Line
-	6250 4150 6700 4150
 $Comp
 L Device:C C?
 U 1 1 617DB34F
@@ -324,15 +280,9 @@ Wire Wire Line
 Wire Wire Line
 	9200 3500 9200 4800
 Wire Wire Line
-	9200 4800 8750 4800
-Connection ~ 8750 4800
-Wire Wire Line
 	9550 3400 9200 3400
 Wire Wire Line
 	9200 3400 9200 2200
-Wire Wire Line
-	9200 2200 8400 2200
-Connection ~ 8400 2200
 Text GLabel 9650 3050 2    50   Input ~ 0
 GND
 Wire Wire Line
@@ -344,7 +294,7 @@ Wire Wire Line
 Text GLabel 4900 3400 0    50   Input ~ 0
 GND
 Wire Wire Line
-	5300 3400 4900 3400
+	5300 3400 5150 3400
 $Comp
 L CustomLib:FPGA U?
 U 1 1 6183A433
@@ -357,15 +307,15 @@ F 3 "" H 3950 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4300 3600 5300 3600
+	4300 3600 5100 3600
 Wire Wire Line
 	4300 3450 4650 3450
 Wire Wire Line
 	4650 3450 4650 3500
 Wire Wire Line
-	4650 3500 5300 3500
+	4650 3500 5100 3500
 Wire Wire Line
-	4300 3300 5300 3300
+	4300 3300 5100 3300
 $Comp
 L Connector:Raspberry_Pi_2_3 J?
 U 1 1 61847C2B
@@ -382,7 +332,7 @@ Wire Wire Line
 Wire Wire Line
 	750  3550 750  5150
 Wire Wire Line
-	750  5150 3200 5150
+	750  5150 3150 5150
 Wire Wire Line
 	3200 5150 3200 3550
 Wire Wire Line
@@ -396,5 +346,259 @@ Wire Wire Line
 Wire Wire Line
 	2950 5000 2950 3400
 Wire Wire Line
-	2950 3400 3600 3400
+	2950 3400 3400 3400
+Wire Wire Line
+	8100 4800 9200 4800
+Wire Wire Line
+	7750 2200 9200 2200
+Text GLabel 6250 3500 2    50   Input ~ 0
+GND
+$Comp
+L 10M02DCU324A7G:10M02DCU324A7G IC?
+U 1 1 618DB3E2
+P 3700 4850
+F 0 "IC?" H 4550 5115 50  0000 C CNN
+F 1 "10M02DCU324A7G" H 4550 5024 50  0000 C CNN
+F 2 "BGA324C80P18X18_1500X1500X155" H 5250 4950 50  0001 L CNN
+F 3 "https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/hb/max-10/m10_datasheet.pdf" H 5250 4850 50  0001 L CNN
+F 4 "FPGA MAX 10 Family 2000 Cells 55nm Technology 1.2V Automotive 324-Pin UFBGA" H 5250 4750 50  0001 L CNN "Description"
+F 5 "1.55" H 5250 4650 50  0001 L CNN "Height"
+F 6 "989-10M02DCU324A7G" H 5250 4550 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Intel-Altera/10M02DCU324A7G?qs=G%2FX6g08h60vP%252BFy8m31GWw%3D%3D" H 5250 4450 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Intel" H 5250 4350 50  0001 L CNN "Manufacturer_Name"
+F 9 "10M02DCU324A7G" H 5250 4250 50  0001 L CNN "Manufacturer_Part_Number"
+	1    3700 4850
+	1    0    0    -1  
+$EndComp
+Connection ~ 3450 3400
+Wire Wire Line
+	3450 3400 3600 3400
+Connection ~ 5150 3300
+Wire Wire Line
+	5150 3300 5300 3300
+Connection ~ 5150 3400
+Wire Wire Line
+	5150 3400 5100 3400
+Connection ~ 5150 3500
+Wire Wire Line
+	5150 3500 5300 3500
+Connection ~ 5150 3600
+Wire Wire Line
+	5150 3600 5300 3600
+Connection ~ 3400 3400
+Wire Wire Line
+	3400 3400 3450 3400
+Connection ~ 5100 3300
+Wire Wire Line
+	5100 3300 5150 3300
+Connection ~ 5100 3400
+Wire Wire Line
+	5100 3400 4900 3400
+Connection ~ 5100 3500
+Wire Wire Line
+	5100 3500 5150 3500
+Connection ~ 5100 3600
+Wire Wire Line
+	5100 3600 5150 3600
+Connection ~ 3150 5150
+Wire Wire Line
+	3150 5150 3200 5150
+$Comp
+L Connector_Generic:Conn_01x18 A
+U 1 1 6195A7F2
+P 2000 6150
+F 0 "A" H 1918 5025 50  0000 C CNN
+F 1 "Conn_01x18" H 1918 5116 50  0000 C CNN
+F 2 "" H 2000 6150 50  0001 C CNN
+F 3 "~" H 2000 6150 50  0001 C CNN
+	1    2000 6150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x18 B
+U 1 1 6195C231
+P 2000 8300
+F 0 "B" H 1918 7175 50  0000 C CNN
+F 1 "Conn_01x18" H 1918 7266 50  0000 C CNN
+F 2 "" H 2000 8300 50  0001 C CNN
+F 3 "~" H 2000 8300 50  0001 C CNN
+	1    2000 8300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x18 C
+U 1 1 6195D2F8
+P 2000 10400
+F 0 "C" H 1918 9275 50  0000 C CNN
+F 1 "Conn_01x18" H 1918 9366 50  0000 C CNN
+F 2 "" H 2000 10400 50  0001 C CNN
+F 3 "~" H 2000 10400 50  0001 C CNN
+	1    2000 10400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x18 D
+U 1 1 6196DC3C
+P 2000 12550
+F 0 "D" H 1918 11425 50  0000 C CNN
+F 1 "Conn_01x18" H 1918 11516 50  0000 C CNN
+F 2 "" H 2000 12550 50  0001 C CNN
+F 3 "~" H 2000 12550 50  0001 C CNN
+	1    2000 12550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x18 E
+U 1 1 6196EF6E
+P 2050 14800
+F 0 "E" H 1968 13675 50  0000 C CNN
+F 1 "Conn_01x18" H 1968 13766 50  0000 C CNN
+F 2 "" H 2050 14800 50  0001 C CNN
+F 3 "~" H 2050 14800 50  0001 C CNN
+	1    2050 14800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x18 F
+U 1 1 619705C8
+P 2000 17100
+F 0 "F" H 1918 15975 50  0000 C CNN
+F 1 "Conn_01x18" H 1918 16066 50  0000 C CNN
+F 2 "" H 2000 17100 50  0001 C CNN
+F 3 "~" H 2000 17100 50  0001 C CNN
+	1    2000 17100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x18 G
+U 1 1 619746CA
+P 1950 19250
+F 0 "G" H 1868 18125 50  0000 C CNN
+F 1 "Conn_01x18" H 1868 18216 50  0000 C CNN
+F 2 "" H 1950 19250 50  0001 C CNN
+F 3 "~" H 1950 19250 50  0001 C CNN
+	1    1950 19250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x18 H
+U 1 1 619783B0
+P 1900 21700
+F 0 "H" H 1818 20575 50  0000 C CNN
+F 1 "Conn_01x18" H 1818 20666 50  0000 C CNN
+F 2 "" H 1900 21700 50  0001 C CNN
+F 3 "~" H 1900 21700 50  0001 C CNN
+	1    1900 21700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x18 J
+U 1 1 61979C9B
+P 1950 24500
+F 0 "J" H 1868 23375 50  0000 C CNN
+F 1 "Conn_01x18" H 1868 23466 50  0000 C CNN
+F 2 "" H 1950 24500 50  0001 C CNN
+F 3 "~" H 1950 24500 50  0001 C CNN
+	1    1950 24500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x18 K
+U 1 1 6197BB63
+P 7050 6100
+F 0 "K" H 7130 6092 50  0000 L CNN
+F 1 "Conn_01x18" H 7130 6001 50  0000 L CNN
+F 2 "" H 7050 6100 50  0001 C CNN
+F 3 "~" H 7050 6100 50  0001 C CNN
+	1    7050 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x18 L
+U 1 1 6197D9BC
+P 7000 8200
+F 0 "L" H 7080 8192 50  0000 L CNN
+F 1 "Conn_01x18" H 7080 8101 50  0000 L CNN
+F 2 "" H 7000 8200 50  0001 C CNN
+F 3 "~" H 7000 8200 50  0001 C CNN
+	1    7000 8200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x18 M
+U 1 1 6197F9CF
+P 7000 10250
+F 0 "M" H 7080 10242 50  0000 L CNN
+F 1 "Conn_01x18" H 7080 10151 50  0000 L CNN
+F 2 "" H 7000 10250 50  0001 C CNN
+F 3 "~" H 7000 10250 50  0001 C CNN
+	1    7000 10250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x18 N
+U 1 1 61981A2E
+P 7000 12400
+F 0 "N" H 7080 12392 50  0000 L CNN
+F 1 "Conn_01x18" H 7080 12301 50  0000 L CNN
+F 2 "" H 7000 12400 50  0001 C CNN
+F 3 "~" H 7000 12400 50  0001 C CNN
+	1    7000 12400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x18 P
+U 1 1 61982ABC
+P 7000 14550
+F 0 "P" H 7080 14542 50  0000 L CNN
+F 1 "Conn_01x18" H 7080 14451 50  0000 L CNN
+F 2 "" H 7000 14550 50  0001 C CNN
+F 3 "~" H 7000 14550 50  0001 C CNN
+	1    7000 14550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x18 R
+U 1 1 619834DB
+P 7000 16700
+F 0 "R" H 7080 16692 50  0000 L CNN
+F 1 "Conn_01x18" H 7080 16601 50  0000 L CNN
+F 2 "" H 7000 16700 50  0001 C CNN
+F 3 "~" H 7000 16700 50  0001 C CNN
+	1    7000 16700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x18 T
+U 1 1 61984837
+P 7050 18800
+F 0 "T" H 7130 18792 50  0000 L CNN
+F 1 "Conn_01x18" H 7130 18701 50  0000 L CNN
+F 2 "" H 7050 18800 50  0001 C CNN
+F 3 "~" H 7050 18800 50  0001 C CNN
+	1    7050 18800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x18 U
+U 1 1 61985974
+P 6950 21000
+F 0 "U" H 7030 20992 50  0000 L CNN
+F 1 "Conn_01x18" H 7030 20901 50  0000 L CNN
+F 2 "" H 6950 21000 50  0001 C CNN
+F 3 "~" H 6950 21000 50  0001 C CNN
+	1    6950 21000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x18 V
+U 1 1 619864D3
+P 6950 23350
+F 0 "V" H 7030 23342 50  0000 L CNN
+F 1 "Conn_01x18" H 7030 23251 50  0000 L CNN
+F 2 "" H 6950 23350 50  0001 C CNN
+F 3 "~" H 6950 23350 50  0001 C CNN
+	1    6950 23350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

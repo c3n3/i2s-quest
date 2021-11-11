@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name CustomLib)(type Legacy)(uri ${KIPRJMOD}/CustomLib.lib)(options "")(descr ""))
+  (lib (name 10M02DCU324A7G)(type Legacy)(uri ${KIPRJMOD}/10M02DCU324A7G.lib)(options "")(descr ""))
 )

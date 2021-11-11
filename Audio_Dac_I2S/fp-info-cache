@@ -1,4 +1,4 @@
-19030957863929540
+19032594526039469
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -58673,6 +58673,13 @@ Audio_Jack
 0
 3
 3
+MyFootprints
+BGA324C80P18X18_1500X1500X155
+324-Pin Ultra FineLine Ball-Grid Array
+Integrated Circuit
+0
+324
+324
 MyFootprints
 DAC
 
