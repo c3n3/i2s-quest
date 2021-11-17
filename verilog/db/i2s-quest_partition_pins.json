@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "master",
+					"strict" : false
+				},
+				{
+					"name" : "lr_clk",
+					"strict" : false
+				},
+				{
+					"name" : "serial",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "ar",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
