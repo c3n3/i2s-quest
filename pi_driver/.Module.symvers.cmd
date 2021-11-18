@@ -1,0 +1,1 @@
+cmd_/home/pi/i2s-quest/pi_driver/Module.symvers := sed 's/ko$$/o/' /home/pi/i2s-quest/pi_driver/modules.order | scripts/mod/modpost -m -a   -o /home/pi/i2s-quest/pi_driver/Module.symvers -e -i Module.symvers   -T -
