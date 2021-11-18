@@ -517,17 +517,6 @@ F 3 "~" H 6400 20800 50  0001 C CNN
 	1    6400 20800
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x18 A
-U 1 1 6195A7F2
-P 1950 6400
-F 0 "A" H 1868 7417 50  0000 C CNN
-F 1 "Conn_01x18" H 1868 7326 50  0000 C CNN
-F 2 "" H 1950 6400 50  0001 C CNN
-F 3 "~" H 1950 6400 50  0001 C CNN
-	1    1950 6400
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	2950 3400 3600 3400
 Wire Wire Line
@@ -540,8 +529,6 @@ Wire Wire Line
 	4300 3600 5300 3600
 Wire Wire Line
 	4900 3400 5300 3400
-Wire Wire Line
-	2150 5600 3750 5600
 Wire Wire Line
 	3750 5700 2150 5700
 Wire Wire Line
@@ -556,8 +543,6 @@ Wire Wire Line
 	2150 6300 3750 6300
 Wire Wire Line
 	2150 6400 3750 6400
-Wire Wire Line
-	3750 7300 2150 7300
 Wire Wire Line
 	3750 7500 2350 7500
 Wire Wire Line
@@ -577,12 +562,6 @@ Wire Wire Line
 Wire Wire Line
 	2500 7800 3750 7800
 Wire Wire Line
-	3750 7900 2550 7900
-Wire Wire Line
-	2550 7900 2550 8250
-Wire Wire Line
-	2550 8250 2100 8250
-Wire Wire Line
 	2100 8350 2600 8350
 Wire Wire Line
 	2600 8350 2600 8000
@@ -600,18 +579,6 @@ Wire Wire Line
 	2700 8200 2700 8550
 Wire Wire Line
 	2700 8550 2100 8550
-Wire Wire Line
-	2100 8650 2750 8650
-Wire Wire Line
-	2750 8650 2750 8300
-Wire Wire Line
-	2750 8300 3750 8300
-Wire Wire Line
-	3750 8800 2250 8800
-Wire Wire Line
-	2250 8800 2250 9150
-Wire Wire Line
-	2250 9150 2100 9150
 $Comp
 L Connector_Generic:Conn_01x18 B
 U 1 1 6195C231
@@ -648,8 +615,6 @@ Wire Wire Line
 Wire Wire Line
 	3750 10900 2650 10900
 Wire Wire Line
-	3750 11200 2100 11200
-Wire Wire Line
 	3750 11300 2100 11300
 Wire Wire Line
 	3750 11400 2100 11400
@@ -672,17 +637,9 @@ Wire Wire Line
 Wire Wire Line
 	3750 13200 2500 13200
 Wire Wire Line
-	3750 13300 2500 13300
-Wire Wire Line
-	3750 13400 2500 13400
-Wire Wire Line
 	3750 13500 2500 13500
 Wire Wire Line
 	3750 13600 2500 13600
-Wire Wire Line
-	3750 13700 2500 13700
-Wire Wire Line
-	3750 14000 2500 14000
 Wire Wire Line
 	3750 14200 2500 14200
 Wire Wire Line
@@ -696,53 +653,29 @@ Wire Wire Line
 Wire Wire Line
 	3750 15000 2000 15000
 Wire Wire Line
-	3750 15100 2000 15100
-Wire Wire Line
-	3750 15300 2000 15300
-Wire Wire Line
-	3750 15400 2000 15400
-Wire Wire Line
 	3750 15500 2000 15500
 Wire Wire Line
 	3750 15800 2000 15800
-Wire Wire Line
-	3750 15900 2000 15900
 Wire Wire Line
 	3750 16000 2000 16000
 Wire Wire Line
 	3750 16100 2000 16100
 Wire Wire Line
-	3750 16200 2000 16200
-Wire Wire Line
 	3750 16300 2000 16300
 Wire Wire Line
-	3750 16500 2400 16500
-Wire Wire Line
 	3750 16600 2400 16600
-Wire Wire Line
-	3750 16700 2400 16700
-Wire Wire Line
-	3750 16800 2400 16800
 Wire Wire Line
 	3750 16900 2400 16900
 Wire Wire Line
 	3750 17000 2400 17000
-Wire Wire Line
-	3750 17100 2400 17100
-Wire Wire Line
-	3750 17200 2400 17200
 Wire Wire Line
 	3750 17300 2400 17300
 Wire Wire Line
 	3750 17400 2400 17400
 Wire Wire Line
 	3750 17500 2400 17500
-Wire Wire Line
-	3750 17600 2400 17600
-Text GLabel 4900 6500 0    47   Input ~ 0
+Text GLabel 5450 6500 2    47   Input ~ 0
 V3
-Wire Wire Line
-	3750 17700 2400 17700
 Wire Wire Line
 	3750 17800 2400 17800
 Wire Wire Line
@@ -756,29 +689,11 @@ Wire Wire Line
 Wire Wire Line
 	1850 18300 3750 18300
 Wire Wire Line
-	3750 18400 1850 18400
-Wire Wire Line
-	1850 18500 3750 18500
-Wire Wire Line
-	3750 18600 1850 18600
-Wire Wire Line
 	1850 18700 3750 18700
-Wire Wire Line
-	3750 18800 1850 18800
-Wire Wire Line
-	3750 18900 1850 18900
-Wire Wire Line
-	1850 19000 3750 19000
-Wire Wire Line
-	3750 19100 1850 19100
 Wire Wire Line
 	1850 19200 3750 19200
 Wire Wire Line
 	3750 19300 1850 19300
-Wire Wire Line
-	1850 19400 3750 19400
-Wire Wire Line
-	3750 19500 1850 19500
 Wire Wire Line
 	1850 19900 3750 19900
 Wire Wire Line
@@ -792,21 +707,7 @@ Wire Wire Line
 Wire Wire Line
 	2300 20300 3750 20300
 Wire Wire Line
-	3750 20400 2300 20400
-Wire Wire Line
 	2300 20500 3750 20500
-Wire Wire Line
-	3750 20600 2300 20600
-Wire Wire Line
-	3750 20800 2300 20800
-Wire Wire Line
-	2300 20900 3750 20900
-Wire Wire Line
-	3750 21200 2300 21200
-Wire Wire Line
-	2300 21300 3750 21300
-Wire Wire Line
-	3750 21600 2300 21600
 Wire Wire Line
 	2300 21700 3750 21700
 Wire Wire Line
@@ -818,25 +719,11 @@ Wire Wire Line
 Wire Wire Line
 	5450 5900 5950 5900
 Wire Wire Line
-	5950 6000 5450 6000
-Wire Wire Line
-	5450 6100 5950 6100
-Wire Wire Line
 	5950 6200 5450 6200
-Wire Wire Line
-	5450 6300 5950 6300
-Wire Wire Line
-	5950 6400 5450 6400
-Wire Wire Line
-	5450 6500 5950 6500
 Wire Wire Line
 	5950 6600 5450 6600
 Wire Wire Line
 	5450 6700 5950 6700
-Wire Wire Line
-	5450 6800 5950 6800
-Wire Wire Line
-	5950 6900 5450 6900
 Wire Wire Line
 	5450 7000 5950 7000
 Wire Wire Line
@@ -850,25 +737,11 @@ Wire Wire Line
 Wire Wire Line
 	6800 7500 5450 7500
 Wire Wire Line
-	5450 7600 6800 7600
-Wire Wire Line
-	6800 7700 5450 7700
-Wire Wire Line
-	5450 7800 6800 7800
-Wire Wire Line
-	6800 7900 5450 7900
-Wire Wire Line
 	6800 8100 5450 8100
-Wire Wire Line
-	5450 8200 6800 8200
 Wire Wire Line
 	6800 8400 5450 8400
 Wire Wire Line
 	5450 8500 6800 8500
-Wire Wire Line
-	5450 8600 6800 8600
-Wire Wire Line
-	6800 8700 5450 8700
 Wire Wire Line
 	5450 8800 6800 8800
 Wire Wire Line
@@ -886,17 +759,9 @@ Wire Wire Line
 Wire Wire Line
 	6650 9500 5450 9500
 Wire Wire Line
-	5450 9600 6650 9600
-Wire Wire Line
-	6650 9700 5450 9700
-Wire Wire Line
 	5450 9900 6650 9900
 Wire Wire Line
 	6650 10000 5450 10000
-Wire Wire Line
-	5450 10400 6650 10400
-Wire Wire Line
-	6650 10500 5450 10500
 Wire Wire Line
 	6650 10900 5450 10900
 Wire Wire Line
@@ -908,23 +773,13 @@ Wire Wire Line
 Wire Wire Line
 	5450 11300 6300 11300
 Wire Wire Line
-	6300 11400 5450 11400
-Wire Wire Line
 	5450 11500 6300 11500
 Wire Wire Line
 	6300 11600 5450 11600
 Wire Wire Line
 	5450 11700 6300 11700
 Wire Wire Line
-	6300 11800 5450 11800
-Wire Wire Line
-	5450 11900 6300 11900
-Wire Wire Line
-	6300 12100 5450 12100
-Wire Wire Line
 	6300 12300 5450 12300
-Wire Wire Line
-	5450 12600 6300 12600
 Wire Wire Line
 	6300 12700 5450 12700
 Wire Wire Line
@@ -935,14 +790,6 @@ Wire Wire Line
 	6550 13200 5450 13200
 Wire Wire Line
 	5450 13300 6550 13300
-Wire Wire Line
-	6550 13400 5450 13400
-Wire Wire Line
-	5450 13500 6550 13500
-Wire Wire Line
-	6550 13600 5450 13600
-Wire Wire Line
-	5450 14000 6550 14000
 Wire Wire Line
 	6550 14100 5450 14100
 Wire Wire Line
@@ -963,8 +810,6 @@ Wire Wire Line
 	6050 15000 5450 15000
 Wire Wire Line
 	5450 15100 6050 15100
-Wire Wire Line
-	6050 15200 5450 15200
 Wire Wire Line
 	5450 15300 6050 15300
 Wire Wire Line
@@ -1002,8 +847,6 @@ Wire Wire Line
 Wire Wire Line
 	5450 18400 5950 18400
 Wire Wire Line
-	5950 18500 5450 18500
-Wire Wire Line
 	5450 18600 5950 18600
 Wire Wire Line
 	5950 18700 5450 18700
@@ -1014,13 +857,7 @@ Wire Wire Line
 Wire Wire Line
 	5450 19000 5950 19000
 Wire Wire Line
-	5950 19100 5450 19100
-Wire Wire Line
 	5450 19200 5950 19200
-Wire Wire Line
-	5950 19500 5450 19500
-Wire Wire Line
-	5450 20000 6200 20000
 Wire Wire Line
 	6200 20100 5450 20100
 Wire Wire Line
@@ -1039,8 +876,6 @@ Wire Wire Line
 	6200 20800 5450 20800
 Wire Wire Line
 	6200 21100 5450 21100
-Wire Wire Line
-	5450 21700 6200 21700
 $Comp
 L Connector:AVR-JTAG-10 J?
 U 1 1 62E558C4
@@ -1052,13 +887,231 @@ F 3 " ~" H 6825 5500 50  0001 C CNN
 	1    8100 6050
 	1    0    0    -1  
 $EndComp
-Text GLabel 4300 20700 2    47   Input ~ 0
+Text GLabel 3050 20700 0    47   Input ~ 0
 tck
+Text GLabel 3750 20800 0    47   Input ~ 0
+V2
+Text GLabel 5450 8200 2    47   Input ~ 0
+V4
+Text GLabel 8600 5950 2    47   Input ~ 0
+tck
+Text GLabel 8600 6050 2    47   Input ~ 0
+tms
+Text GLabel 8600 6150 2    47   Input ~ 0
+tdo
+Text GLabel 8600 6250 2    47   Input ~ 0
+tdi
+Text GLabel 8100 6650 2    47   Input ~ 0
+GND
+Text GLabel 2550 2150 2    47   Input ~ 0
+VCC_JTAG
 Wire Wire Line
-	4300 20700 3750 20700
+	2550 2150 2000 2150
 Wire Wire Line
-	2300 20700 3750 20700
-Connection ~ 3750 20700
+	2000 2150 2000 2250
+Text GLabel 8100 5450 2    47   Input ~ 0
+VCC_JTAG
+Text GLabel 3750 5600 0    47   Input ~ 0
+GND
+Wire Wire Line
+	3750 19100 1850 19100
+Text GLabel 3750 20600 0    47   Input ~ 0
+tms
+Text GLabel 3750 18400 0    47   Input ~ 0
+tdi
+Text GLabel 3750 18500 0    47   Input ~ 0
+tdo
+NoConn ~ 8600 5850
+NoConn ~ 8600 5750
+NoConn ~ 8000 5450
+Text GLabel 3200 18800 0    47   Input ~ 0
+V1.2
+Text GLabel 5450 7700 2    47   Input ~ 0
+GND
+Text GLabel 5450 6300 2    47   Input ~ 0
+GND
+$Comp
+L Device:R R?
+U 1 1 631529AA
+P 3350 18800
+F 0 "R?" V 3143 18800 50  0000 C CNN
+F 1 "10K" V 3234 18800 50  0000 C CNN
+F 2 "" V 3280 18800 50  0001 C CNN
+F 3 "~" H 3350 18800 50  0001 C CNN
+	1    3350 18800
+	0    1    1    0   
+$EndComp
+Text GLabel 2900 17200 0    47   Input ~ 0
+GND
+$Comp
+L Device:R R?
+U 1 1 6315545C
+P 3050 17200
+F 0 "R?" V 2843 17200 50  0000 C CNN
+F 1 "10K" V 2934 17200 50  0000 C CNN
+F 2 "" V 2980 17200 50  0001 C CNN
+F 3 "~" H 3050 17200 50  0001 C CNN
+	1    3050 17200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6318875F
+P 3600 18900
+F 0 "R?" V 3393 18900 50  0000 C CNN
+F 1 "10K" V 3484 18900 50  0000 C CNN
+F 2 "" V 3530 18900 50  0001 C CNN
+F 3 "~" H 3600 18900 50  0001 C CNN
+	1    3600 18900
+	0    1    1    0   
+$EndComp
+Text GLabel 3450 18900 0    47   Input ~ 0
+VCCIO_B8
+Text GLabel 3750 13400 0    47   Input ~ 0
+VCCIO_B8
+$Comp
+L Device:R R?
+U 1 1 631E532E
+P 2900 19000
+F 0 "R?" V 2693 19000 50  0000 C CNN
+F 1 "10K" V 2784 19000 50  0000 C CNN
+F 2 "" V 2830 19000 50  0001 C CNN
+F 3 "~" H 2900 19000 50  0001 C CNN
+	1    2900 19000
+	0    1    1    0   
+$EndComp
+Text GLabel 2750 19000 0    47   Input ~ 0
+VCCIO
+Text GLabel 3450 17100 0    47   Input ~ 0
+V1.2
+$Comp
+L Device:R R?
+U 1 1 6321488B
+P 3600 17100
+F 0 "R?" V 3393 17100 50  0000 C CNN
+F 1 "10K" V 3484 17100 50  0000 C CNN
+F 2 "" V 3530 17100 50  0001 C CNN
+F 3 "~" H 3600 17100 50  0001 C CNN
+	1    3600 17100
+	0    1    1    0   
+$EndComp
+Text GLabel 5450 6000 2    47   Input ~ 0
+V3.3
+Text GLabel 5450 6900 2    47   Input ~ 0
+V3.3
+Text GLabel 5450 7800 2    47   Input ~ 0
+V3.3
+Text GLabel 5450 7900 2    47   Input ~ 0
+V3.3
+Text GLabel 5450 8600 2    47   Input ~ 0
+V3.3
+Text GLabel 5450 8700 2    47   Input ~ 0
+V3.3
+Text GLabel 5450 9600 2    47   Input ~ 0
+V3.3
+Text GLabel 5450 9700 2    47   Input ~ 0
+V3.3
+Text GLabel 5450 10400 2    47   Input ~ 0
+V3.3
+Text GLabel 5450 11800 2    47   Input ~ 0
+V3.3
+Text GLabel 5450 13400 2    47   Input ~ 0
+V3.3
+Text GLabel 5450 14000 2    47   Input ~ 0
+V3.3
+Text GLabel 3750 15100 0    47   Input ~ 0
+V3.3
+Text GLabel 3750 15400 0    47   Input ~ 0
+V3.3
+Text GLabel 3750 15900 0    47   Input ~ 0
+V3.3
+Text GLabel 3750 16800 0    47   Input ~ 0
+V3.3
+Text GLabel 3750 17700 0    47   Input ~ 0
+V3.3
+Text GLabel 3750 18600 0    47   Input ~ 0
+V3.3
+Text GLabel 3750 19400 0    47   Input ~ 0
+V3.3
+Text GLabel 3750 20400 0    47   Input ~ 0
+V3.3
+Text GLabel 3750 21300 0    47   Input ~ 0
+V3.3
+Text GLabel 5450 6100 2    47   Input ~ 0
+GND
+Text GLabel 5450 6800 2    47   Input ~ 0
+GND
+Text GLabel 3750 7300 0    47   Input ~ 0
+GND
+Text GLabel 3750 7900 0    47   Input ~ 0
+GND
+Text GLabel 5450 10500 2    47   Input ~ 0
+GND
+Text GLabel 5450 11100 2    47   Input ~ 0
+GND
+Text GLabel 5450 11400 2    47   Input ~ 0
+GND
+Text GLabel 3750 11200 0    47   Input ~ 0
+GND
+Text GLabel 5450 11900 2    47   Input ~ 0
+GND
+Text GLabel 5450 12100 2    47   Input ~ 0
+GND
+Text GLabel 5450 12600 2    47   Input ~ 0
+GND
+Text GLabel 3750 13300 0    47   Input ~ 0
+GND
+Text GLabel 3750 13700 0    47   Input ~ 0
+GND
+Text GLabel 3750 14000 0    47   Input ~ 0
+GND
+Text GLabel 5450 15200 2    47   Input ~ 0
+GND
+Text GLabel 3750 15300 0    47   Input ~ 0
+GND
+Text GLabel 3750 16200 0    47   Input ~ 0
+GND
+Text GLabel 3750 16500 0    47   Input ~ 0
+GND
+Text GLabel 3750 16700 0    47   Input ~ 0
+GND
+Text GLabel 5450 18500 2    47   Input ~ 0
+GND
+Text GLabel 5450 19100 2    47   Input ~ 0
+GND
+Text GLabel 5450 19500 2    47   Input ~ 0
+GND
+Text GLabel 3750 19500 0    47   Input ~ 0
+GND
+Text GLabel 5450 20000 2    47   Input ~ 0
+GND
+Text GLabel 3750 20900 0    47   Input ~ 0
+GND
+Text GLabel 5450 21700 2    47   Input ~ 0
+GND
+Text GLabel 3750 21600 0    47   Input ~ 0
+GND
+Wire Wire Line
+	3800 17100 3750 17100
+Text GLabel 5450 13500 2    47   Input ~ 0
+V3.3
+Text GLabel 5450 13600 2    47   Input ~ 0
+V3.3
+Text GLabel 3750 8800 0    47   Input ~ 0
+GND
+Text GLabel 3750 8300 0    47   Input ~ 0
+GND
+Text GLabel 5450 7600 2    47   Input ~ 0
+GND
+Wire Wire Line
+	3750 17200 3200 17200
+Text GLabel 3750 17600 0    47   Input ~ 0
+V3.3
+Wire Wire Line
+	3500 18800 3750 18800
+Wire Wire Line
+	3050 19000 3750 19000
+Connection ~ 3750 17100
 $Comp
 L 10M02DCU324A7G:10M02DCU324A7G IC?
 U 1 1 618DB3E2
@@ -1076,46 +1129,24 @@ F 9 "10M02DCU324A7G" H 5300 5000 50  0001 L CNN "Manufacturer_Part_Number"
 	1    3750 5600
 	1    0    0    -1  
 $EndComp
-Text GLabel 4300 20800 2    47   Input ~ 0
-V2
-Wire Wire Line
-	4300 20800 3750 20800
-Connection ~ 3750 20800
-Text GLabel 4250 19100 2    47   Input ~ 0
-V1
-Wire Wire Line
-	4250 19100 3750 19100
-Connection ~ 3750 19100
-Text GLabel 4900 8200 0    47   Input ~ 0
-V4
-Wire Wire Line
-	5450 8200 4900 8200
-Connection ~ 5450 8200
-Wire Wire Line
-	5450 6500 4900 6500
-Connection ~ 5450 6500
-Text GLabel 8600 5950 2    47   Input ~ 0
-tck
-Text GLabel 8600 6050 2    47   Input ~ 0
-tms
-Text GLabel 8600 6150 2    47   Input ~ 0
-tdo
-Text GLabel 8600 6250 2    47   Input ~ 0
-tdi
-Text GLabel 8100 6650 2    47   Input ~ 0
+Text GLabel 3200 21000 0    47   Input ~ 0
 GND
-Text GLabel 8600 5750 2    47   Input ~ 0
-NC
-Text GLabel 8600 5850 2    47   Input ~ 0
-NC
-Text GLabel 8000 5450 0    47   Input ~ 0
-NC
-Text GLabel 2550 2150 2    47   Input ~ 0
-VCC_JTAG
+$Comp
+L Device:R R?
+U 1 1 63271B73
+P 3200 20850
+F 0 "R?" H 3270 20896 50  0000 L CNN
+F 1 "10K" H 3270 20805 50  0000 L CNN
+F 2 "" V 3130 20850 50  0001 C CNN
+F 3 "~" H 3200 20850 50  0001 C CNN
+	1    3200 20850
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	2550 2150 2000 2150
+	3750 20700 3200 20700
 Wire Wire Line
-	2000 2150 2000 2250
-Text GLabel 8100 5450 2    47   Input ~ 0
-VCC_JTAG
+	3200 20700 3050 20700
+Connection ~ 3200 20700
+Text GLabel 3750 21200 0    47   Input ~ 0
+V3.3
 $EndSCHEMATC
