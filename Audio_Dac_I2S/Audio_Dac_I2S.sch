@@ -291,50 +291,8 @@ Wire Wire Line
 	9400 3050 9400 3300
 Wire Wire Line
 	9400 3300 9550 3300
-Text GLabel 4900 3400 0    50   Input ~ 0
+Text GLabel 4600 3400 0    50   Input ~ 0
 GND
-$Comp
-L CustomLib:FPGA U?
-U 1 1 6183A433
-P 3950 3150
-F 0 "U?" H 3950 3225 50  0000 C CNN
-F 1 "FPGA" H 3950 3134 50  0000 C CNN
-F 2 "" H 3950 3150 50  0001 C CNN
-F 3 "" H 3950 3150 50  0001 C CNN
-	1    3950 3150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4300 3450 4650 3450
-Wire Wire Line
-	4650 3450 4650 3500
-$Comp
-L Connector:Raspberry_Pi_2_3 J?
-U 1 1 61847C2B
-P 1800 3550
-F 0 "J?" H 1800 5031 50  0000 C CNN
-F 1 "Raspberry_Pi_2_3" H 1800 4940 50  0000 C CNN
-F 2 "" H 1800 3550 50  0001 C CNN
-F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 1800 3550 50  0001 C CNN
-	1    1800 3550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1000 3550 750  3550
-Wire Wire Line
-	750  3550 750  5150
-Wire Wire Line
-	3200 5150 3200 3550
-Wire Wire Line
-	3200 3550 3600 3550
-Wire Wire Line
-	1000 3950 900  3950
-Wire Wire Line
-	900  3950 900  5000
-Wire Wire Line
-	900  5000 2950 5000
-Wire Wire Line
-	2950 5000 2950 3400
 Wire Wire Line
 	8100 4800 9200 4800
 Wire Wire Line
@@ -342,25 +300,7 @@ Wire Wire Line
 Text GLabel 6250 3500 2    50   Input ~ 0
 GND
 Wire Wire Line
-	2950 3400 3600 3400
-Wire Wire Line
-	750  5150 3200 5150
-Wire Wire Line
-	4300 3300 5300 3300
-Wire Wire Line
-	4650 3500 5300 3500
-Wire Wire Line
-	4300 3600 5300 3600
-Wire Wire Line
 	4900 3400 5300 3400
-Text GLabel 5400 16950 0    47   Input ~ 0
-tck
-Text GLabel 2550 2150 2    47   Input ~ 0
-VCC_JTAG
-Wire Wire Line
-	2550 2150 2000 2150
-Wire Wire Line
-	2000 2150 2000 2250
 Text GLabel 5550 15250 0    47   Input ~ 0
 V3.3
 Text GLabel 5300 13650 0    47   Input ~ 0
@@ -402,8 +342,6 @@ F 3 "~" H 5550 17100 50  0001 C CNN
 	1    5550 17100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5550 16950 5400 16950
 Connection ~ 5550 16950
 Text GLabel 7800 7550 2    47   Input ~ 0
 GND
@@ -938,7 +876,7 @@ Wire Wire Line
 Wire Wire Line
 	5750 13450 6100 13450
 Wire Wire Line
-	5750 13550 6100 13550
+	5750 13550 5800 13550
 Wire Wire Line
 	5750 13750 6100 13750
 Wire Wire Line
@@ -983,7 +921,7 @@ Wire Wire Line
 Wire Wire Line
 	5750 15150 6100 15150
 Wire Wire Line
-	5750 15350 6100 15350
+	5750 15350 5800 15350
 Wire Wire Line
 	5750 15550 6100 15550
 Wire Wire Line
@@ -1006,8 +944,6 @@ Wire Wire Line
 	5750 16450 6100 16450
 Wire Wire Line
 	5750 16550 6100 16550
-Wire Wire Line
-	5750 16650 6100 16650
 Wire Wire Line
 	5400 15450 6100 15450
 Wire Wire Line
@@ -1296,4 +1232,211 @@ Wire Wire Line
 Text GLabel 10350 6600 1    47   Input ~ 0
 V3.3
 NoConn ~ 10450 6600
+$Comp
+L CustomLib:tco-711AR clk?
+U 1 1 63F851EB
+P 10450 8550
+F 0 "clk?" H 10450 8925 50  0000 C CNN
+F 1 "tco-711AR" H 10450 8834 50  0000 C CNN
+F 2 "" H 10450 8550 50  0001 C CNN
+F 3 "" H 10450 8550 50  0001 C CNN
+	1    10450 8550
+	1    0    0    -1  
+$EndComp
+Text GLabel 10050 8700 0    47   Input ~ 0
+GND
+Text GLabel 10850 8700 2    47   Input ~ 0
+V3.3
+Text GLabel 7800 10350 2    47   Input ~ 0
+CLK
+Text GLabel 10850 8400 2    47   Input ~ 0
+CLK
+NoConn ~ 10050 8400
+Text GLabel 950  4050 0    47   Input ~ 0
+DCLK
+Text GLabel 6100 6850 0    47   Input ~ 0
+DCLK
+Text GLabel 950  3550 0    47   Input ~ 0
+DATA
+Text GLabel 6100 6950 0    47   Input ~ 0
+DATA
+Text GLabel 950  3950 0    47   Input ~ 0
+INTERR
+Text GLabel 6100 7050 0    47   Input ~ 0
+INTERR
+Text GLabel 950  3850 0    47   Input ~ 0
+EN
+Text GLabel 6100 7150 0    47   Input ~ 0
+EN
+$Comp
+L Device:R R?
+U 1 1 63FEC555
+P 4750 3400
+F 0 "R?" V 4543 3400 50  0000 C CNN
+F 1 "10K" V 4634 3400 50  0000 C CNN
+F 2 "" V 4680 3400 50  0001 C CNN
+F 3 "~" H 4750 3400 50  0001 C CNN
+	1    4750 3400
+	0    1    1    0   
+$EndComp
+Text GLabel 5300 3300 0    47   Input ~ 0
+SDATA
+Text GLabel 6100 7250 0    47   Input ~ 0
+SDATA
+Text GLabel 5300 3500 0    47   Input ~ 0
+LRCK
+Text GLabel 6100 7350 0    47   Input ~ 0
+LRCK
+Text GLabel 5300 3600 0    47   Input ~ 0
+MCLK
+Text GLabel 6100 7450 0    47   Input ~ 0
+MCLK
+$Comp
+L Connector:Raspberry_Pi_2_3 J?
+U 1 1 61847C2B
+P 1750 3550
+F 0 "J?" H 1750 5031 50  0000 C CNN
+F 1 "Raspberry_Pi_2_3" H 1750 4940 50  0000 C CNN
+F 2 "" H 1750 3550 50  0001 C CNN
+F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 1750 3550 50  0001 C CNN
+	1    1750 3550
+	1    0    0    -1  
+$EndComp
+Text GLabel 1950 2250 2    47   Input ~ 0
+V3.3
+Text GLabel 4700 16950 0    47   Input ~ 0
+tck
+$Comp
+L pspice:DIODE D?
+U 1 1 640500D8
+P 4900 16750
+F 0 "D?" V 4946 16622 50  0000 R CNN
+F 1 "DIODE" V 4855 16622 50  0000 R CNN
+F 2 "" H 4900 16750 50  0001 C CNN
+F 3 "~" H 4900 16750 50  0001 C CNN
+	1    4900 16750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4900 16950 5550 16950
+Wire Wire Line
+	4700 16950 4900 16950
+Connection ~ 4900 16950
+Wire Wire Line
+	5750 16650 6100 16650
+$Comp
+L Device:C C?
+U 1 1 640B117C
+P 4900 17100
+F 0 "C?" H 5015 17146 50  0000 L CNN
+F 1 "10pF" H 5015 17055 50  0000 L CNN
+F 2 "" H 4938 16950 50  0001 C CNN
+F 3 "~" H 4900 17100 50  0001 C CNN
+	1    4900 17100
+	1    0    0    -1  
+$EndComp
+Text GLabel 4900 17250 0    47   Input ~ 0
+GND
+Text GLabel 4900 16550 0    47   Input ~ 0
+V3.3
+$Comp
+L Device:C C?
+U 1 1 640B1F3E
+P 9550 16400
+F 0 "C?" H 9665 16446 50  0000 L CNN
+F 1 "10pF" H 9665 16355 50  0000 L CNN
+F 2 "" H 9588 16250 50  0001 C CNN
+F 3 "~" H 9550 16400 50  0001 C CNN
+	1    9550 16400
+	1    0    0    -1  
+$EndComp
+Text GLabel 9550 16550 0    47   Input ~ 0
+GND
+$Comp
+L pspice:DIODE D?
+U 1 1 640B237A
+P 9550 16050
+F 0 "D?" V 9596 15922 50  0000 R CNN
+F 1 "DIODE" V 9505 15922 50  0000 R CNN
+F 2 "" H 9550 16050 50  0001 C CNN
+F 3 "~" H 9550 16050 50  0001 C CNN
+	1    9550 16050
+	0    -1   -1   0   
+$EndComp
+Text GLabel 9550 15850 0    47   Input ~ 0
+V3.3
+$Comp
+L Device:C C?
+U 1 1 640B92D2
+P 9550 15450
+F 0 "C?" H 9665 15496 50  0000 L CNN
+F 1 "10pF" H 9665 15405 50  0000 L CNN
+F 2 "" H 9588 15300 50  0001 C CNN
+F 3 "~" H 9550 15450 50  0001 C CNN
+	1    9550 15450
+	1    0    0    -1  
+$EndComp
+Text GLabel 9550 15600 0    47   Input ~ 0
+GND
+$Comp
+L pspice:DIODE D?
+U 1 1 640B92D9
+P 9550 15100
+F 0 "D?" V 9596 14972 50  0000 R CNN
+F 1 "DIODE" V 9505 14972 50  0000 R CNN
+F 2 "" H 9550 15100 50  0001 C CNN
+F 3 "~" H 9550 15100 50  0001 C CNN
+	1    9550 15100
+	0    -1   -1   0   
+$EndComp
+Text GLabel 9550 14900 0    47   Input ~ 0
+V3.3
+Text GLabel 9550 15300 0    47   Input ~ 0
+tdo
+Text GLabel 9550 16250 0    47   Input ~ 0
+tdi
+$Comp
+L Device:C C?
+U 1 1 64100C44
+P 10500 15450
+F 0 "C?" H 10615 15496 50  0000 L CNN
+F 1 "10pF" H 10615 15405 50  0000 L CNN
+F 2 "" H 10538 15300 50  0001 C CNN
+F 3 "~" H 10500 15450 50  0001 C CNN
+	1    10500 15450
+	1    0    0    -1  
+$EndComp
+Text GLabel 10500 15600 0    47   Input ~ 0
+GND
+$Comp
+L pspice:DIODE D?
+U 1 1 64100C4B
+P 10500 15100
+F 0 "D?" V 10546 14972 50  0000 R CNN
+F 1 "DIODE" V 10455 14972 50  0000 R CNN
+F 2 "" H 10500 15100 50  0001 C CNN
+F 3 "~" H 10500 15100 50  0001 C CNN
+	1    10500 15100
+	0    -1   -1   0   
+$EndComp
+Text GLabel 10500 14900 0    47   Input ~ 0
+V3.3
+Text GLabel 10500 15300 0    47   Input ~ 0
+tms
+Text GLabel 2050 4850 3    50   Input ~ 0
+GND
+Text GLabel 1950 4850 3    50   Input ~ 0
+GND
+Text GLabel 1850 4850 3    50   Input ~ 0
+GND
+Text GLabel 1750 4850 3    50   Input ~ 0
+GND
+Text GLabel 1650 4850 3    50   Input ~ 0
+GND
+Text GLabel 1550 4850 3    50   Input ~ 0
+GND
+Text GLabel 1450 4850 3    50   Input ~ 0
+GND
+Text GLabel 1350 4850 3    50   Input ~ 0
+GND
 $EndSCHEMATC
