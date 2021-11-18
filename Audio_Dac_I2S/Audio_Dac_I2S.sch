@@ -14,12 +14,12 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Device:R R?
+L Device:R R9
 U 1 1 617B28B7
 P 6700 4500
-F 0 "R?" H 6630 4454 50  0000 R CNN
+F 0 "R9" H 6630 4454 50  0000 R CNN
 F 1 "267K" H 6630 4545 50  0000 R CNN
-F 2 "" V 6630 4500 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 6630 4500 50  0001 C CNN
 F 3 "~" H 6700 4500 50  0001 C CNN
 	1    6700 4500
 	-1   0    0    1   
@@ -29,12 +29,12 @@ Wire Wire Line
 Wire Wire Line
 	6700 4800 6700 4650
 $Comp
-L Device:C C?
+L Device:C C4
 U 1 1 617B34C9
 P 7050 4800
-F 0 "C?" V 6798 4800 50  0000 C CNN
+F 0 "C4" V 6798 4800 50  0000 C CNN
 F 1 "3.3uF" V 6889 4800 50  0000 C CNN
-F 2 "" H 7088 4650 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.0mm_P5.00mm" H 7088 4650 50  0001 C CNN
 F 3 "~" H 7050 4800 50  0001 C CNN
 	1    7050 4800
 	0    1    1    0   
@@ -43,12 +43,12 @@ Wire Wire Line
 	6900 4800 6700 4800
 Connection ~ 6700 4800
 $Comp
-L Device:R R?
+L Device:R R11
 U 1 1 617B3DC2
 P 7400 4500
-F 0 "R?" H 7470 4546 50  0000 L CNN
+F 0 "R11" H 7470 4546 50  0000 L CNN
 F 1 "10K" H 7470 4455 50  0000 L CNN
-F 2 "" V 7330 4500 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 7330 4500 50  0001 C CNN
 F 3 "~" H 7400 4500 50  0001 C CNN
 	1    7400 4500
 	1    0    0    -1  
@@ -60,12 +60,12 @@ Wire Wire Line
 Wire Wire Line
 	7400 4350 7400 4150
 $Comp
-L Device:R R?
+L Device:R R13
 U 1 1 617B480D
 P 7800 4800
-F 0 "R?" V 7593 4800 50  0000 C CNN
+F 0 "R13" V 7593 4800 50  0000 C CNN
 F 1 "560" V 7684 4800 50  0000 C CNN
-F 2 "" V 7730 4800 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 7730 4800 50  0001 C CNN
 F 3 "~" H 7800 4800 50  0001 C CNN
 	1    7800 4800
 	0    1    1    0   
@@ -74,12 +74,12 @@ Wire Wire Line
 	7650 4800 7400 4800
 Connection ~ 7400 4800
 $Comp
-L Device:C C?
+L Device:C C7
 U 1 1 617B4FB1
 P 8100 4500
-F 0 "C?" H 8215 4546 50  0000 L CNN
+F 0 "C7" H 8215 4546 50  0000 L CNN
 F 1 "C" H 8215 4455 50  0000 L CNN
-F 2 "" H 8138 4350 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.0mm_P5.00mm" H 8138 4350 50  0001 C CNN
 F 3 "~" H 8100 4500 50  0001 C CNN
 	1    8100 4500
 	1    0    0    -1  
@@ -95,12 +95,12 @@ Wire Wire Line
 Connection ~ 7400 4150
 Connection ~ 8100 4800
 $Comp
-L Device:R R?
+L Device:R R8
 U 1 1 617C0E91
 P 6350 2600
-F 0 "R?" H 6280 2554 50  0000 R CNN
+F 0 "R8" H 6280 2554 50  0000 R CNN
 F 1 "267K" H 6280 2645 50  0000 R CNN
-F 2 "" V 6280 2600 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 6280 2600 50  0001 C CNN
 F 3 "~" H 6350 2600 50  0001 C CNN
 	1    6350 2600
 	-1   0    0    1   
@@ -108,12 +108,12 @@ $EndComp
 Wire Wire Line
 	6350 2200 6350 2450
 $Comp
-L Device:C C?
+L Device:C C2
 U 1 1 617C0E9C
 P 6700 2200
-F 0 "C?" V 6448 2200 50  0000 C CNN
+F 0 "C2" V 6448 2200 50  0000 C CNN
 F 1 "3.3uF" V 6539 2200 50  0000 C CNN
-F 2 "" H 6738 2050 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.0mm_P5.00mm" H 6738 2050 50  0001 C CNN
 F 3 "~" H 6700 2200 50  0001 C CNN
 	1    6700 2200
 	0    1    1    0   
@@ -122,12 +122,12 @@ Wire Wire Line
 	6550 2200 6350 2200
 Connection ~ 6350 2200
 $Comp
-L Device:R R?
+L Device:R R10
 U 1 1 617C0EA4
 P 7050 2600
-F 0 "R?" H 7120 2646 50  0000 L CNN
+F 0 "R10" H 7120 2646 50  0000 L CNN
 F 1 "10K" H 7120 2555 50  0000 L CNN
-F 2 "" V 6980 2600 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 6980 2600 50  0001 C CNN
 F 3 "~" H 7050 2600 50  0001 C CNN
 	1    7050 2600
 	1    0    0    -1  
@@ -137,12 +137,12 @@ Wire Wire Line
 Wire Wire Line
 	7050 2200 7050 2450
 $Comp
-L Device:R R?
+L Device:R R12
 U 1 1 617C0EAF
 P 7450 2200
-F 0 "R?" V 7243 2200 50  0000 C CNN
+F 0 "R12" V 7243 2200 50  0000 C CNN
 F 1 "560" V 7334 2200 50  0000 C CNN
-F 2 "" V 7380 2200 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 7380 2200 50  0001 C CNN
 F 3 "~" H 7450 2200 50  0001 C CNN
 	1    7450 2200
 	0    1    1    0   
@@ -151,12 +151,12 @@ Wire Wire Line
 	7300 2200 7050 2200
 Connection ~ 7050 2200
 $Comp
-L Device:C C?
+L Device:C C6
 U 1 1 617C0EB7
 P 7750 2600
-F 0 "C?" H 7865 2646 50  0000 L CNN
+F 0 "C6" H 7865 2646 50  0000 L CNN
 F 1 "C" H 7865 2555 50  0000 L CNN
-F 2 "" H 7788 2450 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.0mm_P5.00mm" H 7788 2450 50  0001 C CNN
 F 3 "~" H 7750 2600 50  0001 C CNN
 	1    7750 2600
 	1    0    0    -1  
@@ -183,12 +183,12 @@ Wire Wire Line
 Wire Wire Line
 	6100 2200 6350 2200
 $Comp
-L Device:C C?
+L Device:C C3
 U 1 1 617CF16B
 P 6750 3650
-F 0 "C?" H 6635 3604 50  0000 R CNN
+F 0 "C3" H 6635 3604 50  0000 R CNN
 F 1 "0.1u" H 6635 3695 50  0000 R CNN
-F 2 "" H 6788 3500 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.0mm_P5.00mm" H 6788 3500 50  0001 C CNN
 F 3 "~" H 6750 3650 50  0001 C CNN
 	1    6750 3650
 	-1   0    0    1   
@@ -200,12 +200,12 @@ Wire Wire Line
 Wire Wire Line
 	6250 3500 6100 3500
 $Comp
-L Device:C C?
+L Device:C C5
 U 1 1 617DB34F
 P 7300 3650
-F 0 "C?" H 7185 3604 50  0000 R CNN
+F 0 "C5" H 7185 3604 50  0000 R CNN
 F 1 "1u" H 7185 3695 50  0000 R CNN
-F 2 "" H 7338 3500 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.0mm_P5.00mm" H 7338 3500 50  0001 C CNN
 F 3 "~" H 7300 3650 50  0001 C CNN
 	1    7300 3650
 	-1   0    0    1   
@@ -240,10 +240,6 @@ Wire Wire Line
 	7750 3000 7750 2900
 Text GLabel 7100 3950 0    50   Input ~ 0
 GND
-Wire Wire Line
-	7100 3950 7150 3950
-Wire Wire Line
-	7150 3950 7150 3850
 Text GLabel 7750 4050 0    50   Input ~ 0
 GND
 Wire Wire Line
@@ -254,23 +250,23 @@ Connection ~ 7800 4150
 Wire Wire Line
 	7800 4150 7400 4150
 $Comp
-L CustomLib:FemaleAudioJack U?
+L CustomLib:FemaleAudioJack U2
 U 1 1 617E7FCF
 P 9900 3200
-F 0 "U?" H 10178 3001 50  0000 L CNN
+F 0 "U2" H 10178 3001 50  0000 L CNN
 F 1 "FemaleAudioJack" H 10178 2910 50  0000 L CNN
-F 2 "" H 9900 3200 50  0001 C CNN
+F 2 "MyFootprints:Audio_Jack" H 9900 3200 50  0001 C CNN
 F 3 "" H 9900 3200 50  0001 C CNN
 	1    9900 3200
 	1    0    0    -1  
 $EndComp
 $Comp
-L CustomLib:DAC U?
+L CustomLib:DAC U1
 U 1 1 617E960C
 P 5450 3250
-F 0 "U?" H 5700 3425 50  0000 C CNN
+F 0 "U1" H 5700 3425 50  0000 C CNN
 F 1 "DAC" H 5700 3334 50  0000 C CNN
-F 2 "" H 5450 3250 50  0001 C CNN
+F 2 "MyFootprints:DAC" H 5450 3250 50  0001 C CNN
 F 3 "" H 5450 3250 50  0001 C CNN
 	1    5450 3250
 	1    0    0    -1  
@@ -306,23 +302,23 @@ V3.3
 Text GLabel 5300 13650 0    47   Input ~ 0
 GND
 $Comp
-L Device:R R?
+L Device:R R3
 U 1 1 6315545C
 P 5450 13650
-F 0 "R?" V 5243 13650 50  0000 C CNN
+F 0 "R3" V 5243 13650 50  0000 C CNN
 F 1 "10K" V 5334 13650 50  0000 C CNN
-F 2 "" V 5380 13650 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 5380 13650 50  0001 C CNN
 F 3 "~" H 5450 13650 50  0001 C CNN
 	1    5450 13650
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R2
 U 1 1 631E532E
 P 5250 15450
-F 0 "R?" V 5043 15450 50  0000 C CNN
+F 0 "R2" V 5043 15450 50  0000 C CNN
 F 1 "10K" V 5134 15450 50  0000 C CNN
-F 2 "" V 5180 15450 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 5180 15450 50  0001 C CNN
 F 3 "~" H 5250 15450 50  0001 C CNN
 	1    5250 15450
 	0    1    1    0   
@@ -332,12 +328,12 @@ V3.3
 Text GLabel 5550 17250 0    47   Input ~ 0
 GND
 $Comp
-L Device:R R?
+L Device:R R4
 U 1 1 63271B73
 P 5550 17100
-F 0 "R?" H 5620 17146 50  0000 L CNN
+F 0 "R4" H 5620 17146 50  0000 L CNN
 F 1 "10K" H 5620 17055 50  0000 L CNN
-F 2 "" V 5480 17100 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 5480 17100 50  0001 C CNN
 F 3 "~" H 5550 17100 50  0001 C CNN
 	1    5550 17100
 	1    0    0    -1  
@@ -416,23 +412,23 @@ V3.3
 Text GLabel 5800 15350 0    47   Input ~ 0
 V3.3
 $Comp
-L Device:R R?
+L Device:R R7
 U 1 1 6318875F
 P 5950 15350
-F 0 "R?" V 5743 15350 50  0000 C CNN
+F 0 "R7" V 5743 15350 50  0000 C CNN
 F 1 "10K" V 5834 15350 50  0000 C CNN
-F 2 "" V 5880 15350 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 5880 15350 50  0001 C CNN
 F 3 "~" H 5950 15350 50  0001 C CNN
 	1    5950 15350
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R5
 U 1 1 631529AA
 P 5700 15250
-F 0 "R?" V 5493 15250 50  0000 C CNN
+F 0 "R5" V 5493 15250 50  0000 C CNN
 F 1 "10K" V 5584 15250 50  0000 C CNN
-F 2 "" V 5630 15250 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 5630 15250 50  0001 C CNN
 F 3 "~" H 5700 15250 50  0001 C CNN
 	1    5700 15250
 	0    1    1    0   
@@ -460,12 +456,12 @@ tms
 Text GLabel 10950 7100 2    47   Input ~ 0
 tck
 $Comp
-L Connector:AVR-JTAG-10 J?
+L Connector:AVR-JTAG-10 J14
 U 1 1 62E558C4
 P 10450 7200
-F 0 "J?" H 10020 7246 50  0000 R CNN
+F 0 "J14" H 10020 7246 50  0000 R CNN
 F 1 "AVR-JTAG-10" H 10020 7155 50  0000 R CNN
-F 2 "" V 10300 7350 50  0001 C CNN
+F 2 "MyFootprints:Jtag_header" V 10300 7350 50  0001 C CNN
 F 3 " ~" H 9175 6650 50  0001 C CNN
 	1    10450 7200
 	1    0    0    -1  
@@ -617,23 +613,23 @@ V3.3
 Text GLabel 5800 13550 0    47   Input ~ 0
 V3.3
 $Comp
-L Device:R R?
+L Device:R R6
 U 1 1 6321488B
 P 5950 13550
-F 0 "R?" V 5743 13550 50  0000 C CNN
+F 0 "R6" V 5743 13550 50  0000 C CNN
 F 1 "10K" V 5834 13550 50  0000 C CNN
-F 2 "" V 5880 13550 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 5880 13550 50  0001 C CNN
 F 3 "~" H 5950 13550 50  0001 C CNN
 	1    5950 13550
 	0    1    1    0   
 $EndComp
 $Comp
-L 10M02DCU324A7G:10M02DCU324A7G IC?
+L 10M02DCU324A7G:10M02DCU324A7G IC1
 U 1 1 618DB3E2
 P 6950 13750
-F 0 "IC?" H 7800 14015 50  0000 C CNN
+F 0 "IC1" H 7800 14015 50  0000 C CNN
 F 1 "10M02DCU324A7G" H 7800 13924 50  0000 C CNN
-F 2 "BGA324C80P18X18_1500X1500X155" H 8500 13850 50  0001 L CNN
+F 2 "MyFootprints:BGA324C80P18X18_1500X1500X155" H 8500 13850 50  0001 L CNN
 F 3 "https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/hb/max-10/m10_datasheet.pdf" H 8500 13750 50  0001 L CNN
 F 4 "FPGA MAX 10 Family 2000 Cells 55nm Technology 1.2V Automotive 324-Pin UFBGA" H 8500 13650 50  0001 L CNN "Description"
 F 5 "1.55" H 8500 13550 50  0001 L CNN "Height"
@@ -645,12 +641,12 @@ F 9 "10M02DCU324A7G" H 8500 13150 50  0001 L CNN "Manufacturer_Part_Number"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x20_Male J?
+L Connector:Conn_01x20_Male J8
 U 1 1 63D6BCE3
 P 8350 7650
-F 0 "J?" H 8322 7624 50  0000 R CNN
+F 0 "J8" H 8322 7624 50  0000 R CNN
 F 1 "Conn_01x20_Male" H 8322 7533 50  0000 R CNN
-F 2 "" H 8350 7650 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 8350 7650 50  0001 C CNN
 F 3 "~" H 8350 7650 50  0001 C CNN
 	1    8350 7650
 	-1   0    0    -1  
@@ -696,12 +692,12 @@ Wire Wire Line
 Wire Wire Line
 	8150 8650 7800 8650
 $Comp
-L Connector:Conn_01x20_Male J?
+L Connector:Conn_01x20_Male J2
 U 1 1 63DA5CD9
 P 5550 7650
-F 0 "J?" H 5522 7624 50  0000 R CNN
+F 0 "J2" H 5522 7624 50  0000 R CNN
 F 1 "Conn_01x20_Male" H 5522 7533 50  0000 R CNN
-F 2 "" H 5550 7650 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 5550 7650 50  0001 C CNN
 F 3 "~" H 5550 7650 50  0001 C CNN
 	1    5550 7650
 	1    0    0    -1  
@@ -747,12 +743,12 @@ Wire Wire Line
 Wire Wire Line
 	5750 8650 6100 8650
 $Comp
-L Connector:Conn_01x20_Male J?
+L Connector:Conn_01x20_Male J3
 U 1 1 63DB1002
 P 5550 9650
-F 0 "J?" H 5522 9624 50  0000 R CNN
+F 0 "J3" H 5522 9624 50  0000 R CNN
 F 1 "Conn_01x20_Male" H 5522 9533 50  0000 R CNN
-F 2 "" H 5550 9650 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 5550 9650 50  0001 C CNN
 F 3 "~" H 5550 9650 50  0001 C CNN
 	1    5550 9650
 	1    0    0    -1  
@@ -798,12 +794,12 @@ Wire Wire Line
 Wire Wire Line
 	5750 10650 6100 10650
 $Comp
-L Connector:Conn_01x20_Male J?
+L Connector:Conn_01x20_Male J4
 U 1 1 63DBC261
 P 5550 11650
-F 0 "J?" H 5522 11624 50  0000 R CNN
+F 0 "J4" H 5522 11624 50  0000 R CNN
 F 1 "Conn_01x20_Male" H 5522 11533 50  0000 R CNN
-F 2 "" H 5550 11650 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 5550 11650 50  0001 C CNN
 F 3 "~" H 5550 11650 50  0001 C CNN
 	1    5550 11650
 	1    0    0    -1  
@@ -849,12 +845,12 @@ Wire Wire Line
 Wire Wire Line
 	5750 12650 6100 12650
 $Comp
-L Connector:Conn_01x20_Male J?
+L Connector:Conn_01x20_Male J5
 U 1 1 63DCA2DC
 P 5550 13650
-F 0 "J?" H 5522 13624 50  0000 R CNN
+F 0 "J5" H 5522 13624 50  0000 R CNN
 F 1 "Conn_01x20_Male" H 5522 13533 50  0000 R CNN
-F 2 "" H 5550 13650 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 5550 13650 50  0001 C CNN
 F 3 "~" H 5550 13650 50  0001 C CNN
 	1    5550 13650
 	1    0    0    -1  
@@ -900,12 +896,12 @@ Wire Wire Line
 Wire Wire Line
 	5600 13650 6100 13650
 $Comp
-L Connector:Conn_01x20_Male J?
+L Connector:Conn_01x20_Male J6
 U 1 1 63DD89D5
 P 5550 15650
-F 0 "J?" H 5522 15624 50  0000 R CNN
+F 0 "J6" H 5522 15624 50  0000 R CNN
 F 1 "Conn_01x20_Male" H 5522 15533 50  0000 R CNN
-F 2 "" H 5550 15650 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 5550 15650 50  0001 C CNN
 F 3 "~" H 5550 15650 50  0001 C CNN
 	1    5550 15650
 	1    0    0    -1  
@@ -951,12 +947,12 @@ Wire Wire Line
 Wire Wire Line
 	6100 16950 5750 16950
 $Comp
-L Connector:Conn_01x20_Male J?
+L Connector:Conn_01x20_Male J9
 U 1 1 63E0364E
 P 8350 9650
-F 0 "J?" H 8322 9624 50  0000 R CNN
+F 0 "J9" H 8322 9624 50  0000 R CNN
 F 1 "Conn_01x20_Male" H 8322 9533 50  0000 R CNN
-F 2 "" H 8350 9650 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 8350 9650 50  0001 C CNN
 F 3 "~" H 8350 9650 50  0001 C CNN
 	1    8350 9650
 	-1   0    0    -1  
@@ -1002,12 +998,12 @@ Wire Wire Line
 Wire Wire Line
 	8150 10650 7800 10650
 $Comp
-L Connector:Conn_01x20_Male J?
+L Connector:Conn_01x20_Male J10
 U 1 1 63E5B712
 P 8350 11650
-F 0 "J?" H 8322 11624 50  0000 R CNN
+F 0 "J10" H 8322 11624 50  0000 R CNN
 F 1 "Conn_01x20_Male" H 8322 11533 50  0000 R CNN
-F 2 "" H 8350 11650 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 8350 11650 50  0001 C CNN
 F 3 "~" H 8350 11650 50  0001 C CNN
 	1    8350 11650
 	-1   0    0    -1  
@@ -1053,12 +1049,12 @@ Wire Wire Line
 Wire Wire Line
 	8150 12650 7800 12650
 $Comp
-L Connector:Conn_01x20_Male J?
+L Connector:Conn_01x20_Male J11
 U 1 1 63E717B2
 P 8350 13650
-F 0 "J?" H 8322 13624 50  0000 R CNN
+F 0 "J11" H 8322 13624 50  0000 R CNN
 F 1 "Conn_01x20_Male" H 8322 13533 50  0000 R CNN
-F 2 "" H 8350 13650 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 8350 13650 50  0001 C CNN
 F 3 "~" H 8350 13650 50  0001 C CNN
 	1    8350 13650
 	-1   0    0    -1  
@@ -1104,12 +1100,12 @@ Wire Wire Line
 Wire Wire Line
 	8150 14650 7800 14650
 $Comp
-L Connector:Conn_01x20_Male J?
+L Connector:Conn_01x20_Male J12
 U 1 1 63E8A9B7
 P 8350 15650
-F 0 "J?" H 8322 15624 50  0000 R CNN
+F 0 "J12" H 8322 15624 50  0000 R CNN
 F 1 "Conn_01x20_Male" H 8322 15533 50  0000 R CNN
-F 2 "" H 8350 15650 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 8350 15650 50  0001 C CNN
 F 3 "~" H 8350 15650 50  0001 C CNN
 	1    8350 15650
 	-1   0    0    -1  
@@ -1155,12 +1151,12 @@ Wire Wire Line
 Wire Wire Line
 	8150 16650 7800 16650
 $Comp
-L Connector:Conn_01x09_Male J?
+L Connector:Conn_01x09_Male J7
 U 1 1 63EC79CA
 P 5550 17150
-F 0 "J?" H 5658 17731 50  0000 C CNN
+F 0 "J7" H 5658 17731 50  0000 C CNN
 F 1 "Conn_01x09_Male" H 5658 17640 50  0000 C CNN
-F 2 "" H 5550 17150 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical" H 5550 17150 50  0001 C CNN
 F 3 "~" H 5550 17150 50  0001 C CNN
 	1    5550 17150
 	1    0    0    -1  
@@ -1185,12 +1181,12 @@ Connection ~ 5750 16950
 Wire Wire Line
 	5750 16950 5550 16950
 $Comp
-L Connector:Conn_01x17_Male J?
+L Connector:Conn_01x17_Male J13
 U 1 1 63F1013E
 P 8350 17550
-F 0 "J?" H 8458 18531 50  0000 C CNN
+F 0 "J13" H 8458 18531 50  0000 C CNN
 F 1 "Conn_01x17_Male" H 8458 18440 50  0000 C CNN
-F 2 "" H 8350 17550 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x17_P2.54mm_Vertical" H 8350 17550 50  0001 C CNN
 F 3 "~" H 8350 17550 50  0001 C CNN
 	1    8350 17550
 	-1   0    0    -1  
@@ -1233,12 +1229,12 @@ Text GLabel 10350 6600 1    47   Input ~ 0
 V3.3
 NoConn ~ 10450 6600
 $Comp
-L CustomLib:tco-711AR clk?
+L CustomLib:tco-711AR clk1
 U 1 1 63F851EB
 P 10450 8550
-F 0 "clk?" H 10450 8925 50  0000 C CNN
+F 0 "clk1" H 10450 8925 50  0000 C CNN
 F 1 "tco-711AR" H 10450 8834 50  0000 C CNN
-F 2 "" H 10450 8550 50  0001 C CNN
+F 2 "MyFootprints:tco-711" H 10450 8550 50  0001 C CNN
 F 3 "" H 10450 8550 50  0001 C CNN
 	1    10450 8550
 	1    0    0    -1  
@@ -1269,12 +1265,12 @@ EN
 Text GLabel 6100 7150 0    47   Input ~ 0
 EN
 $Comp
-L Device:R R?
+L Device:R R1
 U 1 1 63FEC555
 P 4750 3400
-F 0 "R?" V 4543 3400 50  0000 C CNN
+F 0 "R1" V 4543 3400 50  0000 C CNN
 F 1 "10K" V 4634 3400 50  0000 C CNN
-F 2 "" V 4680 3400 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 4680 3400 50  0001 C CNN
 F 3 "~" H 4750 3400 50  0001 C CNN
 	1    4750 3400
 	0    1    1    0   
@@ -1292,12 +1288,12 @@ MCLK
 Text GLabel 6100 7450 0    47   Input ~ 0
 MCLK
 $Comp
-L Connector:Raspberry_Pi_2_3 J?
+L Connector:Raspberry_Pi_2_3 J1
 U 1 1 61847C2B
 P 1750 3550
-F 0 "J?" H 1750 5031 50  0000 C CNN
+F 0 "J1" H 1750 5031 50  0000 C CNN
 F 1 "Raspberry_Pi_2_3" H 1750 4940 50  0000 C CNN
-F 2 "" H 1750 3550 50  0001 C CNN
+F 2 "MyFootprints:Raspberry_Pi_40_pin_socket" H 1750 3550 50  0001 C CNN
 F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 1750 3550 50  0001 C CNN
 	1    1750 3550
 	1    0    0    -1  
@@ -1307,12 +1303,12 @@ V3.3
 Text GLabel 4700 16950 0    47   Input ~ 0
 tck
 $Comp
-L pspice:DIODE D?
+L pspice:DIODE D1
 U 1 1 640500D8
 P 4900 16750
-F 0 "D?" V 4946 16622 50  0000 R CNN
+F 0 "D1" V 4946 16622 50  0000 R CNN
 F 1 "DIODE" V 4855 16622 50  0000 R CNN
-F 2 "" H 4900 16750 50  0001 C CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 4900 16750 50  0001 C CNN
 F 3 "~" H 4900 16750 50  0001 C CNN
 	1    4900 16750
 	0    -1   -1   0   
@@ -1325,12 +1321,12 @@ Connection ~ 4900 16950
 Wire Wire Line
 	5750 16650 6100 16650
 $Comp
-L Device:C C?
+L Device:C C1
 U 1 1 640B117C
 P 4900 17100
-F 0 "C?" H 5015 17146 50  0000 L CNN
+F 0 "C1" H 5015 17146 50  0000 L CNN
 F 1 "10pF" H 5015 17055 50  0000 L CNN
-F 2 "" H 4938 16950 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.0mm_P5.00mm" H 4938 16950 50  0001 C CNN
 F 3 "~" H 4900 17100 50  0001 C CNN
 	1    4900 17100
 	1    0    0    -1  
@@ -1340,12 +1336,12 @@ GND
 Text GLabel 4900 16550 0    47   Input ~ 0
 V3.3
 $Comp
-L Device:C C?
+L Device:C C9
 U 1 1 640B1F3E
 P 9550 16400
-F 0 "C?" H 9665 16446 50  0000 L CNN
+F 0 "C9" H 9665 16446 50  0000 L CNN
 F 1 "10pF" H 9665 16355 50  0000 L CNN
-F 2 "" H 9588 16250 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.0mm_P5.00mm" H 9588 16250 50  0001 C CNN
 F 3 "~" H 9550 16400 50  0001 C CNN
 	1    9550 16400
 	1    0    0    -1  
@@ -1353,12 +1349,12 @@ $EndComp
 Text GLabel 9550 16550 0    47   Input ~ 0
 GND
 $Comp
-L pspice:DIODE D?
+L pspice:DIODE D3
 U 1 1 640B237A
 P 9550 16050
-F 0 "D?" V 9596 15922 50  0000 R CNN
+F 0 "D3" V 9596 15922 50  0000 R CNN
 F 1 "DIODE" V 9505 15922 50  0000 R CNN
-F 2 "" H 9550 16050 50  0001 C CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 9550 16050 50  0001 C CNN
 F 3 "~" H 9550 16050 50  0001 C CNN
 	1    9550 16050
 	0    -1   -1   0   
@@ -1366,12 +1362,12 @@ $EndComp
 Text GLabel 9550 15850 0    47   Input ~ 0
 V3.3
 $Comp
-L Device:C C?
+L Device:C C8
 U 1 1 640B92D2
 P 9550 15450
-F 0 "C?" H 9665 15496 50  0000 L CNN
+F 0 "C8" H 9665 15496 50  0000 L CNN
 F 1 "10pF" H 9665 15405 50  0000 L CNN
-F 2 "" H 9588 15300 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.0mm_P5.00mm" H 9588 15300 50  0001 C CNN
 F 3 "~" H 9550 15450 50  0001 C CNN
 	1    9550 15450
 	1    0    0    -1  
@@ -1379,12 +1375,12 @@ $EndComp
 Text GLabel 9550 15600 0    47   Input ~ 0
 GND
 $Comp
-L pspice:DIODE D?
+L pspice:DIODE D2
 U 1 1 640B92D9
 P 9550 15100
-F 0 "D?" V 9596 14972 50  0000 R CNN
+F 0 "D2" V 9596 14972 50  0000 R CNN
 F 1 "DIODE" V 9505 14972 50  0000 R CNN
-F 2 "" H 9550 15100 50  0001 C CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 9550 15100 50  0001 C CNN
 F 3 "~" H 9550 15100 50  0001 C CNN
 	1    9550 15100
 	0    -1   -1   0   
@@ -1396,12 +1392,12 @@ tdo
 Text GLabel 9550 16250 0    47   Input ~ 0
 tdi
 $Comp
-L Device:C C?
+L Device:C C10
 U 1 1 64100C44
 P 10500 15450
-F 0 "C?" H 10615 15496 50  0000 L CNN
+F 0 "C10" H 10615 15496 50  0000 L CNN
 F 1 "10pF" H 10615 15405 50  0000 L CNN
-F 2 "" H 10538 15300 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.0mm_P5.00mm" H 10538 15300 50  0001 C CNN
 F 3 "~" H 10500 15450 50  0001 C CNN
 	1    10500 15450
 	1    0    0    -1  
@@ -1409,12 +1405,12 @@ $EndComp
 Text GLabel 10500 15600 0    47   Input ~ 0
 GND
 $Comp
-L pspice:DIODE D?
+L pspice:DIODE D4
 U 1 1 64100C4B
 P 10500 15100
-F 0 "D?" V 10546 14972 50  0000 R CNN
+F 0 "D4" V 10546 14972 50  0000 R CNN
 F 1 "DIODE" V 10455 14972 50  0000 R CNN
-F 2 "" H 10500 15100 50  0001 C CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 10500 15100 50  0001 C CNN
 F 3 "~" H 10500 15100 50  0001 C CNN
 	1    10500 15100
 	0    -1   -1   0   
@@ -1439,4 +1435,9 @@ Text GLabel 1450 4850 3    50   Input ~ 0
 GND
 Text GLabel 1350 4850 3    50   Input ~ 0
 GND
+Wire Wire Line
+	7300 3850 7300 3950
+Wire Wire Line
+	7100 3950 7300 3950
+Connection ~ 7300 3850
 $EndSCHEMATC
