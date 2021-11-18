@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 10M02DCU324A7G
+D FPGA MAX 10 Family 2000 Cells 55nm Technology 1.2V Automotive 324-Pin UFBGA
+K
+F https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/hb/max-10/m10_datasheet.pdf
+$ENDCMP
+#
+#End Doc Library
