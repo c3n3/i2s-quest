@@ -341,182 +341,6 @@ Wire Wire Line
 	7750 2200 9200 2200
 Text GLabel 6250 3500 2    50   Input ~ 0
 GND
-$Comp
-L Connector_Generic:Conn_01x18 C
-U 1 1 6195D2F8
-P 2450 10000
-F 0 "C" H 2368 8875 50  0000 C CNN
-F 1 "Conn_01x18" H 2368 8966 50  0000 C CNN
-F 2 "" H 2450 10000 50  0001 C CNN
-F 3 "~" H 2450 10000 50  0001 C CNN
-	1    2450 10000
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x18 D
-U 1 1 6196DC3C
-P 1900 11800
-F 0 "D" H 1818 10675 50  0000 C CNN
-F 1 "Conn_01x18" H 1818 10766 50  0000 C CNN
-F 2 "" H 1900 11800 50  0001 C CNN
-F 3 "~" H 1900 11800 50  0001 C CNN
-	1    1900 11800
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x18 E
-U 1 1 6196EF6E
-P 2300 13600
-F 0 "E" H 2218 12475 50  0000 C CNN
-F 1 "Conn_01x18" H 2218 12566 50  0000 C CNN
-F 2 "" H 2300 13600 50  0001 C CNN
-F 3 "~" H 2300 13600 50  0001 C CNN
-	1    2300 13600
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x18 F
-U 1 1 619705C8
-P 1800 15400
-F 0 "F" H 1718 14275 50  0000 C CNN
-F 1 "Conn_01x18" H 1718 14366 50  0000 C CNN
-F 2 "" H 1800 15400 50  0001 C CNN
-F 3 "~" H 1800 15400 50  0001 C CNN
-	1    1800 15400
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x18 G
-U 1 1 619746CA
-P 2200 17200
-F 0 "G" H 2118 16075 50  0000 C CNN
-F 1 "Conn_01x18" H 2118 16166 50  0000 C CNN
-F 2 "" H 2200 17200 50  0001 C CNN
-F 3 "~" H 2200 17200 50  0001 C CNN
-	1    2200 17200
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x18 H
-U 1 1 619783B0
-P 1650 19000
-F 0 "H" H 1568 17875 50  0000 C CNN
-F 1 "Conn_01x18" H 1568 17966 50  0000 C CNN
-F 2 "" H 1650 19000 50  0001 C CNN
-F 3 "~" H 1650 19000 50  0001 C CNN
-	1    1650 19000
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x18 J
-U 1 1 61979C9B
-P 2100 20800
-F 0 "J" H 2018 19675 50  0000 C CNN
-F 1 "Conn_01x18" H 2018 19766 50  0000 C CNN
-F 2 "" H 2100 20800 50  0001 C CNN
-F 3 "~" H 2100 20800 50  0001 C CNN
-	1    2100 20800
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x18 K
-U 1 1 6197BB63
-P 6150 6400
-F 0 "K" H 6230 6392 50  0000 L CNN
-F 1 "Conn_01x18" H 6230 6301 50  0000 L CNN
-F 2 "" H 6150 6400 50  0001 C CNN
-F 3 "~" H 6150 6400 50  0001 C CNN
-	1    6150 6400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x18 L
-U 1 1 6197D9BC
-P 7000 8200
-F 0 "L" H 7080 8192 50  0000 L CNN
-F 1 "Conn_01x18" H 7080 8101 50  0000 L CNN
-F 2 "" H 7000 8200 50  0001 C CNN
-F 3 "~" H 7000 8200 50  0001 C CNN
-	1    7000 8200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x18 M
-U 1 1 6197F9CF
-P 6850 10000
-F 0 "M" H 6930 9992 50  0000 L CNN
-F 1 "Conn_01x18" H 6930 9901 50  0000 L CNN
-F 2 "" H 6850 10000 50  0001 C CNN
-F 3 "~" H 6850 10000 50  0001 C CNN
-	1    6850 10000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x18 N
-U 1 1 61981A2E
-P 6500 11800
-F 0 "N" H 6580 11792 50  0000 L CNN
-F 1 "Conn_01x18" H 6580 11701 50  0000 L CNN
-F 2 "" H 6500 11800 50  0001 C CNN
-F 3 "~" H 6500 11800 50  0001 C CNN
-	1    6500 11800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x18 P
-U 1 1 61982ABC
-P 6750 13600
-F 0 "P" H 6830 13592 50  0000 L CNN
-F 1 "Conn_01x18" H 6830 13501 50  0000 L CNN
-F 2 "" H 6750 13600 50  0001 C CNN
-F 3 "~" H 6750 13600 50  0001 C CNN
-	1    6750 13600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x18 R
-U 1 1 619834DB
-P 6250 15400
-F 0 "R" H 6330 15392 50  0000 L CNN
-F 1 "Conn_01x18" H 6330 15301 50  0000 L CNN
-F 2 "" H 6250 15400 50  0001 C CNN
-F 3 "~" H 6250 15400 50  0001 C CNN
-	1    6250 15400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x18 T
-U 1 1 61984837
-P 6500 17200
-F 0 "T" H 6580 17192 50  0000 L CNN
-F 1 "Conn_01x18" H 6580 17101 50  0000 L CNN
-F 2 "" H 6500 17200 50  0001 C CNN
-F 3 "~" H 6500 17200 50  0001 C CNN
-	1    6500 17200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x18 U
-U 1 1 61985974
-P 6150 19000
-F 0 "U" H 6230 18992 50  0000 L CNN
-F 1 "Conn_01x18" H 6230 18901 50  0000 L CNN
-F 2 "" H 6150 19000 50  0001 C CNN
-F 3 "~" H 6150 19000 50  0001 C CNN
-	1    6150 19000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x18 V
-U 1 1 619864D3
-P 6400 20800
-F 0 "V" H 6480 20792 50  0000 L CNN
-F 1 "Conn_01x18" H 6480 20701 50  0000 L CNN
-F 2 "" H 6400 20800 50  0001 C CNN
-F 3 "~" H 6400 20800 50  0001 C CNN
-	1    6400 20800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2950 3400 3600 3400
 Wire Wire Line
@@ -529,624 +353,947 @@ Wire Wire Line
 	4300 3600 5300 3600
 Wire Wire Line
 	4900 3400 5300 3400
-Wire Wire Line
-	3750 5700 2150 5700
-Wire Wire Line
-	2150 5800 3750 5800
-Wire Wire Line
-	3750 5900 2150 5900
-Wire Wire Line
-	2150 6000 3750 6000
-Wire Wire Line
-	3750 6100 2150 6100
-Wire Wire Line
-	2150 6300 3750 6300
-Wire Wire Line
-	2150 6400 3750 6400
-Wire Wire Line
-	3750 7500 2350 7500
-Wire Wire Line
-	2350 7500 2350 7850
-Wire Wire Line
-	2350 7850 2100 7850
-Wire Wire Line
-	3750 7700 2450 7700
-Wire Wire Line
-	2450 7700 2450 8050
-Wire Wire Line
-	2450 8050 2100 8050
-Wire Wire Line
-	2100 8150 2500 8150
-Wire Wire Line
-	2500 8150 2500 7800
-Wire Wire Line
-	2500 7800 3750 7800
-Wire Wire Line
-	2100 8350 2600 8350
-Wire Wire Line
-	2600 8350 2600 8000
-Wire Wire Line
-	2600 8000 3750 8000
-Wire Wire Line
-	3750 8100 2650 8100
-Wire Wire Line
-	2650 8100 2650 8450
-Wire Wire Line
-	2650 8450 2100 8450
-Wire Wire Line
-	3750 8200 2700 8200
-Wire Wire Line
-	2700 8200 2700 8550
-Wire Wire Line
-	2700 8550 2100 8550
-$Comp
-L Connector_Generic:Conn_01x18 B
-U 1 1 6195C231
-P 1900 8550
-F 0 "B" H 1818 9567 50  0000 C CNN
-F 1 "Conn_01x18" H 1818 9476 50  0000 C CNN
-F 2 "" H 1900 8550 50  0001 C CNN
-F 3 "~" H 1900 8550 50  0001 C CNN
-	1    1900 8550
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	3750 9100 2350 9100
-Wire Wire Line
-	2350 9100 2350 9450
-Wire Wire Line
-	2350 9450 2100 9450
-Wire Wire Line
-	3750 9500 2650 9500
-Wire Wire Line
-	3750 9600 2650 9600
-Wire Wire Line
-	3750 9700 2650 9700
-Wire Wire Line
-	3750 9800 2650 9800
-Wire Wire Line
-	3750 9900 2650 9900
-Wire Wire Line
-	3750 10000 2650 10000
-Wire Wire Line
-	3750 10100 2650 10100
-Wire Wire Line
-	3750 10800 2650 10800
-Wire Wire Line
-	3750 10900 2650 10900
-Wire Wire Line
-	3750 11300 2100 11300
-Wire Wire Line
-	3750 11400 2100 11400
-Wire Wire Line
-	3750 11500 2100 11500
-Wire Wire Line
-	3750 11600 2100 11600
-Wire Wire Line
-	3750 11700 2100 11700
-Wire Wire Line
-	3750 12400 2100 12400
-Wire Wire Line
-	3750 12500 2100 12500
-Wire Wire Line
-	3750 12600 2100 12600
-Wire Wire Line
-	3750 12700 2100 12700
-Wire Wire Line
-	3750 13100 2500 13100
-Wire Wire Line
-	3750 13200 2500 13200
-Wire Wire Line
-	3750 13500 2500 13500
-Wire Wire Line
-	3750 13600 2500 13600
-Wire Wire Line
-	3750 14200 2500 14200
-Wire Wire Line
-	3750 14300 2500 14300
-Wire Wire Line
-	3750 14400 2500 14400
-Wire Wire Line
-	3750 14500 2500 14500
-Wire Wire Line
-	3750 14700 2000 14700
-Wire Wire Line
-	3750 15000 2000 15000
-Wire Wire Line
-	3750 15500 2000 15500
-Wire Wire Line
-	3750 15800 2000 15800
-Wire Wire Line
-	3750 16000 2000 16000
-Wire Wire Line
-	3750 16100 2000 16100
-Wire Wire Line
-	3750 16300 2000 16300
-Wire Wire Line
-	3750 16600 2400 16600
-Wire Wire Line
-	3750 16900 2400 16900
-Wire Wire Line
-	3750 17000 2400 17000
-Wire Wire Line
-	3750 17300 2400 17300
-Wire Wire Line
-	3750 17400 2400 17400
-Wire Wire Line
-	3750 17500 2400 17500
-Text GLabel 5450 6500 2    47   Input ~ 0
-V3
-Wire Wire Line
-	3750 17800 2400 17800
-Wire Wire Line
-	2400 17900 3750 17900
-Wire Wire Line
-	2400 18100 3750 18100
-Wire Wire Line
-	3750 18000 2400 18000
-Wire Wire Line
-	3750 18200 1850 18200
-Wire Wire Line
-	1850 18300 3750 18300
-Wire Wire Line
-	1850 18700 3750 18700
-Wire Wire Line
-	1850 19200 3750 19200
-Wire Wire Line
-	3750 19300 1850 19300
-Wire Wire Line
-	1850 19900 3750 19900
-Wire Wire Line
-	1850 19800 3750 19800
-Wire Wire Line
-	3750 20000 2300 20000
-Wire Wire Line
-	2300 20100 3750 20100
-Wire Wire Line
-	3750 20200 2300 20200
-Wire Wire Line
-	2300 20300 3750 20300
-Wire Wire Line
-	2300 20500 3750 20500
-Wire Wire Line
-	2300 21700 3750 21700
-Wire Wire Line
-	5950 5600 5450 5600
-Wire Wire Line
-	5450 5700 5950 5700
-Wire Wire Line
-	5950 5800 5450 5800
-Wire Wire Line
-	5450 5900 5950 5900
-Wire Wire Line
-	5950 6200 5450 6200
-Wire Wire Line
-	5950 6600 5450 6600
-Wire Wire Line
-	5450 6700 5950 6700
-Wire Wire Line
-	5450 7000 5950 7000
-Wire Wire Line
-	5950 7100 5450 7100
-Wire Wire Line
-	5950 7200 5450 7200
-Wire Wire Line
-	5450 7300 5950 7300
-Wire Wire Line
-	5450 7400 6800 7400
-Wire Wire Line
-	6800 7500 5450 7500
-Wire Wire Line
-	6800 8100 5450 8100
-Wire Wire Line
-	6800 8400 5450 8400
-Wire Wire Line
-	5450 8500 6800 8500
-Wire Wire Line
-	5450 8800 6800 8800
-Wire Wire Line
-	6800 8900 5450 8900
-Wire Wire Line
-	5450 9000 6800 9000
-Wire Wire Line
-	6800 9100 5450 9100
-Wire Wire Line
-	5450 9200 6650 9200
-Wire Wire Line
-	6650 9300 5450 9300
-Wire Wire Line
-	5450 9400 6650 9400
-Wire Wire Line
-	6650 9500 5450 9500
-Wire Wire Line
-	5450 9900 6650 9900
-Wire Wire Line
-	6650 10000 5450 10000
-Wire Wire Line
-	6650 10900 5450 10900
-Wire Wire Line
-	5450 10800 6650 10800
-Wire Wire Line
-	5450 11000 6300 11000
-Wire Wire Line
-	6300 11200 5450 11200
-Wire Wire Line
-	5450 11300 6300 11300
-Wire Wire Line
-	5450 11500 6300 11500
-Wire Wire Line
-	6300 11600 5450 11600
-Wire Wire Line
-	5450 11700 6300 11700
-Wire Wire Line
-	6300 12300 5450 12300
-Wire Wire Line
-	6300 12700 5450 12700
-Wire Wire Line
-	6550 12800 5450 12800
-Wire Wire Line
-	5450 13100 6550 13100
-Wire Wire Line
-	6550 13200 5450 13200
-Wire Wire Line
-	5450 13300 6550 13300
-Wire Wire Line
-	6550 14100 5450 14100
-Wire Wire Line
-	5450 14200 6550 14200
-Wire Wire Line
-	6550 14300 5450 14300
-Wire Wire Line
-	5450 14400 6550 14400
-Wire Wire Line
-	6550 14500 5450 14500
-Wire Wire Line
-	6050 14600 5450 14600
-Wire Wire Line
-	6050 14700 5450 14700
-Wire Wire Line
-	5450 14900 6050 14900
-Wire Wire Line
-	6050 15000 5450 15000
-Wire Wire Line
-	5450 15100 6050 15100
-Wire Wire Line
-	5450 15300 6050 15300
-Wire Wire Line
-	6050 15400 5450 15400
-Wire Wire Line
-	5450 16000 6050 16000
-Wire Wire Line
-	6050 16100 5450 16100
-Wire Wire Line
-	5450 16200 6050 16200
-Wire Wire Line
-	6050 16300 5450 16300
-Wire Wire Line
-	5450 16700 6300 16700
-Wire Wire Line
-	6300 16800 5450 16800
-Wire Wire Line
-	6300 16900 5450 16900
-Wire Wire Line
-	5450 17000 6300 17000
-Wire Wire Line
-	6300 17100 5450 17100
-Wire Wire Line
-	5450 17200 6300 17200
-Wire Wire Line
-	6300 17300 5450 17300
-Wire Wire Line
-	5450 17900 6300 17900
-Wire Wire Line
-	6300 18000 5450 18000
-Wire Wire Line
-	5950 18200 5450 18200
-Wire Wire Line
-	5450 18300 5950 18300
-Wire Wire Line
-	5450 18400 5950 18400
-Wire Wire Line
-	5450 18600 5950 18600
-Wire Wire Line
-	5950 18700 5450 18700
-Wire Wire Line
-	5450 18800 5950 18800
-Wire Wire Line
-	5950 18900 5450 18900
-Wire Wire Line
-	5450 19000 5950 19000
-Wire Wire Line
-	5450 19200 5950 19200
-Wire Wire Line
-	6200 20100 5450 20100
-Wire Wire Line
-	5450 20200 6200 20200
-Wire Wire Line
-	6200 20300 5450 20300
-Wire Wire Line
-	5450 20400 6200 20400
-Wire Wire Line
-	6200 20500 5450 20500
-Wire Wire Line
-	5450 20600 6200 20600
-Wire Wire Line
-	6200 20700 5450 20700
-Wire Wire Line
-	6200 20800 5450 20800
-Wire Wire Line
-	6200 21100 5450 21100
-$Comp
-L Connector:AVR-JTAG-10 J?
-U 1 1 62E558C4
-P 8100 6050
-F 0 "J?" H 7670 6096 50  0000 R CNN
-F 1 "AVR-JTAG-10" H 7670 6005 50  0000 R CNN
-F 2 "" V 7950 6200 50  0001 C CNN
-F 3 " ~" H 6825 5500 50  0001 C CNN
-	1    8100 6050
-	1    0    0    -1  
-$EndComp
-Text GLabel 3050 20700 0    47   Input ~ 0
+Text GLabel 5400 16950 0    47   Input ~ 0
 tck
-Text GLabel 3750 20800 0    47   Input ~ 0
-V2
-Text GLabel 5450 8200 2    47   Input ~ 0
-V4
-Text GLabel 8600 5950 2    47   Input ~ 0
-tck
-Text GLabel 8600 6050 2    47   Input ~ 0
-tms
-Text GLabel 8600 6150 2    47   Input ~ 0
-tdo
-Text GLabel 8600 6250 2    47   Input ~ 0
-tdi
-Text GLabel 8100 6650 2    47   Input ~ 0
-GND
 Text GLabel 2550 2150 2    47   Input ~ 0
 VCC_JTAG
 Wire Wire Line
 	2550 2150 2000 2150
 Wire Wire Line
 	2000 2150 2000 2250
-Text GLabel 8100 5450 2    47   Input ~ 0
-VCC_JTAG
-Text GLabel 3750 5600 0    47   Input ~ 0
-GND
-Wire Wire Line
-	3750 19100 1850 19100
-Text GLabel 3750 20600 0    47   Input ~ 0
-tms
-Text GLabel 3750 18400 0    47   Input ~ 0
-tdi
-Text GLabel 3750 18500 0    47   Input ~ 0
-tdo
-NoConn ~ 8600 5850
-NoConn ~ 8600 5750
-NoConn ~ 8000 5450
-Text GLabel 3200 18800 0    47   Input ~ 0
-V1.2
-Text GLabel 5450 7700 2    47   Input ~ 0
-GND
-Text GLabel 5450 6300 2    47   Input ~ 0
-GND
-$Comp
-L Device:R R?
-U 1 1 631529AA
-P 3350 18800
-F 0 "R?" V 3143 18800 50  0000 C CNN
-F 1 "10K" V 3234 18800 50  0000 C CNN
-F 2 "" V 3280 18800 50  0001 C CNN
-F 3 "~" H 3350 18800 50  0001 C CNN
-	1    3350 18800
-	0    1    1    0   
-$EndComp
-Text GLabel 2900 17200 0    47   Input ~ 0
+Text GLabel 5550 15250 0    47   Input ~ 0
+V3.3
+Text GLabel 5300 13650 0    47   Input ~ 0
 GND
 $Comp
 L Device:R R?
 U 1 1 6315545C
-P 3050 17200
-F 0 "R?" V 2843 17200 50  0000 C CNN
-F 1 "10K" V 2934 17200 50  0000 C CNN
-F 2 "" V 2980 17200 50  0001 C CNN
-F 3 "~" H 3050 17200 50  0001 C CNN
-	1    3050 17200
+P 5450 13650
+F 0 "R?" V 5243 13650 50  0000 C CNN
+F 1 "10K" V 5334 13650 50  0000 C CNN
+F 2 "" V 5380 13650 50  0001 C CNN
+F 3 "~" H 5450 13650 50  0001 C CNN
+	1    5450 13650
 	0    1    1    0   
 $EndComp
-$Comp
-L Device:R R?
-U 1 1 6318875F
-P 3600 18900
-F 0 "R?" V 3393 18900 50  0000 C CNN
-F 1 "10K" V 3484 18900 50  0000 C CNN
-F 2 "" V 3530 18900 50  0001 C CNN
-F 3 "~" H 3600 18900 50  0001 C CNN
-	1    3600 18900
-	0    1    1    0   
-$EndComp
-Text GLabel 3450 18900 0    47   Input ~ 0
-VCCIO_B8
-Text GLabel 3750 13400 0    47   Input ~ 0
-VCCIO_B8
 $Comp
 L Device:R R?
 U 1 1 631E532E
-P 2900 19000
-F 0 "R?" V 2693 19000 50  0000 C CNN
-F 1 "10K" V 2784 19000 50  0000 C CNN
-F 2 "" V 2830 19000 50  0001 C CNN
-F 3 "~" H 2900 19000 50  0001 C CNN
-	1    2900 19000
+P 5250 15450
+F 0 "R?" V 5043 15450 50  0000 C CNN
+F 1 "10K" V 5134 15450 50  0000 C CNN
+F 2 "" V 5180 15450 50  0001 C CNN
+F 3 "~" H 5250 15450 50  0001 C CNN
+	1    5250 15450
 	0    1    1    0   
 $EndComp
-Text GLabel 2750 19000 0    47   Input ~ 0
-VCCIO
-Text GLabel 3450 17100 0    47   Input ~ 0
-V1.2
-$Comp
-L Device:R R?
-U 1 1 6321488B
-P 3600 17100
-F 0 "R?" V 3393 17100 50  0000 C CNN
-F 1 "10K" V 3484 17100 50  0000 C CNN
-F 2 "" V 3530 17100 50  0001 C CNN
-F 3 "~" H 3600 17100 50  0001 C CNN
-	1    3600 17100
-	0    1    1    0   
-$EndComp
-Text GLabel 5450 6000 2    47   Input ~ 0
+Text GLabel 5100 15450 0    47   Input ~ 0
 V3.3
-Text GLabel 5450 6900 2    47   Input ~ 0
-V3.3
-Text GLabel 5450 7800 2    47   Input ~ 0
-V3.3
-Text GLabel 5450 7900 2    47   Input ~ 0
-V3.3
-Text GLabel 5450 8600 2    47   Input ~ 0
-V3.3
-Text GLabel 5450 8700 2    47   Input ~ 0
-V3.3
-Text GLabel 5450 9600 2    47   Input ~ 0
-V3.3
-Text GLabel 5450 9700 2    47   Input ~ 0
-V3.3
-Text GLabel 5450 10400 2    47   Input ~ 0
-V3.3
-Text GLabel 5450 11800 2    47   Input ~ 0
-V3.3
-Text GLabel 5450 13400 2    47   Input ~ 0
-V3.3
-Text GLabel 5450 14000 2    47   Input ~ 0
-V3.3
-Text GLabel 3750 15100 0    47   Input ~ 0
-V3.3
-Text GLabel 3750 15400 0    47   Input ~ 0
-V3.3
-Text GLabel 3750 15900 0    47   Input ~ 0
-V3.3
-Text GLabel 3750 16800 0    47   Input ~ 0
-V3.3
-Text GLabel 3750 17700 0    47   Input ~ 0
-V3.3
-Text GLabel 3750 18600 0    47   Input ~ 0
-V3.3
-Text GLabel 3750 19400 0    47   Input ~ 0
-V3.3
-Text GLabel 3750 20400 0    47   Input ~ 0
-V3.3
-Text GLabel 3750 21300 0    47   Input ~ 0
-V3.3
-Text GLabel 5450 6100 2    47   Input ~ 0
-GND
-Text GLabel 5450 6800 2    47   Input ~ 0
-GND
-Text GLabel 3750 7300 0    47   Input ~ 0
-GND
-Text GLabel 3750 7900 0    47   Input ~ 0
-GND
-Text GLabel 5450 10500 2    47   Input ~ 0
-GND
-Text GLabel 5450 11100 2    47   Input ~ 0
-GND
-Text GLabel 5450 11400 2    47   Input ~ 0
-GND
-Text GLabel 3750 11200 0    47   Input ~ 0
-GND
-Text GLabel 5450 11900 2    47   Input ~ 0
-GND
-Text GLabel 5450 12100 2    47   Input ~ 0
-GND
-Text GLabel 5450 12600 2    47   Input ~ 0
-GND
-Text GLabel 3750 13300 0    47   Input ~ 0
-GND
-Text GLabel 3750 13700 0    47   Input ~ 0
-GND
-Text GLabel 3750 14000 0    47   Input ~ 0
-GND
-Text GLabel 5450 15200 2    47   Input ~ 0
-GND
-Text GLabel 3750 15300 0    47   Input ~ 0
-GND
-Text GLabel 3750 16200 0    47   Input ~ 0
-GND
-Text GLabel 3750 16500 0    47   Input ~ 0
-GND
-Text GLabel 3750 16700 0    47   Input ~ 0
-GND
-Text GLabel 5450 18500 2    47   Input ~ 0
-GND
-Text GLabel 5450 19100 2    47   Input ~ 0
-GND
-Text GLabel 5450 19500 2    47   Input ~ 0
-GND
-Text GLabel 3750 19500 0    47   Input ~ 0
-GND
-Text GLabel 5450 20000 2    47   Input ~ 0
-GND
-Text GLabel 3750 20900 0    47   Input ~ 0
-GND
-Text GLabel 5450 21700 2    47   Input ~ 0
-GND
-Text GLabel 3750 21600 0    47   Input ~ 0
-GND
-Wire Wire Line
-	3800 17100 3750 17100
-Text GLabel 5450 13500 2    47   Input ~ 0
-V3.3
-Text GLabel 5450 13600 2    47   Input ~ 0
-V3.3
-Text GLabel 3750 8800 0    47   Input ~ 0
-GND
-Text GLabel 3750 8300 0    47   Input ~ 0
-GND
-Text GLabel 5450 7600 2    47   Input ~ 0
-GND
-Wire Wire Line
-	3750 17200 3200 17200
-Text GLabel 3750 17600 0    47   Input ~ 0
-V3.3
-Wire Wire Line
-	3500 18800 3750 18800
-Wire Wire Line
-	3050 19000 3750 19000
-Connection ~ 3750 17100
-$Comp
-L 10M02DCU324A7G:10M02DCU324A7G IC?
-U 1 1 618DB3E2
-P 3750 5600
-F 0 "IC?" H 4600 5865 50  0000 C CNN
-F 1 "10M02DCU324A7G" H 4600 5774 50  0000 C CNN
-F 2 "BGA324C80P18X18_1500X1500X155" H 5300 5700 50  0001 L CNN
-F 3 "https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/hb/max-10/m10_datasheet.pdf" H 5300 5600 50  0001 L CNN
-F 4 "FPGA MAX 10 Family 2000 Cells 55nm Technology 1.2V Automotive 324-Pin UFBGA" H 5300 5500 50  0001 L CNN "Description"
-F 5 "1.55" H 5300 5400 50  0001 L CNN "Height"
-F 6 "989-10M02DCU324A7G" H 5300 5300 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/Intel-Altera/10M02DCU324A7G?qs=G%2FX6g08h60vP%252BFy8m31GWw%3D%3D" H 5300 5200 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Intel" H 5300 5100 50  0001 L CNN "Manufacturer_Name"
-F 9 "10M02DCU324A7G" H 5300 5000 50  0001 L CNN "Manufacturer_Part_Number"
-	1    3750 5600
-	1    0    0    -1  
-$EndComp
-Text GLabel 3200 21000 0    47   Input ~ 0
+Text GLabel 5550 17250 0    47   Input ~ 0
 GND
 $Comp
 L Device:R R?
 U 1 1 63271B73
-P 3200 20850
-F 0 "R?" H 3270 20896 50  0000 L CNN
-F 1 "10K" H 3270 20805 50  0000 L CNN
-F 2 "" V 3130 20850 50  0001 C CNN
-F 3 "~" H 3200 20850 50  0001 C CNN
-	1    3200 20850
+P 5550 17100
+F 0 "R?" H 5620 17146 50  0000 L CNN
+F 1 "10K" H 5620 17055 50  0000 L CNN
+F 2 "" V 5480 17100 50  0001 C CNN
+F 3 "~" H 5550 17100 50  0001 C CNN
+	1    5550 17100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3750 20700 3200 20700
-Wire Wire Line
-	3200 20700 3050 20700
-Connection ~ 3200 20700
-Text GLabel 3750 21200 0    47   Input ~ 0
+	5550 16950 5400 16950
+Connection ~ 5550 16950
+Text GLabel 7800 7550 2    47   Input ~ 0
+GND
+Text GLabel 6100 8350 0    47   Input ~ 0
+GND
+Text GLabel 6100 8450 0    47   Input ~ 0
+GND
+Text GLabel 7800 13150 2    47   Input ~ 0
 V3.3
+Text GLabel 7800 13250 2    47   Input ~ 0
+V3.3
+Text GLabel 6100 17150 0    47   Input ~ 0
+GND
+Text GLabel 7800 17250 2    47   Input ~ 0
+GND
+Text GLabel 6100 17450 0    47   Input ~ 0
+GND
+Text GLabel 6100 11150 0    47   Input ~ 0
+GND
+Text GLabel 6100 10750 0    47   Input ~ 0
+GND
+Text GLabel 7800 11750 2    47   Input ~ 0
+GND
+Text GLabel 7800 11050 2    47   Input ~ 0
+GND
+Text GLabel 7800 12350 2    47   Input ~ 0
+GND
+Text GLabel 6100 9550 0    47   Input ~ 0
+GND
+Text GLabel 7800 12550 2    47   Input ~ 0
+GND
+Text GLabel 7800 12250 2    47   Input ~ 0
+GND
+Text GLabel 7800 11450 2    47   Input ~ 0
+GND
+Text GLabel 6100 7950 0    47   Input ~ 0
+GND
+Text GLabel 6100 7550 0    47   Input ~ 0
+GND
+Text GLabel 7800 7950 2    47   Input ~ 0
+GND
+Text GLabel 7800 7250 2    47   Input ~ 0
+GND
+Text GLabel 6100 16650 0    47   Input ~ 0
+V3.3
+Text GLabel 6100 17250 0    47   Input ~ 0
+V3.3
+Text GLabel 7800 13450 2    47   Input ~ 0
+V3.3
+Text GLabel 7800 13350 2    47   Input ~ 0
+V3.3
+Text GLabel 7800 12150 2    47   Input ~ 0
+V3.3
+Text GLabel 7800 10950 2    47   Input ~ 0
+V3.3
+Text GLabel 7800 10550 2    47   Input ~ 0
+V3.3
+Text GLabel 6100 10950 0    47   Input ~ 0
+V3.3
+Text GLabel 7800 10650 2    47   Input ~ 0
+V3.3
+Text GLabel 7800 9550 2    47   Input ~ 0
+V3.3
+Text GLabel 7800 9050 2    47   Input ~ 0
+V3.3
+Text GLabel 7800 8950 2    47   Input ~ 0
+V3.3
+Text GLabel 7800 8050 2    47   Input ~ 0
+V3.3
+Text GLabel 7800 7150 2    47   Input ~ 0
+V3.3
+Text GLabel 5800 15350 0    47   Input ~ 0
+V3.3
+$Comp
+L Device:R R?
+U 1 1 6318875F
+P 5950 15350
+F 0 "R?" V 5743 15350 50  0000 C CNN
+F 1 "10K" V 5834 15350 50  0000 C CNN
+F 2 "" V 5880 15350 50  0001 C CNN
+F 3 "~" H 5950 15350 50  0001 C CNN
+	1    5950 15350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 631529AA
+P 5700 15250
+F 0 "R?" V 5493 15250 50  0000 C CNN
+F 1 "10K" V 5584 15250 50  0000 C CNN
+F 2 "" V 5630 15250 50  0001 C CNN
+F 3 "~" H 5700 15250 50  0001 C CNN
+	1    5700 15250
+	0    1    1    0   
+$EndComp
+Text GLabel 7800 8850 2    47   Input ~ 0
+GND
+NoConn ~ 10950 6900
+NoConn ~ 10950 7000
+Text GLabel 6100 14950 0    47   Input ~ 0
+tdo
+Text GLabel 6100 14850 0    47   Input ~ 0
+tdi
+Text GLabel 6100 16850 0    47   Input ~ 0
+tms
+Text GLabel 6100 6750 0    47   Input ~ 0
+GND
+Text GLabel 10450 7800 2    47   Input ~ 0
+GND
+Text GLabel 10950 7400 2    47   Input ~ 0
+tdi
+Text GLabel 10950 7300 2    47   Input ~ 0
+tdo
+Text GLabel 10950 7200 2    47   Input ~ 0
+tms
+Text GLabel 10950 7100 2    47   Input ~ 0
+tck
+$Comp
+L Connector:AVR-JTAG-10 J?
+U 1 1 62E558C4
+P 10450 7200
+F 0 "J?" H 10020 7246 50  0000 R CNN
+F 1 "AVR-JTAG-10" H 10020 7155 50  0000 R CNN
+F 2 "" V 10300 7350 50  0001 C CNN
+F 3 " ~" H 9175 6650 50  0001 C CNN
+	1    10450 7200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2950 7700
+NoConn ~ 2950 7600
+NoConn ~ 2950 7500
+NoConn ~ 2950 7400
+NoConn ~ 2950 7300
+NoConn ~ 2950 7200
+NoConn ~ 2950 7100
+NoConn ~ 2950 7000
+NoConn ~ 2950 6900
+NoConn ~ 2950 6800
+NoConn ~ 2950 9800
+NoConn ~ 2950 9900
+NoConn ~ 2950 10000
+NoConn ~ 2950 10100
+NoConn ~ 2950 10200
+NoConn ~ 2950 10300
+NoConn ~ 2950 10400
+NoConn ~ 2950 10500
+NoConn ~ 2950 10600
+NoConn ~ 2950 10700
+NoConn ~ 2950 10800
+NoConn ~ 2950 10900
+NoConn ~ 2950 11000
+NoConn ~ 2950 11100
+NoConn ~ 2950 11200
+NoConn ~ 2950 11300
+NoConn ~ 2950 11400
+NoConn ~ 2950 11500
+NoConn ~ 2950 11600
+NoConn ~ 2950 11700
+NoConn ~ 2950 7800
+NoConn ~ 2950 7900
+NoConn ~ 2950 8000
+NoConn ~ 2950 8100
+NoConn ~ 2950 8200
+NoConn ~ 2950 8300
+NoConn ~ 2950 8400
+NoConn ~ 2950 8500
+NoConn ~ 2950 8600
+NoConn ~ 2950 8700
+NoConn ~ 2950 8800
+NoConn ~ 2950 8900
+NoConn ~ 2950 9000
+NoConn ~ 2950 9100
+NoConn ~ 2950 9200
+NoConn ~ 2950 9300
+NoConn ~ 2950 9400
+NoConn ~ 2950 9500
+NoConn ~ 2950 9600
+NoConn ~ 2950 9700
+NoConn ~ 2950 11800
+NoConn ~ 2950 11900
+NoConn ~ 2950 12000
+NoConn ~ 2950 12100
+NoConn ~ 2950 12200
+NoConn ~ 2950 12300
+NoConn ~ 2950 12400
+NoConn ~ 2950 12500
+NoConn ~ 2950 12600
+NoConn ~ 2950 12700
+NoConn ~ 2950 12800
+NoConn ~ 2950 12900
+NoConn ~ 2950 13000
+NoConn ~ 2950 13100
+NoConn ~ 2950 13200
+NoConn ~ 2950 13300
+NoConn ~ 2950 13400
+NoConn ~ 2950 13500
+NoConn ~ 2950 13600
+NoConn ~ 2950 13700
+NoConn ~ 2950 13800
+NoConn ~ 2950 13900
+NoConn ~ 2950 14000
+NoConn ~ 2950 14100
+NoConn ~ 2950 14200
+NoConn ~ 2950 14300
+NoConn ~ 2950 14400
+NoConn ~ 2950 14500
+NoConn ~ 2950 14600
+NoConn ~ 2950 14700
+NoConn ~ 2950 14800
+NoConn ~ 2950 14900
+NoConn ~ 2950 15000
+NoConn ~ 2950 15100
+NoConn ~ 2950 15200
+NoConn ~ 2950 15300
+NoConn ~ 2950 15400
+NoConn ~ 2950 15500
+NoConn ~ 2950 15600
+NoConn ~ 2950 15700
+NoConn ~ 2950 15800
+NoConn ~ 2950 15900
+NoConn ~ 2950 16000
+NoConn ~ 2950 16100
+NoConn ~ 2950 16200
+NoConn ~ 2950 16300
+NoConn ~ 2950 16400
+NoConn ~ 2950 16500
+Text GLabel 6100 11250 0    47   Input ~ 0
+GND
+Text GLabel 6100 12050 0    47   Input ~ 0
+GND
+Text GLabel 6100 12750 0    47   Input ~ 0
+GND
+Text GLabel 6100 12950 0    47   Input ~ 0
+GND
+Text GLabel 6100 13150 0    47   Input ~ 0
+GND
+Text GLabel 6100 15950 0    47   Input ~ 0
+GND
+Text GLabel 6100 10850 0    47   Input ~ 0
+VCCIO_B8
+Text GLabel 6100 17350 0    47   Input ~ 0
+V3.3
+Text GLabel 7800 17350 2    47   Input ~ 0
+GND
+Text GLabel 7800 18350 2    47   Input ~ 0
+GND
+Text GLabel 7800 17050 2    47   Input ~ 0
+GND
+Text GLabel 7800 16450 2    47   Input ~ 0
+GND
+Text GLabel 7800 14550 2    47   Input ~ 0
+GND
+Text GLabel 7800 9650 2    47   Input ~ 0
+V3.3
+Text GLabel 6100 11050 0    47   Input ~ 0
+V3.3
+Text GLabel 6100 12150 0    47   Input ~ 0
+V3.3
+Text GLabel 6100 12450 0    47   Input ~ 0
+V3.3
+Text GLabel 6100 13250 0    47   Input ~ 0
+V3.3
+Text GLabel 6100 14050 0    47   Input ~ 0
+V3.3
+Text GLabel 6100 14150 0    47   Input ~ 0
+V3.3
+Text GLabel 6100 15050 0    47   Input ~ 0
+V3.3
+Text GLabel 6100 15850 0    47   Input ~ 0
+V3.3
+Text GLabel 6100 11950 0    47   Input ~ 0
+V3.3
+Text GLabel 5800 13550 0    47   Input ~ 0
+V3.3
+$Comp
+L Device:R R?
+U 1 1 6321488B
+P 5950 13550
+F 0 "R?" V 5743 13550 50  0000 C CNN
+F 1 "10K" V 5834 13550 50  0000 C CNN
+F 2 "" V 5880 13550 50  0001 C CNN
+F 3 "~" H 5950 13550 50  0001 C CNN
+	1    5950 13550
+	0    1    1    0   
+$EndComp
+$Comp
+L 10M02DCU324A7G:10M02DCU324A7G IC?
+U 1 1 618DB3E2
+P 6950 13750
+F 0 "IC?" H 7800 14015 50  0000 C CNN
+F 1 "10M02DCU324A7G" H 7800 13924 50  0000 C CNN
+F 2 "BGA324C80P18X18_1500X1500X155" H 8500 13850 50  0001 L CNN
+F 3 "https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/hb/max-10/m10_datasheet.pdf" H 8500 13750 50  0001 L CNN
+F 4 "FPGA MAX 10 Family 2000 Cells 55nm Technology 1.2V Automotive 324-Pin UFBGA" H 8500 13650 50  0001 L CNN "Description"
+F 5 "1.55" H 8500 13550 50  0001 L CNN "Height"
+F 6 "989-10M02DCU324A7G" H 8500 13450 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Intel-Altera/10M02DCU324A7G?qs=G%2FX6g08h60vP%252BFy8m31GWw%3D%3D" H 8500 13350 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Intel" H 8500 13250 50  0001 L CNN "Manufacturer_Name"
+F 9 "10M02DCU324A7G" H 8500 13150 50  0001 L CNN "Manufacturer_Part_Number"
+	1    6950 13750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x20_Male J?
+U 1 1 63D6BCE3
+P 8350 7650
+F 0 "J?" H 8322 7624 50  0000 R CNN
+F 1 "Conn_01x20_Male" H 8322 7533 50  0000 R CNN
+F 2 "" H 8350 7650 50  0001 C CNN
+F 3 "~" H 8350 7650 50  0001 C CNN
+	1    8350 7650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 6750 7800 6750
+Wire Wire Line
+	8150 6850 7800 6850
+Wire Wire Line
+	8150 6950 7800 6950
+Wire Wire Line
+	8150 7050 7800 7050
+Wire Wire Line
+	8150 7150 7800 7150
+Wire Wire Line
+	8150 7250 7800 7250
+Wire Wire Line
+	8150 7350 7800 7350
+Wire Wire Line
+	8150 7450 7800 7450
+Wire Wire Line
+	8150 7550 7800 7550
+Wire Wire Line
+	8150 7650 7800 7650
+Wire Wire Line
+	8150 7750 7800 7750
+Wire Wire Line
+	8150 7850 7800 7850
+Wire Wire Line
+	8150 7950 7800 7950
+Wire Wire Line
+	8150 8050 7800 8050
+Wire Wire Line
+	8150 8150 7800 8150
+Wire Wire Line
+	8150 8250 7800 8250
+Wire Wire Line
+	8150 8350 7800 8350
+Wire Wire Line
+	8150 8450 7800 8450
+Wire Wire Line
+	8150 8550 7800 8550
+Wire Wire Line
+	8150 8650 7800 8650
+$Comp
+L Connector:Conn_01x20_Male J?
+U 1 1 63DA5CD9
+P 5550 7650
+F 0 "J?" H 5522 7624 50  0000 R CNN
+F 1 "Conn_01x20_Male" H 5522 7533 50  0000 R CNN
+F 2 "" H 5550 7650 50  0001 C CNN
+F 3 "~" H 5550 7650 50  0001 C CNN
+	1    5550 7650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 6750 6100 6750
+Wire Wire Line
+	5750 6850 6100 6850
+Wire Wire Line
+	5750 6950 6100 6950
+Wire Wire Line
+	5750 7050 6100 7050
+Wire Wire Line
+	5750 7150 6100 7150
+Wire Wire Line
+	5750 7250 6100 7250
+Wire Wire Line
+	5750 7350 6100 7350
+Wire Wire Line
+	5750 7450 6100 7450
+Wire Wire Line
+	5750 7550 6100 7550
+Wire Wire Line
+	5750 7650 6100 7650
+Wire Wire Line
+	5750 7750 6100 7750
+Wire Wire Line
+	5750 7850 6100 7850
+Wire Wire Line
+	5750 7950 6100 7950
+Wire Wire Line
+	5750 8050 6100 8050
+Wire Wire Line
+	5750 8150 6100 8150
+Wire Wire Line
+	5750 8250 6100 8250
+Wire Wire Line
+	5750 8350 6100 8350
+Wire Wire Line
+	5750 8450 6100 8450
+Wire Wire Line
+	5750 8550 6100 8550
+Wire Wire Line
+	5750 8650 6100 8650
+$Comp
+L Connector:Conn_01x20_Male J?
+U 1 1 63DB1002
+P 5550 9650
+F 0 "J?" H 5522 9624 50  0000 R CNN
+F 1 "Conn_01x20_Male" H 5522 9533 50  0000 R CNN
+F 2 "" H 5550 9650 50  0001 C CNN
+F 3 "~" H 5550 9650 50  0001 C CNN
+	1    5550 9650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 8750 6100 8750
+Wire Wire Line
+	5750 8850 6100 8850
+Wire Wire Line
+	5750 8950 6100 8950
+Wire Wire Line
+	5750 9050 6100 9050
+Wire Wire Line
+	5750 9150 6100 9150
+Wire Wire Line
+	5750 9250 6100 9250
+Wire Wire Line
+	5750 9350 6100 9350
+Wire Wire Line
+	5750 9450 6100 9450
+Wire Wire Line
+	5750 9550 6100 9550
+Wire Wire Line
+	5750 9650 6100 9650
+Wire Wire Line
+	5750 9750 6100 9750
+Wire Wire Line
+	5750 9850 6100 9850
+Wire Wire Line
+	5750 9950 6100 9950
+Wire Wire Line
+	5750 10050 6100 10050
+Wire Wire Line
+	5750 10150 6100 10150
+Wire Wire Line
+	5750 10250 6100 10250
+Wire Wire Line
+	5750 10350 6100 10350
+Wire Wire Line
+	5750 10450 6100 10450
+Wire Wire Line
+	5750 10550 6100 10550
+Wire Wire Line
+	5750 10650 6100 10650
+$Comp
+L Connector:Conn_01x20_Male J?
+U 1 1 63DBC261
+P 5550 11650
+F 0 "J?" H 5522 11624 50  0000 R CNN
+F 1 "Conn_01x20_Male" H 5522 11533 50  0000 R CNN
+F 2 "" H 5550 11650 50  0001 C CNN
+F 3 "~" H 5550 11650 50  0001 C CNN
+	1    5550 11650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 10750 6100 10750
+Wire Wire Line
+	5750 10850 6100 10850
+Wire Wire Line
+	5750 10950 6100 10950
+Wire Wire Line
+	5750 11050 6100 11050
+Wire Wire Line
+	5750 11150 6100 11150
+Wire Wire Line
+	5750 11250 6100 11250
+Wire Wire Line
+	5750 11350 6100 11350
+Wire Wire Line
+	5750 11450 6100 11450
+Wire Wire Line
+	5750 11550 6100 11550
+Wire Wire Line
+	5750 11650 6100 11650
+Wire Wire Line
+	5750 11750 6100 11750
+Wire Wire Line
+	5750 11850 6100 11850
+Wire Wire Line
+	5750 11950 6100 11950
+Wire Wire Line
+	5750 12050 6100 12050
+Wire Wire Line
+	5750 12150 6100 12150
+Wire Wire Line
+	5750 12250 6100 12250
+Wire Wire Line
+	5750 12350 6100 12350
+Wire Wire Line
+	5750 12450 6100 12450
+Wire Wire Line
+	5750 12550 6100 12550
+Wire Wire Line
+	5750 12650 6100 12650
+$Comp
+L Connector:Conn_01x20_Male J?
+U 1 1 63DCA2DC
+P 5550 13650
+F 0 "J?" H 5522 13624 50  0000 R CNN
+F 1 "Conn_01x20_Male" H 5522 13533 50  0000 R CNN
+F 2 "" H 5550 13650 50  0001 C CNN
+F 3 "~" H 5550 13650 50  0001 C CNN
+	1    5550 13650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 12750 6100 12750
+Wire Wire Line
+	5750 12850 6100 12850
+Wire Wire Line
+	5750 12950 6100 12950
+Wire Wire Line
+	5750 13050 6100 13050
+Wire Wire Line
+	5750 13150 6100 13150
+Wire Wire Line
+	5750 13250 6100 13250
+Wire Wire Line
+	5750 13350 6100 13350
+Wire Wire Line
+	5750 13450 6100 13450
+Wire Wire Line
+	5750 13550 6100 13550
+Wire Wire Line
+	5750 13750 6100 13750
+Wire Wire Line
+	5750 13850 6100 13850
+Wire Wire Line
+	5750 13950 6100 13950
+Wire Wire Line
+	5750 14050 6100 14050
+Wire Wire Line
+	5750 14150 6100 14150
+Wire Wire Line
+	5750 14250 6100 14250
+Wire Wire Line
+	5750 14350 6100 14350
+Wire Wire Line
+	5750 14450 6100 14450
+Wire Wire Line
+	5750 14550 6100 14550
+Wire Wire Line
+	5750 14650 6100 14650
+Wire Wire Line
+	5600 13650 6100 13650
+$Comp
+L Connector:Conn_01x20_Male J?
+U 1 1 63DD89D5
+P 5550 15650
+F 0 "J?" H 5522 15624 50  0000 R CNN
+F 1 "Conn_01x20_Male" H 5522 15533 50  0000 R CNN
+F 2 "" H 5550 15650 50  0001 C CNN
+F 3 "~" H 5550 15650 50  0001 C CNN
+	1    5550 15650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 14750 6100 14750
+Wire Wire Line
+	5750 14850 6100 14850
+Wire Wire Line
+	5750 14950 6100 14950
+Wire Wire Line
+	5750 15050 6100 15050
+Wire Wire Line
+	5750 15150 6100 15150
+Wire Wire Line
+	5750 15350 6100 15350
+Wire Wire Line
+	5750 15550 6100 15550
+Wire Wire Line
+	5750 15650 6100 15650
+Wire Wire Line
+	5750 15750 6100 15750
+Wire Wire Line
+	5750 15850 6100 15850
+Wire Wire Line
+	5750 15950 6100 15950
+Wire Wire Line
+	5750 16050 6100 16050
+Wire Wire Line
+	5750 16150 6100 16150
+Wire Wire Line
+	5750 16250 6100 16250
+Wire Wire Line
+	5750 16350 6100 16350
+Wire Wire Line
+	5750 16450 6100 16450
+Wire Wire Line
+	5750 16550 6100 16550
+Wire Wire Line
+	5750 16650 6100 16650
+Wire Wire Line
+	5400 15450 6100 15450
+Wire Wire Line
+	5750 15250 6100 15250
+Wire Wire Line
+	6100 16950 5750 16950
+$Comp
+L Connector:Conn_01x20_Male J?
+U 1 1 63E0364E
+P 8350 9650
+F 0 "J?" H 8322 9624 50  0000 R CNN
+F 1 "Conn_01x20_Male" H 8322 9533 50  0000 R CNN
+F 2 "" H 8350 9650 50  0001 C CNN
+F 3 "~" H 8350 9650 50  0001 C CNN
+	1    8350 9650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 8750 7800 8750
+Wire Wire Line
+	8150 8850 7800 8850
+Wire Wire Line
+	8150 8950 7800 8950
+Wire Wire Line
+	8150 9050 7800 9050
+Wire Wire Line
+	8150 9150 7800 9150
+Wire Wire Line
+	8150 9250 7800 9250
+Wire Wire Line
+	8150 9350 7800 9350
+Wire Wire Line
+	8150 9450 7800 9450
+Wire Wire Line
+	8150 9550 7800 9550
+Wire Wire Line
+	8150 9650 7800 9650
+Wire Wire Line
+	8150 9750 7800 9750
+Wire Wire Line
+	8150 9850 7800 9850
+Wire Wire Line
+	8150 9950 7800 9950
+Wire Wire Line
+	8150 10050 7800 10050
+Wire Wire Line
+	8150 10150 7800 10150
+Wire Wire Line
+	8150 10250 7800 10250
+Wire Wire Line
+	8150 10350 7800 10350
+Wire Wire Line
+	8150 10450 7800 10450
+Wire Wire Line
+	8150 10550 7800 10550
+Wire Wire Line
+	8150 10650 7800 10650
+$Comp
+L Connector:Conn_01x20_Male J?
+U 1 1 63E5B712
+P 8350 11650
+F 0 "J?" H 8322 11624 50  0000 R CNN
+F 1 "Conn_01x20_Male" H 8322 11533 50  0000 R CNN
+F 2 "" H 8350 11650 50  0001 C CNN
+F 3 "~" H 8350 11650 50  0001 C CNN
+	1    8350 11650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 10750 7800 10750
+Wire Wire Line
+	8150 10850 7800 10850
+Wire Wire Line
+	8150 10950 7800 10950
+Wire Wire Line
+	8150 11050 7800 11050
+Wire Wire Line
+	8150 11150 7800 11150
+Wire Wire Line
+	8150 11250 7800 11250
+Wire Wire Line
+	8150 11350 7800 11350
+Wire Wire Line
+	8150 11450 7800 11450
+Wire Wire Line
+	8150 11550 7800 11550
+Wire Wire Line
+	8150 11650 7800 11650
+Wire Wire Line
+	8150 11750 7800 11750
+Wire Wire Line
+	8150 11850 7800 11850
+Wire Wire Line
+	8150 11950 7800 11950
+Wire Wire Line
+	8150 12050 7800 12050
+Wire Wire Line
+	8150 12150 7800 12150
+Wire Wire Line
+	8150 12250 7800 12250
+Wire Wire Line
+	8150 12350 7800 12350
+Wire Wire Line
+	8150 12450 7800 12450
+Wire Wire Line
+	8150 12550 7800 12550
+Wire Wire Line
+	8150 12650 7800 12650
+$Comp
+L Connector:Conn_01x20_Male J?
+U 1 1 63E717B2
+P 8350 13650
+F 0 "J?" H 8322 13624 50  0000 R CNN
+F 1 "Conn_01x20_Male" H 8322 13533 50  0000 R CNN
+F 2 "" H 8350 13650 50  0001 C CNN
+F 3 "~" H 8350 13650 50  0001 C CNN
+	1    8350 13650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 12750 7800 12750
+Wire Wire Line
+	8150 12850 7800 12850
+Wire Wire Line
+	8150 12950 7800 12950
+Wire Wire Line
+	8150 13050 7800 13050
+Wire Wire Line
+	8150 13150 7800 13150
+Wire Wire Line
+	8150 13250 7800 13250
+Wire Wire Line
+	8150 13350 7800 13350
+Wire Wire Line
+	8150 13450 7800 13450
+Wire Wire Line
+	8150 13550 7800 13550
+Wire Wire Line
+	8150 13650 7800 13650
+Wire Wire Line
+	8150 13750 7800 13750
+Wire Wire Line
+	8150 13850 7800 13850
+Wire Wire Line
+	8150 13950 7800 13950
+Wire Wire Line
+	8150 14050 7800 14050
+Wire Wire Line
+	8150 14150 7800 14150
+Wire Wire Line
+	8150 14250 7800 14250
+Wire Wire Line
+	8150 14350 7800 14350
+Wire Wire Line
+	8150 14450 7800 14450
+Wire Wire Line
+	8150 14550 7800 14550
+Wire Wire Line
+	8150 14650 7800 14650
+$Comp
+L Connector:Conn_01x20_Male J?
+U 1 1 63E8A9B7
+P 8350 15650
+F 0 "J?" H 8322 15624 50  0000 R CNN
+F 1 "Conn_01x20_Male" H 8322 15533 50  0000 R CNN
+F 2 "" H 8350 15650 50  0001 C CNN
+F 3 "~" H 8350 15650 50  0001 C CNN
+	1    8350 15650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 14750 7800 14750
+Wire Wire Line
+	8150 14850 7800 14850
+Wire Wire Line
+	8150 14950 7800 14950
+Wire Wire Line
+	8150 15050 7800 15050
+Wire Wire Line
+	8150 15150 7800 15150
+Wire Wire Line
+	8150 15250 7800 15250
+Wire Wire Line
+	8150 15350 7800 15350
+Wire Wire Line
+	8150 15450 7800 15450
+Wire Wire Line
+	8150 15550 7800 15550
+Wire Wire Line
+	8150 15650 7800 15650
+Wire Wire Line
+	8150 15750 7800 15750
+Wire Wire Line
+	8150 15850 7800 15850
+Wire Wire Line
+	8150 15950 7800 15950
+Wire Wire Line
+	8150 16050 7800 16050
+Wire Wire Line
+	8150 16150 7800 16150
+Wire Wire Line
+	8150 16250 7800 16250
+Wire Wire Line
+	8150 16350 7800 16350
+Wire Wire Line
+	8150 16450 7800 16450
+Wire Wire Line
+	8150 16550 7800 16550
+Wire Wire Line
+	8150 16650 7800 16650
+$Comp
+L Connector:Conn_01x09_Male J?
+U 1 1 63EC79CA
+P 5550 17150
+F 0 "J?" H 5658 17731 50  0000 C CNN
+F 1 "Conn_01x09_Male" H 5658 17640 50  0000 C CNN
+F 2 "" H 5550 17150 50  0001 C CNN
+F 3 "~" H 5550 17150 50  0001 C CNN
+	1    5550 17150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 16750 5750 16750
+Wire Wire Line
+	6100 16850 5750 16850
+Wire Wire Line
+	6100 17050 5750 17050
+Wire Wire Line
+	6100 17150 5750 17150
+Wire Wire Line
+	6100 17250 5750 17250
+Wire Wire Line
+	6100 17350 5750 17350
+Wire Wire Line
+	6100 17450 5750 17450
+Wire Wire Line
+	6100 17550 5750 17550
+Connection ~ 5750 16950
+Wire Wire Line
+	5750 16950 5550 16950
+$Comp
+L Connector:Conn_01x17_Male J?
+U 1 1 63F1013E
+P 8350 17550
+F 0 "J?" H 8458 18531 50  0000 C CNN
+F 1 "Conn_01x17_Male" H 8458 18440 50  0000 C CNN
+F 2 "" H 8350 17550 50  0001 C CNN
+F 3 "~" H 8350 17550 50  0001 C CNN
+	1    8350 17550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 16750 8150 16750
+Wire Wire Line
+	7800 16850 8150 16850
+Wire Wire Line
+	7800 16950 8150 16950
+Wire Wire Line
+	7800 17050 8150 17050
+Wire Wire Line
+	7800 17150 8150 17150
+Wire Wire Line
+	7800 17250 8150 17250
+Wire Wire Line
+	7800 17350 8150 17350
+Wire Wire Line
+	7800 17450 8150 17450
+Wire Wire Line
+	7800 17550 8150 17550
+Wire Wire Line
+	7800 17650 8150 17650
+Wire Wire Line
+	7800 17750 8150 17750
+Wire Wire Line
+	7800 17850 8150 17850
+Wire Wire Line
+	7800 17950 8150 17950
+Wire Wire Line
+	7800 18050 8150 18050
+Wire Wire Line
+	7800 18150 8150 18150
+Wire Wire Line
+	7800 18250 8150 18250
+Wire Wire Line
+	7800 18350 8150 18350
+Text GLabel 10350 6600 1    47   Input ~ 0
+V3.3
+NoConn ~ 10450 6600
 $EndSCHEMATC

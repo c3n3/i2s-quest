@@ -1,4 +1,4 @@
-19032594526039469
+19034231800238452
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -58687,6 +58687,13 @@ DAC
 0
 8
 8
+MyFootprints
+Jtag_header
+
+
+0
+10
+9
 MyFootprints
 Raspberry_Pi_40_pin_socket
 Raspberry Pi Zero using through hole straight pin socket, 2x20, 2.54mm pitch, https://www.raspberrypi.org/documentation/hardware/raspberrypi/mechanical/rpi_MECH_Zero_1p2.pdf
