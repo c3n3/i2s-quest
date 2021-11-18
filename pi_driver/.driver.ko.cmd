@@ -1,0 +1,1 @@
+cmd_/home/pi/i2s-quest/pi_driver/driver.ko := ld -r  -EL  --build-id=sha1  -T scripts/module.lds -o /home/pi/i2s-quest/pi_driver/driver.ko /home/pi/i2s-quest/pi_driver/driver.o /home/pi/i2s-quest/pi_driver/driver.mod.o;  true
