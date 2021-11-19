@@ -179,7 +179,7 @@ Connection ~ 7750 2900
 Wire Wire Line
 	7750 2900 7050 2900
 Wire Wire Line
-	6100 3300 6100 2200
+	6100 3300 6100 3100
 Wire Wire Line
 	6100 2200 6350 2200
 $Comp
@@ -297,8 +297,6 @@ Text GLabel 6250 3500 2    50   Input ~ 0
 GND
 Wire Wire Line
 	4900 3400 5300 3400
-Text GLabel 5550 15250 0    47   Input ~ 0
-V3.3
 Text GLabel 5300 13650 0    47   Input ~ 0
 GND
 $Comp
@@ -409,7 +407,7 @@ Text GLabel 7800 8050 2    47   Input ~ 0
 V3.3
 Text GLabel 7800 7150 2    47   Input ~ 0
 V3.3
-Text GLabel 5800 15350 0    47   Input ~ 0
+Text GLabel 5750 15350 0    47   Input ~ 0
 V3.3
 $Comp
 L Device:R R7
@@ -420,17 +418,6 @@ F 1 "10K" V 5834 15350 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 5880 15350 50  0001 C CNN
 F 3 "~" H 5950 15350 50  0001 C CNN
 	1    5950 15350
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R5
-U 1 1 631529AA
-P 5700 15250
-F 0 "R5" V 5493 15250 50  0000 C CNN
-F 1 "10K" V 5584 15250 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 5630 15250 50  0001 C CNN
-F 3 "~" H 5700 15250 50  0001 C CNN
-	1    5700 15250
 	0    1    1    0   
 $EndComp
 Text GLabel 7800 8850 2    47   Input ~ 0
@@ -623,34 +610,6 @@ F 3 "~" H 5950 13550 50  0001 C CNN
 	1    5950 13550
 	0    1    1    0   
 $EndComp
-$Comp
-L 10M02DCU324A7G:10M02DCU324A7G IC1
-U 1 1 618DB3E2
-P 6950 13750
-F 0 "IC1" H 7800 14015 50  0000 C CNN
-F 1 "10M02DCU324A7G" H 7800 13924 50  0000 C CNN
-F 2 "MyFootprints:BGA324C80P18X18_1500X1500X155" H 8500 13850 50  0001 L CNN
-F 3 "https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/hb/max-10/m10_datasheet.pdf" H 8500 13750 50  0001 L CNN
-F 4 "FPGA MAX 10 Family 2000 Cells 55nm Technology 1.2V Automotive 324-Pin UFBGA" H 8500 13650 50  0001 L CNN "Description"
-F 5 "1.55" H 8500 13550 50  0001 L CNN "Height"
-F 6 "989-10M02DCU324A7G" H 8500 13450 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/Intel-Altera/10M02DCU324A7G?qs=G%2FX6g08h60vP%252BFy8m31GWw%3D%3D" H 8500 13350 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Intel" H 8500 13250 50  0001 L CNN "Manufacturer_Name"
-F 9 "10M02DCU324A7G" H 8500 13150 50  0001 L CNN "Manufacturer_Part_Number"
-	1    6950 13750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x20_Male J8
-U 1 1 63D6BCE3
-P 8350 7650
-F 0 "J8" H 8322 7624 50  0000 R CNN
-F 1 "Conn_01x20_Male" H 8322 7533 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 8350 7650 50  0001 C CNN
-F 3 "~" H 8350 7650 50  0001 C CNN
-	1    8350 7650
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	8150 6750 7800 6750
 Wire Wire Line
@@ -691,17 +650,6 @@ Wire Wire Line
 	8150 8550 7800 8550
 Wire Wire Line
 	8150 8650 7800 8650
-$Comp
-L Connector:Conn_01x20_Male J2
-U 1 1 63DA5CD9
-P 5550 7650
-F 0 "J2" H 5522 7624 50  0000 R CNN
-F 1 "Conn_01x20_Male" H 5522 7533 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 5550 7650 50  0001 C CNN
-F 3 "~" H 5550 7650 50  0001 C CNN
-	1    5550 7650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5750 6750 6100 6750
 Wire Wire Line
@@ -793,17 +741,6 @@ Wire Wire Line
 	5750 10550 6100 10550
 Wire Wire Line
 	5750 10650 6100 10650
-$Comp
-L Connector:Conn_01x20_Male J4
-U 1 1 63DBC261
-P 5550 11650
-F 0 "J4" H 5522 11624 50  0000 R CNN
-F 1 "Conn_01x20_Male" H 5522 11533 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 5550 11650 50  0001 C CNN
-F 3 "~" H 5550 11650 50  0001 C CNN
-	1    5550 11650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5750 10750 6100 10750
 Wire Wire Line
@@ -844,17 +781,6 @@ Wire Wire Line
 	5750 12550 6100 12550
 Wire Wire Line
 	5750 12650 6100 12650
-$Comp
-L Connector:Conn_01x20_Male J5
-U 1 1 63DCA2DC
-P 5550 13650
-F 0 "J5" H 5522 13624 50  0000 R CNN
-F 1 "Conn_01x20_Male" H 5522 13533 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 5550 13650 50  0001 C CNN
-F 3 "~" H 5550 13650 50  0001 C CNN
-	1    5550 13650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5750 12750 6100 12750
 Wire Wire Line
@@ -894,19 +820,6 @@ Wire Wire Line
 Wire Wire Line
 	5750 14650 6100 14650
 Wire Wire Line
-	5600 13650 6100 13650
-$Comp
-L Connector:Conn_01x20_Male J6
-U 1 1 63DD89D5
-P 5550 15650
-F 0 "J6" H 5522 15624 50  0000 R CNN
-F 1 "Conn_01x20_Male" H 5522 15533 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 5550 15650 50  0001 C CNN
-F 3 "~" H 5550 15650 50  0001 C CNN
-	1    5550 15650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
 	5750 14750 6100 14750
 Wire Wire Line
 	5750 14850 6100 14850
@@ -941,22 +854,7 @@ Wire Wire Line
 Wire Wire Line
 	5750 16550 6100 16550
 Wire Wire Line
-	5400 15450 6100 15450
-Wire Wire Line
 	5750 15250 6100 15250
-Wire Wire Line
-	6100 16950 5750 16950
-$Comp
-L Connector:Conn_01x20_Male J9
-U 1 1 63E0364E
-P 8350 9650
-F 0 "J9" H 8322 9624 50  0000 R CNN
-F 1 "Conn_01x20_Male" H 8322 9533 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 8350 9650 50  0001 C CNN
-F 3 "~" H 8350 9650 50  0001 C CNN
-	1    8350 9650
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	8150 8750 7800 8750
 Wire Wire Line
@@ -997,17 +895,6 @@ Wire Wire Line
 	8150 10550 7800 10550
 Wire Wire Line
 	8150 10650 7800 10650
-$Comp
-L Connector:Conn_01x20_Male J10
-U 1 1 63E5B712
-P 8350 11650
-F 0 "J10" H 8322 11624 50  0000 R CNN
-F 1 "Conn_01x20_Male" H 8322 11533 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 8350 11650 50  0001 C CNN
-F 3 "~" H 8350 11650 50  0001 C CNN
-	1    8350 11650
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	8150 10750 7800 10750
 Wire Wire Line
@@ -1048,17 +935,6 @@ Wire Wire Line
 	8150 12550 7800 12550
 Wire Wire Line
 	8150 12650 7800 12650
-$Comp
-L Connector:Conn_01x20_Male J11
-U 1 1 63E717B2
-P 8350 13650
-F 0 "J11" H 8322 13624 50  0000 R CNN
-F 1 "Conn_01x20_Male" H 8322 13533 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 8350 13650 50  0001 C CNN
-F 3 "~" H 8350 13650 50  0001 C CNN
-	1    8350 13650
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	8150 12750 7800 12750
 Wire Wire Line
@@ -1099,17 +975,6 @@ Wire Wire Line
 	8150 14550 7800 14550
 Wire Wire Line
 	8150 14650 7800 14650
-$Comp
-L Connector:Conn_01x20_Male J12
-U 1 1 63E8A9B7
-P 8350 15650
-F 0 "J12" H 8322 15624 50  0000 R CNN
-F 1 "Conn_01x20_Male" H 8322 15533 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 8350 15650 50  0001 C CNN
-F 3 "~" H 8350 15650 50  0001 C CNN
-	1    8350 15650
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	8150 14750 7800 14750
 Wire Wire Line
@@ -1150,17 +1015,6 @@ Wire Wire Line
 	8150 16550 7800 16550
 Wire Wire Line
 	8150 16650 7800 16650
-$Comp
-L Connector:Conn_01x09_Male J7
-U 1 1 63EC79CA
-P 5550 17150
-F 0 "J7" H 5658 17731 50  0000 C CNN
-F 1 "Conn_01x09_Male" H 5658 17640 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical" H 5550 17150 50  0001 C CNN
-F 3 "~" H 5550 17150 50  0001 C CNN
-	1    5550 17150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6100 16750 5750 16750
 Wire Wire Line
@@ -1177,20 +1031,6 @@ Wire Wire Line
 	6100 17450 5750 17450
 Wire Wire Line
 	6100 17550 5750 17550
-Connection ~ 5750 16950
-Wire Wire Line
-	5750 16950 5550 16950
-$Comp
-L Connector:Conn_01x17_Male J13
-U 1 1 63F1013E
-P 8350 17550
-F 0 "J13" H 8458 18531 50  0000 C CNN
-F 1 "Conn_01x17_Male" H 8458 18440 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x17_P2.54mm_Vertical" H 8350 17550 50  0001 C CNN
-F 3 "~" H 8350 17550 50  0001 C CNN
-	1    8350 17550
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	7800 16750 8150 16750
 Wire Wire Line
@@ -1440,4 +1280,172 @@ Wire Wire Line
 Wire Wire Line
 	7100 3950 7300 3950
 Connection ~ 7300 3850
+$Comp
+L 10M02DCU324A7G:10M02DCU324A7G IC1
+U 1 1 618DB3E2
+P 6950 13750
+F 0 "IC1" H 7800 14015 50  0000 C CNN
+F 1 "10M02DCU324A7G" H 7800 13924 50  0000 C CNN
+F 2 "MyFootprints:BGA324C80P18X18_1500X1500X155" H 8500 13850 50  0001 L CNN
+F 3 "https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/hb/max-10/m10_datasheet.pdf" H 8500 13750 50  0001 L CNN
+F 4 "FPGA MAX 10 Family 2000 Cells 55nm Technology 1.2V Automotive 324-Pin UFBGA" H 8500 13650 50  0001 L CNN "Description"
+F 5 "1.55" H 8500 13550 50  0001 L CNN "Height"
+F 6 "989-10M02DCU324A7G" H 8500 13450 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Intel-Altera/10M02DCU324A7G?qs=G%2FX6g08h60vP%252BFy8m31GWw%3D%3D" H 8500 13350 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Intel" H 8500 13250 50  0001 L CNN "Manufacturer_Name"
+F 9 "10M02DCU324A7G" H 8500 13150 50  0001 L CNN "Manufacturer_Part_Number"
+	1    6950 13750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 13650 6100 13650
+Wire Wire Line
+	5400 15450 6100 15450
+Wire Wire Line
+	5550 16950 6100 16950
+Text GLabel 5400 2900 3    47   Input ~ 0
+SDATA
+Text GLabel 5500 2900 3    47   Input ~ 0
+LRCK
+Text GLabel 5600 2900 3    47   Input ~ 0
+MCLK
+Wire Wire Line
+	6100 3100 5700 3100
+Wire Wire Line
+	5700 3100 5700 2900
+Connection ~ 6100 3100
+Wire Wire Line
+	6100 3100 6100 2200
+Wire Wire Line
+	6100 3600 6200 3600
+Wire Wire Line
+	6200 3600 6200 2900
+Connection ~ 6100 3600
+$Comp
+L Connector:Conn_01x05_Male DBG1
+U 1 1 61D21F52
+P 5600 2700
+F 0 "DBG1" V 5662 2944 50  0000 L CNN
+F 1 "Conn_01x05_Male" V 5753 2944 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 5600 2700 50  0001 C CNN
+F 3 "~" H 5600 2700 50  0001 C CNN
+	1    5600 2700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5800 2900 6200 2900
+Text GLabel 8150 8550 2    47   Input ~ 0
+l1
+Text GLabel 8150 6750 2    47   Input ~ 0
+k1
+Text GLabel 8150 10150 2    47   Input ~ 0
+m1
+Text GLabel 8150 11350 2    47   Input ~ 0
+n1
+Text GLabel 8150 12750 2    47   Input ~ 0
+p1
+Text GLabel 8150 14050 2    47   Input ~ 0
+r1
+Text GLabel 8150 16150 2    47   Input ~ 0
+u1
+Text GLabel 8150 17350 2    47   Input ~ 0
+v1
+Text GLabel 5750 6750 0    47   Input ~ 0
+a1
+Text GLabel 5750 14650 0    47   Input ~ 0
+h1
+Text GLabel 5750 16250 0    47   Input ~ 0
+j1
+$Comp
+L Connector:Conn_01x11_Male J2
+U 1 1 61D86844
+P 5600 5750
+F 0 "J2" V 5435 5728 50  0000 C CNN
+F 1 "Conn_01x11_Male" V 5526 5728 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical" H 5600 5750 50  0001 C CNN
+F 3 "~" H 5600 5750 50  0001 C CNN
+	1    5600 5750
+	0    1    1    0   
+$EndComp
+Text GLabel 5100 5950 3    47   Input ~ 0
+a1
+Text GLabel 5300 5950 3    47   Input ~ 0
+j1
+Text GLabel 5200 5950 3    47   Input ~ 0
+h1
+Text GLabel 5400 5950 3    47   Input ~ 0
+k1
+Text GLabel 5500 5950 3    47   Input ~ 0
+l1
+Text GLabel 5600 5950 3    47   Input ~ 0
+m1
+Text GLabel 5700 5950 3    47   Input ~ 0
+n1
+Text GLabel 5800 5950 3    47   Input ~ 0
+r1
+Text GLabel 5900 5950 3    47   Input ~ 0
+p1
+Text GLabel 6000 5950 3    47   Input ~ 0
+u1
+Text GLabel 6100 5950 3    47   Input ~ 0
+v1
+Text GLabel 5950 8750 0    47   Input ~ 0
+c5
+Text GLabel 5900 8850 0    47   Input ~ 0
+c6
+Text GLabel 5900 8950 0    47   Input ~ 0
+c7
+Text GLabel 5900 9050 0    47   Input ~ 0
+c8
+Text GLabel 5900 9150 0    47   Input ~ 0
+c9
+Text GLabel 5900 9250 0    47   Input ~ 0
+c10
+Text GLabel 5900 9350 0    47   Input ~ 0
+c17
+Text GLabel 5900 9450 0    47   Input ~ 0
+c18
+Text GLabel 5850 9650 0    47   Input ~ 0
+d4
+Text GLabel 5850 9750 0    47   Input ~ 0
+d5
+Text GLabel 5850 9850 0    47   Input ~ 0
+d6
+Text GLabel 5850 9950 0    47   Input ~ 0
+d7
+Text GLabel 5850 10050 0    47   Input ~ 0
+d8
+Text GLabel 5850 10150 0    47   Input ~ 0
+d15
+Text GLabel 5850 10250 0    47   Input ~ 0
+d16
+Text GLabel 5850 10350 0    47   Input ~ 0
+d17
+Text GLabel 5850 10450 0    47   Input ~ 0
+d18
+Text GLabel 5850 10550 0    47   Input ~ 0
+e4
+Text GLabel 5850 10650 0    47   Input ~ 0
+e5
+$Comp
+L Connector:Conn_01x04_Male PI_OUT1
+U 1 1 61E18016
+P 700 5000
+F 0 "PI_OUT1" H 808 5281 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 808 5190 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 700 5000 50  0001 C CNN
+F 3 "~" H 700 5000 50  0001 C CNN
+	1    700  5000
+	1    0    0    -1  
+$EndComp
+Text GLabel 900  4900 2    47   Input ~ 0
+DCLK
+Text GLabel 900  5200 2    47   Input ~ 0
+DATA
+Text GLabel 900  5000 2    47   Input ~ 0
+INTERR
+Text GLabel 900  5100 2    47   Input ~ 0
+EN
+Text GLabel 1550 2250 1    50   Input ~ 0
+5Vin
 $EndSCHEMATC
