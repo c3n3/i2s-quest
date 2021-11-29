@@ -36,10 +36,15 @@
 extern unsigned long volatile jiffies;
 unsigned long old_jiffie = 0;
 #endif
+
 //LED is connected to this GPIO
 #define GPIO_21_OUT (21)
+
 //LED is connected to this GPIO
 #define GPIO_25_IN  (25)
+
+// Enable i2s
+#define ENABLE_PIN  (26)
 //GPIO_25_IN value toggle
 unsigned int led_toggle = 0; 
 //This used for storing the IRQ number for the GPIO
@@ -58,21 +63,25 @@ static void output_data(uint8_t* buffer, size_t size, int pin)
   pr_info("Output data\n");
 }
 
+
+#define BYTES_PER_24_BIT_NUM 3
+#define MAX_24_BIT (0x00000001 << 23)
+#define INCREMENT (MAX_24_BIT / NUM_COUNT)
+#define NUM_COUNT 32
+
+static uint8_t data[NUM_COUNT*BYTES_PER_24_BIT_NUM];
+
+static void write24Bit(uint8_t* bytes, uint32_t value)
+{
+  bytes[0] = value & (0x000000ff);
+  bytes[1] = value & (0x0000ff00);
+  bytes[2] = value & (0x00ff0000);
+}
+
 //Interrupt handler for GPIO 25. This will be called whenever there is a raising edge detected. 
 static irqreturn_t gpio_irq_handler(int irq,void *dev_id) 
 {
   static unsigned long flags = 0;
-  static uint32_t data = 0x55555555;
-  
-#ifdef EN_DEBOUNCE
-   unsigned long diff = jiffies - old_jiffie;
-   if (diff < 20)
-   {
-     return IRQ_HANDLED;
-   }
-  
-  old_jiffie = jiffies;
-#endif
   local_irq_save(flags);
   output_data((uint8_t*)&data, sizeof(data), GPIO_21_OUT);
   local_irq_restore(flags);
@@ -228,18 +237,28 @@ static int __init etx_driver_init(void)
   //configure the GPIO as input
   gpio_direction_input(GPIO_25_IN);
   
-  /*
-  ** I have commented the below few lines, as gpio_set_debounce is not supported 
-  ** in the Raspberry pi. So we are using EN_DEBOUNCE to handle this in this driver.
-  */ 
-#ifndef EN_DEBOUNCE
-  //Debounce the button with a delay of 200ms
-  if(gpio_set_debounce(GPIO_25_IN, 200) < 0){
-    pr_err("ERROR: gpio_set_debounce - %d\n", GPIO_25_IN);
-    //goto r_gpio_in;
-  }
-#endif
   
+  //Input GPIO configuratioin
+  //Checking the GPIO is valid or not
+  if(gpio_is_valid(ENABLE_PIN) == false){
+    pr_err("GPIO %d is not valid\n", ENABLE_PIN);
+    goto enable_gpio;
+  }
+  
+  //Requesting the GPIO
+  if(gpio_request(ENABLE_PIN,"GPIO_25_IN") < 0){
+    pr_err("ERROR: GPIO %d request\n", ENABLE_PIN);
+    goto enable_gpio;
+  }
+  
+  //configure the GPIO as input
+  gpio_direction_output(ENABLE_PIN, 1);
+
+
+  for (int i = 0; i < NUM_COUNT; i++) {
+    write24Bit(data, INCREMENT*i);
+  }
+
   //Get the IRQ number for our GPIO
   GPIO_irqNumber = gpio_to_irq(GPIO_25_IN);
   pr_info("GPIO_irqNumber = %d\n", GPIO_irqNumber);
@@ -257,6 +276,8 @@ static int __init etx_driver_init(void)
  
   pr_info("Device Driver Insert...Done!!!\n");
   return 0;
+enable_gpio:
+  gpio_free(ENABLE_PIN);
 r_gpio_in:
   gpio_free(GPIO_25_IN);
 r_gpio_out:
@@ -280,6 +301,7 @@ static void __exit etx_driver_exit(void)
   free_irq(GPIO_irqNumber,NULL);
   gpio_free(GPIO_25_IN);
   gpio_free(GPIO_21_OUT);
+  gpio_free(ENABLE_PIN);
   device_destroy(dev_class,dev);
   class_destroy(dev_class);
   cdev_del(&etx_cdev);
