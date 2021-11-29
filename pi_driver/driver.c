@@ -40,11 +40,14 @@ unsigned long old_jiffie = 0;
 //LED is connected to this GPIO
 #define GPIO_21_OUT (21)
 
+#define CLOCK_OUT_PIN (22)
+
 //LED is connected to this GPIO
 #define GPIO_25_IN  (25)
 
 // Enable i2s
 #define ENABLE_PIN  (26)
+
 //GPIO_25_IN value toggle
 unsigned int led_toggle = 0; 
 //This used for storing the IRQ number for the GPIO
@@ -58,6 +61,8 @@ static void output_data(uint8_t* buffer, size_t size, int pin)
   for (i = 0; i < size; i++) {
     for (bit = 0x01; bit != 0; bit = bit << 1) {
       gpio_set_value(GPIO_21_OUT, buffer[i] & bit);
+      gpio_set_value(CLOCK_OUT_PIN, 0);
+      gpio_set_value(CLOCK_OUT_PIN, 1);
     }
   }
   pr_info("Output data\n");
@@ -246,13 +251,29 @@ static int __init etx_driver_init(void)
   }
   
   //Requesting the GPIO
-  if(gpio_request(ENABLE_PIN,"GPIO_25_IN") < 0){
+  if(gpio_request(ENABLE_PIN,"ENABLE_PIN") < 0){
     pr_err("ERROR: GPIO %d request\n", ENABLE_PIN);
     goto enable_gpio;
   }
   
   //configure the GPIO as input
   gpio_direction_output(ENABLE_PIN, 1);
+  
+  //Input GPIO configuratioin
+  //Checking the GPIO is valid or not
+  if(gpio_is_valid(CLOCK_OUT_PIN) == false){
+    pr_err("GPIO %d is not valid\n", ENABLE_PIN);
+    goto clock_out;
+  }
+  
+  //Requesting the GPIO
+  if(gpio_request(CLOCK_OUT_PIN,"CLOCK_OUT_PIN") < 0){
+    pr_err("ERROR: GPIO %d request\n", CLOCK_OUT_PIN);
+    goto clock_out;
+  }
+  
+  //configure the GPIO as input
+  gpio_direction_output(CLOCK_OUT_PIN, 1);
 
 
   for (int i = 0; i < NUM_COUNT; i++) {
@@ -276,6 +297,8 @@ static int __init etx_driver_init(void)
  
   pr_info("Device Driver Insert...Done!!!\n");
   return 0;
+clock_out:
+  gpio_free(CLOCK_OUT_PIN);
 enable_gpio:
   gpio_free(ENABLE_PIN);
 r_gpio_in:
@@ -302,6 +325,7 @@ static void __exit etx_driver_exit(void)
   gpio_free(GPIO_25_IN);
   gpio_free(GPIO_21_OUT);
   gpio_free(ENABLE_PIN);
+  gpio_free(CLOCK_OUT_PIN);
   device_destroy(dev_class,dev);
   class_destroy(dev_class);
   cdev_del(&etx_cdev);
@@ -313,6 +337,6 @@ module_init(etx_driver_init);
 module_exit(etx_driver_exit);
  
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("EmbeTronicX <embetronicx@gmail.com>");
+MODULE_AUTHOR("EmbeTronicX <not_you@gmail.com>");
 MODULE_DESCRIPTION("A simple device driver - GPIO Driver (GPIO Interrupt) ");
 MODULE_VERSION("1.33");
