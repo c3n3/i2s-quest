@@ -1,7 +1,9 @@
 module data_input(
 	input clk, 
-	input serial, 
+	input serial,
+	input enable,
 	input ready,
+	output reg rpi_interrupt,
 	output reg [23:0] data
 	);
 	
@@ -13,19 +15,34 @@ module data_input(
 	
 	always@(posedge clk)
 	begin
-		data_regs[reg_selector][counter] = serial;
-		counter = counter + 1;
-		if (counter > 23)
+		if (enable)
 		begin
-			counter = 0;
-			reg_selector = reg_selector + 1;
+			data_regs[reg_selector][counter] = serial;
+			counter = counter + 1;
+			if (counter > 23)
+			begin
+				counter = 0;
+				reg_selector = reg_selector + 1;
+			end
+			if (reg_selector - curr_reg < 32)
+			begin
+				rpi_interrupt = 1;
+			end
+			else if (reg_selector - curr_reg == 63)
+			begin
+				rpi_interrupt = 0;
+			end
+		end
+		else
+		begin
+			rpi_interrupt = 0;
 		end
 	end
 	
 	always@(posedge ready)
 	begin
 		data = data_regs[curr_reg];
-		curr_reg = curr_reg + 1;
+		if (reg_selector - curr_reg > 0) curr_reg = curr_reg + 1;
 	end
 	
 endmodule

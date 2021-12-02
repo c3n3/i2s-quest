@@ -10,10 +10,11 @@ module top(
 	);
 	wire data;
 	wire ready;
+	wire data_clk;
 
-	clk_div_master master_clk_div(.ar(ar), .clk_in(clk), .clk_out(master));
-	clk_div_LR lr_clk_div(.ar(ar), .clk_in(master), .clk_out(lr_clk));
-	clk_div_data data_clk_div(.ar(lr_clk), .clk_in(clk), .clk_out(data_clk));
-	data_input rpi_data(.clk(rpi_clk), .serial(rpi_serial), .ready(ready), .data(data));
+	clk_div_master master_clk_div(.clk_in(clk), .clk_out(master));
+	clk_div_LR lr_clk_div(.clk_in(master), .clk_out(lr_clk));
+	clk_div_data data_clk_div(.clk_in(clk), .clk_out(data_clk));
+	data_input rpi_data(.clk(rpi_clk), .serial(rpi_serial), .enable(rpi_enable), .ready(ready), .rpi_interrupt(rpi_interrupt), .data(data));
 	data_shift shift(.clk(data_clk), .data(data), .ready(ready), .current(serial));
 endmodule

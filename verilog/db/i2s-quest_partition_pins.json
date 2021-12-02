@@ -2,7 +2,40 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "rpi_interrupt",
+					"strict" : false
+				},
+				{
+					"name" : "master",
+					"strict" : false
+				},
+				{
+					"name" : "lr_clk",
+					"strict" : false
+				},
+				{
+					"name" : "serial",
+					"strict" : false
+				},
+				{
+					"name" : "rpi_clk",
+					"strict" : false
+				},
+				{
+					"name" : "rpi_enable",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rpi_serial",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

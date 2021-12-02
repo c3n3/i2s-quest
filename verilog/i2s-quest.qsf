@@ -49,11 +49,6 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name VERILOG_FILE top.v
-set_global_assignment -name VERILOG_FILE clk_div_LR.v
-set_global_assignment -name VERILOG_FILE clk_div_data.v
-set_global_assignment -name VERILOG_FILE clk_div_master.v
-set_global_assignment -name VERILOG_FILE data_shift.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -61,4 +56,14 @@ set_location_assignment PIN_Y26 -to clk
 set_location_assignment PIN_AC18 -to lr_clk
 set_location_assignment PIN_Y17 -to master
 set_location_assignment PIN_AD17 -to serial
+set_global_assignment -name VERILOG_FILE data_input.v
+set_global_assignment -name VERILOG_FILE top.v
+set_global_assignment -name VERILOG_FILE clk_div_LR.v
+set_global_assignment -name VERILOG_FILE clk_div_data.v
+set_global_assignment -name VERILOG_FILE clk_div_master.v
+set_global_assignment -name VERILOG_FILE data_shift.v
+set_location_assignment PIN_Y18 -to rpi_clk
+set_location_assignment PIN_AK16 -to rpi_enable
+set_location_assignment PIN_AK18 -to rpi_interrupt
+set_location_assignment PIN_AK19 -to rpi_serial
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

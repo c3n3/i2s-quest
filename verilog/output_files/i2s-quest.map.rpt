@@ -1,5 +1,5 @@
 Analysis & Synthesis report for i2s-quest
-Thu Nov 18 15:29:32 2021
+Thu Dec 02 16:53:02 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,14 +14,13 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Parameter Settings for User Entity Instance: clk_div_data:data_clk_div
- 12. Port Connectivity Checks: "data_shift:shift"
- 13. Port Connectivity Checks: "data_input:rpi_data"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: clk_div_data:data_clk_div
+ 11. Port Connectivity Checks: "data_shift:shift"
+ 12. Port Connectivity Checks: "data_input:rpi_data"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -48,14 +47,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 18 15:29:32 2021       ;
+; Analysis & Synthesis Status     ; Successful - Thu Dec 02 16:53:02 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; i2s-quest                                   ;
 ; Top-level Entity Name           ; top                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 6                                           ;
+; Total registers                 ; 67                                          ;
+; Total pins                      ; 8                                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -164,144 +163,80 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                          ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                      ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------+---------+
-; top.v                            ; yes             ; User Verilog HDL File        ; C:/Users/g2boe/i2s-quest/verilog/top.v            ;         ;
-; clk_div_LR.v                     ; yes             ; User Verilog HDL File        ; C:/Users/g2boe/i2s-quest/verilog/clk_div_LR.v     ;         ;
-; clk_div_data.v                   ; yes             ; User Verilog HDL File        ; C:/Users/g2boe/i2s-quest/verilog/clk_div_data.v   ;         ;
-; clk_div_master.v                 ; yes             ; User Verilog HDL File        ; C:/Users/g2boe/i2s-quest/verilog/clk_div_master.v ;         ;
-; data_shift.v                     ; yes             ; User Verilog HDL File        ; C:/Users/g2boe/i2s-quest/verilog/data_shift.v     ;         ;
-; data_input.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/g2boe/i2s-quest/verilog/data_input.v     ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                    ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                      ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
+; data_input.v                     ; yes             ; User Verilog HDL File  ; C:/Users/g2boe/i2s-quest/verilog/data_input.v     ;         ;
+; top.v                            ; yes             ; User Verilog HDL File  ; C:/Users/g2boe/i2s-quest/verilog/top.v            ;         ;
+; clk_div_LR.v                     ; yes             ; User Verilog HDL File  ; C:/Users/g2boe/i2s-quest/verilog/clk_div_LR.v     ;         ;
+; clk_div_data.v                   ; yes             ; User Verilog HDL File  ; C:/Users/g2boe/i2s-quest/verilog/clk_div_data.v   ;         ;
+; clk_div_master.v                 ; yes             ; User Verilog HDL File  ; C:/Users/g2boe/i2s-quest/verilog/clk_div_master.v ;         ;
+; data_shift.v                     ; yes             ; User Verilog HDL File  ; C:/Users/g2boe/i2s-quest/verilog/data_shift.v     ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 0     ;
-;                                             ;       ;
-; Combinational ALUT usage for logic          ; 0     ;
-;     -- 7 input functions                    ; 0     ;
-;     -- 6 input functions                    ; 0     ;
-;     -- 5 input functions                    ; 0     ;
-;     -- 4 input functions                    ; 0     ;
-;     -- <=3 input functions                  ; 0     ;
-;                                             ;       ;
-; Dedicated logic registers                   ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 6     ;
-;                                             ;       ;
-; Total DSP Blocks                            ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 6     ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimate of Logic utilization (ALMs needed) ; 70            ;
+;                                             ;               ;
+; Combinational ALUT usage for logic          ; 115           ;
+;     -- 7 input functions                    ; 6             ;
+;     -- 6 input functions                    ; 18            ;
+;     -- 5 input functions                    ; 38            ;
+;     -- 4 input functions                    ; 18            ;
+;     -- <=3 input functions                  ; 35            ;
+;                                             ;               ;
+; Dedicated logic registers                   ; 67            ;
+;                                             ;               ;
+; I/O pins                                    ; 8             ;
+;                                             ;               ;
+; Total DSP Blocks                            ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; rpi_clk~input ;
+; Maximum fan-out                             ; 36            ;
+; Total fan-out                               ; 650           ;
+; Average fan-out                             ; 3.28          ;
++---------------------------------------------+---------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |top                       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 6    ; 0            ; |top                ; top         ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                              ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name    ; Library Name ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+----------------+--------------+
+; |top                               ; 115 (0)             ; 67 (0)                    ; 0                 ; 0          ; 8    ; 0            ; |top                               ; top            ; work         ;
+;    |clk_div_LR:lr_clk_div|         ; 8 (8)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |top|clk_div_LR:lr_clk_div         ; clk_div_LR     ; work         ;
+;    |clk_div_data:data_clk_div|     ; 6 (6)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |top|clk_div_data:data_clk_div     ; clk_div_data   ; work         ;
+;    |clk_div_master:master_clk_div| ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |top|clk_div_master:master_clk_div ; clk_div_master ; work         ;
+;    |data_input:rpi_data|           ; 91 (91)             ; 43 (43)                   ; 0                 ; 0          ; 0    ; 0            ; |top|data_input:rpi_data           ; data_input     ; work         ;
+;    |data_shift:shift|              ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_shift:shift              ; data_shift     ; work         ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                               ;
-+-------------------------------------------+--------------------------------------+
-; Register name                             ; Reason for Removal                   ;
-+-------------------------------------------+--------------------------------------+
-; clk_div_LR:lr_clk_div|count[0..7]         ; Stuck at GND due to stuck port clear ;
-; clk_div_master:master_clk_div|count[0..2] ; Stuck at GND due to stuck port clear ;
-; clk_div_data:data_clk_div|clk_out         ; Stuck at GND due to stuck port clear ;
-; clk_div_data:data_clk_div|count[0..4]     ; Stuck at GND due to stuck port clear ;
-; data_shift:shift|selector[0,1]            ; Stuck at GND due to stuck port clock ;
-; data_shift:shift|ready                    ; Stuck at GND due to stuck port clock ;
-; data_shift:shift|selector[2..4]           ; Stuck at GND due to stuck port clock ;
-; data_shift:shift|current                  ; Stuck at GND due to stuck port clock ;
-; data_shift:shift|data_reg[0]              ; Stuck at GND due to stuck port clock ;
-; data_input:rpi_data|data[0]               ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[23][0]      ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[22][0]      ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[21][0]      ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[20][0]      ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[19][0]      ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[18][0]      ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[17][0]      ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[16][0]      ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[15][0]      ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[14][0]      ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[13][0]      ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[12][0]      ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[11][0]      ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[10][0]      ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[9][0]       ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[8][0]       ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[7][0]       ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[6][0]       ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[5][0]       ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[4][0]       ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[3][0]       ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[2][0]       ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[1][0]       ; Lost fanout                          ;
-; data_input:rpi_data|data_regs[0][0]       ; Lost fanout                          ;
-; data_shift:shift|data_reg[1..23]          ; Stuck at GND due to stuck port clock ;
-; data_input:rpi_data|curr_reg[0..5]        ; Stuck at GND due to stuck port clock ;
-; data_input:rpi_data|counter[0..4]         ; Lost fanout                          ;
-; data_input:rpi_data|reg_selector[0..5]    ; Lost fanout                          ;
-; Total Number of Removed Registers = 90    ;                                      ;
-+-------------------------------------------+--------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                            ;
-+--------------------------------------+-------------------------+---------------------------------------------------------------------------------------+
-; Register name                        ; Reason for Removal      ; Registers Removed due to This Register                                                ;
-+--------------------------------------+-------------------------+---------------------------------------------------------------------------------------+
-; clk_div_LR:lr_clk_div|count[7]       ; Stuck at GND            ; clk_div_data:data_clk_div|clk_out, clk_div_data:data_clk_div|count[4],                ;
-;                                      ; due to stuck port clear ; clk_div_data:data_clk_div|count[3], clk_div_data:data_clk_div|count[2],               ;
-;                                      ;                         ; clk_div_data:data_clk_div|count[1], clk_div_data:data_clk_div|count[0],               ;
-;                                      ;                         ; data_shift:shift|selector[1], data_shift:shift|selector[0], data_shift:shift|ready,   ;
-;                                      ;                         ; data_shift:shift|selector[2], data_shift:shift|selector[3],                           ;
-;                                      ;                         ; data_shift:shift|selector[4], data_shift:shift|current, data_shift:shift|data_reg[0], ;
-;                                      ;                         ; data_input:rpi_data|data[0], data_shift:shift|data_reg[1],                            ;
-;                                      ;                         ; data_shift:shift|data_reg[2], data_shift:shift|data_reg[3],                           ;
-;                                      ;                         ; data_shift:shift|data_reg[4], data_shift:shift|data_reg[5],                           ;
-;                                      ;                         ; data_shift:shift|data_reg[6], data_shift:shift|data_reg[7],                           ;
-;                                      ;                         ; data_shift:shift|data_reg[8], data_shift:shift|data_reg[9],                           ;
-;                                      ;                         ; data_shift:shift|data_reg[10], data_shift:shift|data_reg[11],                         ;
-;                                      ;                         ; data_shift:shift|data_reg[12], data_shift:shift|data_reg[13],                         ;
-;                                      ;                         ; data_shift:shift|data_reg[14], data_shift:shift|data_reg[15],                         ;
-;                                      ;                         ; data_shift:shift|data_reg[16], data_shift:shift|data_reg[17],                         ;
-;                                      ;                         ; data_shift:shift|data_reg[18], data_shift:shift|data_reg[19],                         ;
-;                                      ;                         ; data_shift:shift|data_reg[20], data_shift:shift|data_reg[21],                         ;
-;                                      ;                         ; data_shift:shift|data_reg[22], data_shift:shift|data_reg[23],                         ;
-;                                      ;                         ; data_input:rpi_data|curr_reg[3], data_input:rpi_data|curr_reg[2],                     ;
-;                                      ;                         ; data_input:rpi_data|curr_reg[1], data_input:rpi_data|curr_reg[0],                     ;
-;                                      ;                         ; data_input:rpi_data|curr_reg[5], data_input:rpi_data|curr_reg[4]                      ;
-; data_input:rpi_data|data_regs[23][0] ; Lost Fanouts            ; data_input:rpi_data|counter[4], data_input:rpi_data|counter[3],                       ;
-;                                      ;                         ; data_input:rpi_data|counter[2], data_input:rpi_data|counter[1],                       ;
-;                                      ;                         ; data_input:rpi_data|counter[0], data_input:rpi_data|reg_selector[5],                  ;
-;                                      ;                         ; data_input:rpi_data|reg_selector[4], data_input:rpi_data|reg_selector[3],             ;
-;                                      ;                         ; data_input:rpi_data|reg_selector[2], data_input:rpi_data|reg_selector[1],             ;
-;                                      ;                         ; data_input:rpi_data|reg_selector[0]                                                   ;
-+--------------------------------------+-------------------------+---------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                ;
++----------------------------------------+------------------------------------------+
+; Register name                          ; Reason for Removal                       ;
++----------------------------------------+------------------------------------------+
+; data_shift:shift|data_reg[2..23]       ; Merged with data_shift:shift|data_reg[1] ;
+; data_shift:shift|data_reg[1]           ; Stuck at GND due to stuck port data_in   ;
+; data_shift:shift|data_reg[0]           ; Lost fanout                              ;
+; Total Number of Removed Registers = 24 ;                                          ;
++----------------------------------------+------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -309,12 +244,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 67    ;
+; Number of registers using Synchronous Clear  ; 1     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 5     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -353,13 +288,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
+; arriav_ff             ; 67                          ;
+;     ENA               ; 5                           ;
+;     SCLR              ; 1                           ;
+;     plain             ; 61                          ;
+; arriav_lcell_comb     ; 115                         ;
+;     arith             ; 15                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 1                           ;
+;         5 data inputs ; 6                           ;
+;     extend            ; 6                           ;
+;         7 data inputs ; 6                           ;
+;     normal            ; 87                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 11                          ;
+;         4 data inputs ; 18                          ;
+;         5 data inputs ; 32                          ;
+;         6 data inputs ; 18                          ;
+;     shared            ; 7                           ;
 ;         0 data inputs ; 1                           ;
-; boundary_port         ; 6                           ;
+;         2 data inputs ; 6                           ;
+; boundary_port         ; 8                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 4.20                        ;
+; Average LUT depth     ; 2.55                        ;
 +-----------------------+-----------------------------+
 
 
@@ -378,10 +332,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov 18 15:29:24 2021
+    Info: Processing started: Thu Dec 02 16:52:53 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off i2s-quest -c i2s-quest
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file data_input.v
+    Info (12023): Found entity 1: data_input File: C:/Users/g2boe/i2s-quest/verilog/data_input.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file top.v
     Info (12023): Found entity 1: top File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file clk_div_lr.v
@@ -392,45 +348,33 @@ Info (12021): Found 1 design units, including 1 entities, in source file clk_div
     Info (12023): Found entity 1: clk_div_master File: C:/Users/g2boe/i2s-quest/verilog/clk_div_master.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file data_shift.v
     Info (12023): Found entity 1: data_shift File: C:/Users/g2boe/i2s-quest/verilog/data_shift.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at top.v(12): created implicit net for "ar" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 12
-Warning (10236): Verilog HDL Implicit Net warning at top.v(14): created implicit net for "data_clk" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 14
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Info (12128): Elaborating entity "clk_div_master" for hierarchy "clk_div_master:master_clk_div" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 12
-Warning (10230): Verilog HDL assignment warning at clk_div_master.v(18): truncated value with size 32 to match size of target (3) File: C:/Users/g2boe/i2s-quest/verilog/clk_div_master.v Line: 18
-Info (12128): Elaborating entity "clk_div_LR" for hierarchy "clk_div_LR:lr_clk_div" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 13
-Warning (10230): Verilog HDL assignment warning at clk_div_LR.v(18): truncated value with size 32 to match size of target (8) File: C:/Users/g2boe/i2s-quest/verilog/clk_div_LR.v Line: 18
-Info (12128): Elaborating entity "clk_div_data" for hierarchy "clk_div_data:data_clk_div" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 14
-Warning (10230): Verilog HDL assignment warning at clk_div_data.v(28): truncated value with size 32 to match size of target (5) File: C:/Users/g2boe/i2s-quest/verilog/clk_div_data.v Line: 28
-Warning (12125): Using design file data_input.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: data_input File: C:/Users/g2boe/i2s-quest/verilog/data_input.v Line: 1
-Info (12128): Elaborating entity "data_input" for hierarchy "data_input:rpi_data" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 15
-Warning (10230): Verilog HDL assignment warning at data_input.v(17): truncated value with size 32 to match size of target (5) File: C:/Users/g2boe/i2s-quest/verilog/data_input.v Line: 17
-Warning (10230): Verilog HDL assignment warning at data_input.v(21): truncated value with size 32 to match size of target (6) File: C:/Users/g2boe/i2s-quest/verilog/data_input.v Line: 21
-Warning (10230): Verilog HDL assignment warning at data_input.v(27): truncated value with size 64 to match size of target (24) File: C:/Users/g2boe/i2s-quest/verilog/data_input.v Line: 27
-Warning (10230): Verilog HDL assignment warning at data_input.v(28): truncated value with size 32 to match size of target (6) File: C:/Users/g2boe/i2s-quest/verilog/data_input.v Line: 28
-Info (12128): Elaborating entity "data_shift" for hierarchy "data_shift:shift" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 16
+Info (12128): Elaborating entity "clk_div_master" for hierarchy "clk_div_master:master_clk_div" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 15
+Warning (10230): Verilog HDL assignment warning at clk_div_master.v(12): truncated value with size 32 to match size of target (3) File: C:/Users/g2boe/i2s-quest/verilog/clk_div_master.v Line: 12
+Info (12128): Elaborating entity "clk_div_LR" for hierarchy "clk_div_LR:lr_clk_div" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 16
+Warning (10230): Verilog HDL assignment warning at clk_div_LR.v(12): truncated value with size 32 to match size of target (8) File: C:/Users/g2boe/i2s-quest/verilog/clk_div_LR.v Line: 12
+Info (12128): Elaborating entity "clk_div_data" for hierarchy "clk_div_data:data_clk_div" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 17
+Warning (10230): Verilog HDL assignment warning at clk_div_data.v(21): truncated value with size 32 to match size of target (5) File: C:/Users/g2boe/i2s-quest/verilog/clk_div_data.v Line: 21
+Info (12128): Elaborating entity "data_input" for hierarchy "data_input:rpi_data" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 18
+Warning (10230): Verilog HDL assignment warning at data_input.v(21): truncated value with size 32 to match size of target (5) File: C:/Users/g2boe/i2s-quest/verilog/data_input.v Line: 21
+Warning (10230): Verilog HDL assignment warning at data_input.v(25): truncated value with size 32 to match size of target (6) File: C:/Users/g2boe/i2s-quest/verilog/data_input.v Line: 25
+Warning (10230): Verilog HDL assignment warning at data_input.v(44): truncated value with size 64 to match size of target (24) File: C:/Users/g2boe/i2s-quest/verilog/data_input.v Line: 44
+Warning (10230): Verilog HDL assignment warning at data_input.v(45): truncated value with size 32 to match size of target (6) File: C:/Users/g2boe/i2s-quest/verilog/data_input.v Line: 45
+Info (12128): Elaborating entity "data_shift" for hierarchy "data_shift:shift" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 19
 Warning (10230): Verilog HDL assignment warning at data_shift.v(14): truncated value with size 32 to match size of target (5) File: C:/Users/g2boe/i2s-quest/verilog/data_shift.v Line: 14
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "ar" is missing source, defaulting to GND File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 12
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "master" is stuck at GND File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 5
-    Warning (13410): Pin "lr_clk" is stuck at GND File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 6
-    Warning (13410): Pin "serial" is stuck at GND File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 8
-Info (17049): 36 registers lost all their fanouts during netlist optimizations.
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 2
-    Warning (15610): No output dependent on input pin "rpi_clk" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 3
-    Warning (15610): No output dependent on input pin "rpi_serial" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 4
-Info (21057): Implemented 6 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 3 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 4793 megabytes
-    Info: Processing ended: Thu Nov 18 15:29:32 2021
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:20
+Info (21057): Implemented 123 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 115 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4826 megabytes
+    Info: Processing ended: Thu Dec 02 16:53:02 2021
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:22
 
 
