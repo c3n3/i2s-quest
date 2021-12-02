@@ -328,7 +328,7 @@ deps_/home/pi/i2s-quest/pi_driver/driver.mod.o := \
     $(wildcard include/config/cpu/copy/v6.h) \
     $(wildcard include/config/kuser/helpers.h) \
   arch/arm/include/asm/glue.h \
-  arch/arm/include/asm/pgtable-2level-types.h \
+  arch/arm/include/asm/pgtable-3level-types.h \
   arch/arm/include/asm/memory.h \
     $(wildcard include/config/need/mach/memory/h.h) \
     $(wildcard include/config/page/offset.h) \

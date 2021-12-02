@@ -38,19 +38,17 @@ unsigned long old_jiffie = 0;
 #endif
 
 //LED is connected to this GPIO
-#define GPIO_21_OUT (21)
+#define DATA_OUT_PIN (21)
 
-#define CLOCK_OUT_PIN (22)
+#define CLOCK_OUT_PIN (20)
 
 //LED is connected to this GPIO
-#define GPIO_25_IN  (25)
+#define INTERRUPT_PIN  (25)
 
 // Enable i2s
 #define ENABLE_PIN  (26)
 
-//GPIO_25_IN value toggle
-unsigned int led_toggle = 0; 
-//This used for storing the IRQ number for the GPIO
+unsigned int led_toggle = 0;
 unsigned int GPIO_irqNumber;
 
 
@@ -60,12 +58,11 @@ static void output_data(uint8_t* buffer, size_t size, int pin)
   uint8_t bit;
   for (i = 0; i < size; i++) {
     for (bit = 0x01; bit != 0; bit = bit << 1) {
-      gpio_set_value(GPIO_21_OUT, buffer[i] & bit);
-      gpio_set_value(CLOCK_OUT_PIN, 0);
+      gpio_set_value(pin, buffer[i] & bit);
       gpio_set_value(CLOCK_OUT_PIN, 1);
+      gpio_set_value(CLOCK_OUT_PIN, 0);
     }
   }
-  pr_info("Output data\n");
 }
 
 
@@ -74,21 +71,20 @@ static void output_data(uint8_t* buffer, size_t size, int pin)
 #define INCREMENT (MAX_24_BIT / NUM_COUNT)
 #define NUM_COUNT 32
 
-static uint8_t data[NUM_COUNT*BYTES_PER_24_BIT_NUM];
+static uint8_t data[NUM_COUNT*BYTES_PER_24_BIT_NUM + 1];
 
 static void write24Bit(uint8_t* bytes, uint32_t value)
 {
-  bytes[0] = value & (0x000000ff);
-  bytes[1] = value & (0x0000ff00);
-  bytes[2] = value & (0x00ff0000);
+  *(uint32_t*)bytes = value & (0x00ffffff);
 }
 
 //Interrupt handler for GPIO 25. This will be called whenever there is a raising edge detected. 
 static irqreturn_t gpio_irq_handler(int irq,void *dev_id) 
 {
   static unsigned long flags = 0;
+  // unsigned int j = 0x55555555;
   local_irq_save(flags);
-  output_data((uint8_t*)&data, sizeof(data), GPIO_21_OUT);
+  output_data(data, sizeof(data), DATA_OUT_PIN);
   local_irq_restore(flags);
   return IRQ_HANDLED;
 }
@@ -140,19 +136,6 @@ static int etx_release(struct inode *inode, struct file *file)
 static ssize_t etx_read(struct file *filp, 
                 char __user *buf, size_t len, loff_t *off)
 {
-  uint8_t gpio_state = 0;
-  
-  //reading GPIO value
-  gpio_state = gpio_get_value(GPIO_21_OUT);
-  
-  //write to user
-  len = 1;
-  if( copy_to_user(buf, &gpio_state, len) > 0) {
-    pr_err("ERROR: Not all the bytes have been copied to user\n");
-  }
-  
-  pr_info("Read function : GPIO_21 = %d \n", gpio_state);
-  
   return 0;
 }
 /*
@@ -165,18 +148,6 @@ static ssize_t etx_write(struct file *filp,
   
   if( copy_from_user( rec_buf, buf, len ) > 0) {
     pr_err("ERROR: Not all the bytes have been copied from user\n");
-  }
-  
-  pr_info("Write Function : GPIO_21 Set = %c\n", rec_buf[0]);
-  
-  if (rec_buf[0]=='1') {
-    //set the GPIO value to HIGH
-    gpio_set_value(GPIO_21_OUT, 1);
-  } else if (rec_buf[0]=='0') {
-    //set the GPIO value to LOW
-    gpio_set_value(GPIO_21_OUT, 0);
-  } else {
-    pr_err("Unknown command : Please provide either 1 or 0 \n");
   }
   
   return len;
@@ -212,35 +183,35 @@ static int __init etx_driver_init(void)
   
   //Output GPIO configuration
   //Checking the GPIO is valid or not
-  if(gpio_is_valid(GPIO_21_OUT) == false){
-    pr_err("GPIO %d is not valid\n", GPIO_21_OUT);
+  if(gpio_is_valid(DATA_OUT_PIN) == false){
+    pr_err("GPIO %d is not valid\n", DATA_OUT_PIN);
     goto r_device;
   }
   
   //Requesting the GPIO
-  if(gpio_request(GPIO_21_OUT,"GPIO_21_OUT") < 0){
-    pr_err("ERROR: GPIO %d request\n", GPIO_21_OUT);
+  if(gpio_request(DATA_OUT_PIN,"DATA_OUT_PIN") < 0){
+    pr_err("ERROR: GPIO %d request\n", DATA_OUT_PIN);
     goto r_gpio_out;
   }
   
   //configure the GPIO as output
-  gpio_direction_output(GPIO_21_OUT, 0);
+  gpio_direction_output(DATA_OUT_PIN, 1);
   
   //Input GPIO configuratioin
   //Checking the GPIO is valid or not
-  if(gpio_is_valid(GPIO_25_IN) == false){
-    pr_err("GPIO %d is not valid\n", GPIO_25_IN);
+  if(gpio_is_valid(INTERRUPT_PIN) == false){
+    pr_err("GPIO %d is not valid\n", INTERRUPT_PIN);
     goto r_gpio_in;
   }
   
   //Requesting the GPIO
-  if(gpio_request(GPIO_25_IN,"GPIO_25_IN") < 0){
-    pr_err("ERROR: GPIO %d request\n", GPIO_25_IN);
+  if(gpio_request(INTERRUPT_PIN,"INTERRUPT_PIN") < 0){
+    pr_err("ERROR: GPIO %d request\n", INTERRUPT_PIN);
     goto r_gpio_in;
   }
   
   //configure the GPIO as input
-  gpio_direction_input(GPIO_25_IN);
+  gpio_direction_input(INTERRUPT_PIN);
   
   
   //Input GPIO configuratioin
@@ -275,13 +246,14 @@ static int __init etx_driver_init(void)
   //configure the GPIO as input
   gpio_direction_output(CLOCK_OUT_PIN, 1);
 
-
-  for (int i = 0; i < NUM_COUNT; i++) {
-    write24Bit(data, INCREMENT*i);
+  int i;
+  pr_info("Increment = %x", INCREMENT);
+  for (i = 0; i < NUM_COUNT; i++) {
+    write24Bit(data + BYTES_PER_24_BIT_NUM*i, INCREMENT*i);
   }
 
   //Get the IRQ number for our GPIO
-  GPIO_irqNumber = gpio_to_irq(GPIO_25_IN);
+  GPIO_irqNumber = gpio_to_irq(INTERRUPT_PIN);
   pr_info("GPIO_irqNumber = %d\n", GPIO_irqNumber);
   
   if (request_irq(GPIO_irqNumber,             //IRQ number
@@ -302,9 +274,9 @@ clock_out:
 enable_gpio:
   gpio_free(ENABLE_PIN);
 r_gpio_in:
-  gpio_free(GPIO_25_IN);
+  gpio_free(INTERRUPT_PIN);
 r_gpio_out:
-  gpio_free(GPIO_21_OUT);
+  gpio_free(DATA_OUT_PIN);
 r_device:
   device_destroy(dev_class,dev);
 r_class:
@@ -322,8 +294,8 @@ r_unreg:
 static void __exit etx_driver_exit(void)
 {
   free_irq(GPIO_irqNumber,NULL);
-  gpio_free(GPIO_25_IN);
-  gpio_free(GPIO_21_OUT);
+  gpio_free(INTERRUPT_PIN);
+  gpio_free(DATA_OUT_PIN);
   gpio_free(ENABLE_PIN);
   gpio_free(CLOCK_OUT_PIN);
   device_destroy(dev_class,dev);
