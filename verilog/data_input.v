@@ -24,7 +24,7 @@ module data_input(
 			begin
 				rpi_interrupt = 1;
 			end
-			else if (sub == 63)
+			else
 			begin
 				rpi_interrupt = 0;
 			end
