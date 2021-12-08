@@ -15,5 +15,13 @@ module  rpi_interrupt_clk(clk_in, interrupt_enable, clk_out);
 				count = count + 1;
 			end
       end
-                                                                                                                                                                                                              
+      always @(negedge interrupt_enable)
+      begin
+        count = 0;
+      end
+      always @(posedge interrupt_enable)
+      begin
+        count[5] = 1;
+      end                                                                                                                                                                                            
  endmodule
+ 
