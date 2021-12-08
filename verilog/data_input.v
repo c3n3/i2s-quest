@@ -17,17 +17,10 @@ module data_input(
 	
 	always@(posedge clk)
 	begin
-		if (enable)
+		sub = reg_selector - curr_reg;
+		if (sub < 32)
 		begin
-			sub = reg_selector - curr_reg;
-			if (sub < 32)
-			begin
-				rpi_interrupt = 1;
-			end
-			else
-			begin
-				rpi_interrupt = 0;
-			end
+			rpi_interrupt = 1;
 		end
 		else
 		begin
@@ -37,15 +30,13 @@ module data_input(
 	
 	always@(posedge rpi_clk)
 	begin
-		if (enable)
+		data_regs[reg_selector][counter] = serial;
+		counter = counter + 1;
+		if (counter > 23)
 		begin
-			data_regs[reg_selector][counter] = serial;
-			counter = counter + 1;
-			if (counter > 23)
-			begin
-				counter = 0;
+			counter = 0;
+			if (reg_selector + 1 - curr_reg > 0)
 				reg_selector = reg_selector + 1;
-			end
 		end
 	end
 	
