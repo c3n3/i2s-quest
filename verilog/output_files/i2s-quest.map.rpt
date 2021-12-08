@@ -1,5 +1,5 @@
 Analysis & Synthesis report for i2s-quest
-Mon Dec 06 14:06:29 2021
+Wed Dec 08 14:07:38 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -47,13 +47,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Dec 06 14:06:29 2021       ;
+; Analysis & Synthesis Status     ; Successful - Wed Dec 08 14:07:38 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; i2s-quest                                   ;
 ; Top-level Entity Name           ; top                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 73                                          ;
+; Total registers                 ; 125                                         ;
 ; Total pins                      ; 8                                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -191,25 +191,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimate of Logic utilization (ALMs needed) ; 67            ;
+; Estimate of Logic utilization (ALMs needed) ; 138           ;
 ;                                             ;               ;
-; Combinational ALUT usage for logic          ; 107           ;
-;     -- 7 input functions                    ; 6             ;
-;     -- 6 input functions                    ; 21            ;
-;     -- 5 input functions                    ; 32            ;
-;     -- 4 input functions                    ; 17            ;
-;     -- <=3 input functions                  ; 31            ;
+; Combinational ALUT usage for logic          ; 177           ;
+;     -- 7 input functions                    ; 0             ;
+;     -- 6 input functions                    ; 98            ;
+;     -- 5 input functions                    ; 16            ;
+;     -- 4 input functions                    ; 6             ;
+;     -- <=3 input functions                  ; 57            ;
 ;                                             ;               ;
-; Dedicated logic registers                   ; 73            ;
+; Dedicated logic registers                   ; 125           ;
 ;                                             ;               ;
 ; I/O pins                                    ; 8             ;
 ;                                             ;               ;
 ; Total DSP Blocks                            ; 0             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; rpi_clk~input ;
-; Maximum fan-out                             ; 35            ;
-; Total fan-out                               ; 633           ;
-; Average fan-out                             ; 3.23          ;
+; Maximum fan-out                             ; 75            ;
+; Total fan-out                               ; 1106          ;
+; Average fan-out                             ; 3.48          ;
 +---------------------------------------------+---------------+
 
 
@@ -218,13 +218,13 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name       ; Library Name ;
 +------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+-------------------+--------------+
-; |top                               ; 107 (0)             ; 73 (0)                    ; 0                 ; 0          ; 8    ; 0            ; |top                               ; top               ; work         ;
+; |top                               ; 177 (0)             ; 125 (0)                   ; 0                 ; 0          ; 8    ; 0            ; |top                               ; top               ; work         ;
 ;    |clk_div_LR:lr_clk_div|         ; 8 (8)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |top|clk_div_LR:lr_clk_div         ; clk_div_LR        ; work         ;
 ;    |clk_div_data:data_clk_div|     ; 6 (6)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |top|clk_div_data:data_clk_div     ; clk_div_data      ; work         ;
 ;    |clk_div_master:master_clk_div| ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |top|clk_div_master:master_clk_div ; clk_div_master    ; work         ;
-;    |data_input:rpi_data|           ; 76 (76)             ; 43 (43)                   ; 0                 ; 0          ; 0    ; 0            ; |top|data_input:rpi_data           ; data_input        ; work         ;
-;    |data_shift:shift|              ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_shift:shift              ; data_shift        ; work         ;
-;    |rpi_interrupt_clk:done|        ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |top|rpi_interrupt_clk:done        ; rpi_interrupt_clk ; work         ;
+;    |data_input:rpi_data|           ; 134 (134)           ; 83 (83)                   ; 0                 ; 0          ; 0    ; 0            ; |top|data_input:rpi_data           ; data_input        ; work         ;
+;    |data_shift:shift|              ; 9 (9)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |top|data_shift:shift              ; data_shift        ; work         ;
+;    |rpi_interrupt_clk:done|        ; 17 (17)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |top|rpi_interrupt_clk:done        ; rpi_interrupt_clk ; work         ;
 +------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -234,10 +234,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+------------------------------------------+
 ; Register name                          ; Reason for Removal                       ;
 +----------------------------------------+------------------------------------------+
+; rpi_interrupt_clk:done|immediate       ; Stuck at VCC due to stuck port data_in   ;
 ; data_shift:shift|data_reg[2..23]       ; Merged with data_shift:shift|data_reg[1] ;
 ; data_shift:shift|data_reg[1]           ; Stuck at GND due to stuck port data_in   ;
 ; data_shift:shift|data_reg[0]           ; Lost fanout                              ;
-; Total Number of Removed Registers = 24 ;                                          ;
+; Total Number of Removed Registers = 25 ;                                          ;
 +----------------------------------------+------------------------------------------+
 
 
@@ -246,8 +247,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 73    ;
-; Number of registers using Synchronous Clear  ; 1     ;
+; Total registers                              ; 125   ;
+; Number of registers using Synchronous Clear  ; 17    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -290,30 +291,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 73                          ;
+; arriav_ff             ; 125                         ;
 ;     ENA               ; 5                           ;
-;     SCLR              ; 1                           ;
-;     plain             ; 67                          ;
-; arriav_lcell_comb     ; 107                         ;
-;     arith             ; 7                           ;
-;         1 data inputs ; 6                           ;
+;     SCLR              ; 17                          ;
+;     plain             ; 103                         ;
+; arriav_lcell_comb     ; 178                         ;
+;     arith             ; 24                          ;
+;         1 data inputs ; 23                          ;
 ;         2 data inputs ; 1                           ;
-;     extend            ; 6                           ;
-;         7 data inputs ; 6                           ;
-;     normal            ; 87                          ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 9                           ;
-;         4 data inputs ; 17                          ;
-;         5 data inputs ; 32                          ;
-;         6 data inputs ; 21                          ;
+;     normal            ; 147                         ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 6                           ;
+;         5 data inputs ; 16                          ;
+;         6 data inputs ; 98                          ;
 ;     shared            ; 7                           ;
 ;         0 data inputs ; 1                           ;
 ;         2 data inputs ; 6                           ;
 ; boundary_port         ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.20                        ;
-; Average LUT depth     ; 2.32                        ;
+; Average LUT depth     ; 2.31                        ;
 +-----------------------+-----------------------------+
 
 
@@ -332,7 +331,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Dec 06 14:06:13 2021
+    Info: Processing started: Wed Dec 08 14:07:29 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off i2s-quest -c i2s-quest
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -351,34 +350,34 @@ Info (12021): Found 1 design units, including 1 entities, in source file data_sh
 Info (12021): Found 1 design units, including 1 entities, in source file rpi_interrupt_clk.v
     Info (12023): Found entity 1: rpi_interrupt_clk File: C:/Users/g2boe/i2s-quest/verilog/rpi_interrupt_clk.v Line: 1
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Info (12128): Elaborating entity "clk_div_master" for hierarchy "clk_div_master:master_clk_div" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 16
+Warning (10036): Verilog HDL or VHDL warning at top.v(15): object "temp" assigned a value but never read File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 15
+Info (12128): Elaborating entity "clk_div_master" for hierarchy "clk_div_master:master_clk_div" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 19
 Warning (10230): Verilog HDL assignment warning at clk_div_master.v(12): truncated value with size 32 to match size of target (3) File: C:/Users/g2boe/i2s-quest/verilog/clk_div_master.v Line: 12
-Info (12128): Elaborating entity "clk_div_LR" for hierarchy "clk_div_LR:lr_clk_div" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 17
+Info (12128): Elaborating entity "clk_div_LR" for hierarchy "clk_div_LR:lr_clk_div" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 20
 Warning (10230): Verilog HDL assignment warning at clk_div_LR.v(12): truncated value with size 32 to match size of target (8) File: C:/Users/g2boe/i2s-quest/verilog/clk_div_LR.v Line: 12
-Info (12128): Elaborating entity "clk_div_data" for hierarchy "clk_div_data:data_clk_div" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 18
+Info (12128): Elaborating entity "clk_div_data" for hierarchy "clk_div_data:data_clk_div" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 21
 Warning (10230): Verilog HDL assignment warning at clk_div_data.v(21): truncated value with size 32 to match size of target (5) File: C:/Users/g2boe/i2s-quest/verilog/clk_div_data.v Line: 21
-Info (12128): Elaborating entity "data_input" for hierarchy "data_input:rpi_data" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 19
+Info (12128): Elaborating entity "data_input" for hierarchy "data_input:rpi_data" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 22
 Warning (10230): Verilog HDL assignment warning at data_input.v(43): truncated value with size 32 to match size of target (5) File: C:/Users/g2boe/i2s-quest/verilog/data_input.v Line: 43
 Warning (10230): Verilog HDL assignment warning at data_input.v(47): truncated value with size 32 to match size of target (6) File: C:/Users/g2boe/i2s-quest/verilog/data_input.v Line: 47
-Warning (10230): Verilog HDL assignment warning at data_input.v(54): truncated value with size 64 to match size of target (24) File: C:/Users/g2boe/i2s-quest/verilog/data_input.v Line: 54
 Warning (10230): Verilog HDL assignment warning at data_input.v(55): truncated value with size 32 to match size of target (6) File: C:/Users/g2boe/i2s-quest/verilog/data_input.v Line: 55
-Info (12128): Elaborating entity "data_shift" for hierarchy "data_shift:shift" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 20
-Warning (10230): Verilog HDL assignment warning at data_shift.v(14): truncated value with size 32 to match size of target (5) File: C:/Users/g2boe/i2s-quest/verilog/data_shift.v Line: 14
-Info (12128): Elaborating entity "rpi_interrupt_clk" for hierarchy "rpi_interrupt_clk:done" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 21
-Warning (10230): Verilog HDL assignment warning at rpi_interrupt_clk.v(15): truncated value with size 32 to match size of target (6) File: C:/Users/g2boe/i2s-quest/verilog/rpi_interrupt_clk.v Line: 15
+Info (12128): Elaborating entity "data_shift" for hierarchy "data_shift:shift" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 23
+Warning (10230): Verilog HDL assignment warning at data_shift.v(15): truncated value with size 32 to match size of target (5) File: C:/Users/g2boe/i2s-quest/verilog/data_shift.v Line: 15
+Info (12128): Elaborating entity "rpi_interrupt_clk" for hierarchy "rpi_interrupt_clk:done" File: C:/Users/g2boe/i2s-quest/verilog/top.v Line: 24
+Warning (10230): Verilog HDL assignment warning at rpi_interrupt_clk.v(15): truncated value with size 32 to match size of target (17) File: C:/Users/g2boe/i2s-quest/verilog/rpi_interrupt_clk.v Line: 15
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 115 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 185 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 107 logic cells
+    Info (21061): Implemented 177 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4823 megabytes
-    Info: Processing ended: Mon Dec 06 14:06:29 2021
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Peak virtual memory: 4819 megabytes
+    Info: Processing ended: Wed Dec 08 14:07:38 2021
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:20
 
 

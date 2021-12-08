@@ -3,9 +3,9 @@ module  rpi_interrupt_clk(clk_in, interrupt_enable, clk_out);
 	 input interrupt_enable;
     output clk_out;       // 
     reg immediate;
-    reg [5:0]   count;
+    reg [16:0]   count;
 	 
-	 assign clk_out = count[5] ^ immediate;
+	 assign clk_out = count[16] ^ immediate;
     
     
     always @(posedge clk_in)
@@ -13,7 +13,9 @@ module  rpi_interrupt_clk(clk_in, interrupt_enable, clk_out);
         if (interrupt_enable)
         begin
           count = count + 1;
+			end
         else
+		  begin
           count = 0;
         end
       end

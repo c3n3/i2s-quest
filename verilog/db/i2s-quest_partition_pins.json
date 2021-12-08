@@ -28,11 +28,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "rpi_clk",
+					"name" : "rpi_serial",
 					"strict" : false
 				},
 				{
-					"name" : "rpi_serial",
+					"name" : "rpi_clk",
 					"strict" : false
 				}
 			]

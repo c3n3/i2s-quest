@@ -1,5 +1,5 @@
 Timing Analyzer report for i2s-quest
-Mon Dec 06 14:07:25 2021
+Wed Dec 08 14:08:25 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -100,14 +100,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.11        ;
+; Average used               ; 1.14        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.9%      ;
-;     Processor 3            ;   3.6%      ;
-;     Processor 4            ;   3.5%      ;
+;     Processor 2            ;   5.0%      ;
+;     Processor 3            ;   4.8%      ;
+;     Processor 4            ;   4.6%      ;
 +----------------------------+-------------+
 
 
@@ -129,11 +129,11 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+----------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                             ; Note ;
 +------------+-----------------+----------------------------------------+------+
-; 158.3 MHz  ; 158.3 MHz       ; data_shift:shift|ready                 ;      ;
-; 251.51 MHz ; 251.51 MHz      ; clk                                    ;      ;
-; 310.66 MHz ; 310.66 MHz      ; clk_div_master:master_clk_div|count[2] ;      ;
-; 364.96 MHz ; 364.96 MHz      ; rpi_clk                                ;      ;
-; 428.45 MHz ; 428.45 MHz      ; clk_div_data:data_clk_div|clk_out      ;      ;
+; 158.08 MHz ; 158.08 MHz      ; data_shift:shift|ready                 ;      ;
+; 205.38 MHz ; 205.38 MHz      ; clk                                    ;      ;
+; 277.93 MHz ; 277.93 MHz      ; clk_div_data:data_clk_div|clk_out      ;      ;
+; 315.96 MHz ; 315.96 MHz      ; clk_div_master:master_clk_div|count[2] ;      ;
+; 372.72 MHz ; 372.72 MHz      ; rpi_clk                                ;      ;
 +------------+-----------------+----------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -144,17 +144,17 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 HTML report is unavailable in plain text report export.
 
 
-+-----------------------------------------------------------------+
-; Slow 1100mV 85C Model Setup Summary                             ;
-+----------------------------------------+--------+---------------+
-; Clock                                  ; Slack  ; End Point TNS ;
-+----------------------------------------+--------+---------------+
-; data_shift:shift|ready                 ; -9.982 ; -67.522       ;
-; clk                                    ; -8.386 ; -26.869       ;
-; clk_div_master:master_clk_div|count[2] ; -2.219 ; -15.159       ;
-; rpi_clk                                ; -1.740 ; -46.407       ;
-; clk_div_data:data_clk_div|clk_out      ; -1.334 ; -13.800       ;
-+----------------------------------------+--------+---------------+
++------------------------------------------------------------------+
+; Slow 1100mV 85C Model Setup Summary                              ;
++----------------------------------------+---------+---------------+
+; Clock                                  ; Slack   ; End Point TNS ;
++----------------------------------------+---------+---------------+
+; data_shift:shift|ready                 ; -10.117 ; -69.185       ;
+; clk                                    ; -8.273  ; -40.054       ;
+; clk_div_data:data_clk_div|clk_out      ; -2.598  ; -17.886       ;
+; clk_div_master:master_clk_div|count[2] ; -2.165  ; -13.305       ;
+; rpi_clk                                ; -1.683  ; -110.032      ;
++----------------------------------------+---------+---------------+
 
 
 +----------------------------------------------------------------+
@@ -162,11 +162,11 @@ HTML report is unavailable in plain text report export.
 +----------------------------------------+-------+---------------+
 ; Clock                                  ; Slack ; End Point TNS ;
 +----------------------------------------+-------+---------------+
-; clk_div_data:data_clk_div|clk_out      ; 0.253 ; 0.000         ;
-; clk                                    ; 0.375 ; 0.000         ;
 ; rpi_clk                                ; 0.375 ; 0.000         ;
-; clk_div_master:master_clk_div|count[2] ; 0.558 ; 0.000         ;
-; data_shift:shift|ready                 ; 0.655 ; 0.000         ;
+; clk                                    ; 0.383 ; 0.000         ;
+; clk_div_master:master_clk_div|count[2] ; 0.508 ; 0.000         ;
+; data_shift:shift|ready                 ; 0.533 ; 0.000         ;
+; clk_div_data:data_clk_div|clk_out      ; 0.622 ; 0.000         ;
 +----------------------------------------+-------+---------------+
 
 
@@ -187,11 +187,11 @@ No paths to report.
 +----------------------------------------+--------+---------------+
 ; Clock                                  ; Slack  ; End Point TNS ;
 +----------------------------------------+--------+---------------+
-; rpi_clk                                ; -0.394 ; -22.622       ;
-; clk                                    ; -0.394 ; -11.902       ;
-; clk_div_data:data_clk_div|clk_out      ; -0.394 ; -6.116        ;
-; clk_div_master:master_clk_div|count[2] ; -0.394 ; -4.680        ;
-; data_shift:shift|ready                 ; -0.394 ; -3.649        ;
+; clk                                    ; -0.506 ; -17.459       ;
+; rpi_clk                                ; -0.394 ; -49.650       ;
+; clk_div_data:data_clk_div|clk_out      ; -0.394 ; -5.992        ;
+; clk_div_master:master_clk_div|count[2] ; -0.394 ; -4.175        ;
+; data_shift:shift|ready                 ; -0.394 ; -3.679        ;
 +----------------------------------------+--------+---------------+
 
 
@@ -206,26 +206,26 @@ No synchronizer chains to report.
 +------------+-----------------+----------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                             ; Note ;
 +------------+-----------------+----------------------------------------+------+
-; 157.83 MHz ; 157.83 MHz      ; data_shift:shift|ready                 ;      ;
-; 238.49 MHz ; 238.49 MHz      ; clk                                    ;      ;
-; 308.55 MHz ; 308.55 MHz      ; clk_div_master:master_clk_div|count[2] ;      ;
-; 376.51 MHz ; 376.51 MHz      ; rpi_clk                                ;      ;
-; 424.99 MHz ; 424.99 MHz      ; clk_div_data:data_clk_div|clk_out      ;      ;
+; 160.18 MHz ; 160.18 MHz      ; data_shift:shift|ready                 ;      ;
+; 198.18 MHz ; 198.18 MHz      ; clk                                    ;      ;
+; 282.33 MHz ; 282.33 MHz      ; clk_div_data:data_clk_div|clk_out      ;      ;
+; 312.4 MHz  ; 312.4 MHz       ; clk_div_master:master_clk_div|count[2] ;      ;
+; 374.39 MHz ; 374.39 MHz      ; rpi_clk                                ;      ;
 +------------+-----------------+----------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+-----------------------------------------------------------------+
-; Slow 1100mV 0C Model Setup Summary                              ;
-+----------------------------------------+--------+---------------+
-; Clock                                  ; Slack  ; End Point TNS ;
-+----------------------------------------+--------+---------------+
-; data_shift:shift|ready                 ; -9.974 ; -67.248       ;
-; clk                                    ; -8.060 ; -26.151       ;
-; clk_div_master:master_clk_div|count[2] ; -2.241 ; -15.622       ;
-; rpi_clk                                ; -1.656 ; -45.354       ;
-; clk_div_data:data_clk_div|clk_out      ; -1.353 ; -14.030       ;
-+----------------------------------------+--------+---------------+
++------------------------------------------------------------------+
+; Slow 1100mV 0C Model Setup Summary                               ;
++----------------------------------------+---------+---------------+
+; Clock                                  ; Slack   ; End Point TNS ;
++----------------------------------------+---------+---------------+
+; data_shift:shift|ready                 ; -10.131 ; -69.038       ;
+; clk                                    ; -7.993  ; -41.131       ;
+; clk_div_data:data_clk_div|clk_out      ; -2.542  ; -17.677       ;
+; clk_div_master:master_clk_div|count[2] ; -2.201  ; -13.764       ;
+; rpi_clk                                ; -1.671  ; -109.419      ;
++----------------------------------------+---------+---------------+
 
 
 +----------------------------------------------------------------+
@@ -233,11 +233,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------+-------+---------------+
 ; Clock                                  ; Slack ; End Point TNS ;
 +----------------------------------------+-------+---------------+
-; clk_div_data:data_clk_div|clk_out      ; 0.199 ; 0.000         ;
-; clk                                    ; 0.324 ; 0.000         ;
-; rpi_clk                                ; 0.393 ; 0.000         ;
-; clk_div_master:master_clk_div|count[2] ; 0.506 ; 0.000         ;
-; data_shift:shift|ready                 ; 0.649 ; 0.000         ;
+; clk                                    ; 0.335 ; 0.000         ;
+; rpi_clk                                ; 0.392 ; 0.000         ;
+; clk_div_master:master_clk_div|count[2] ; 0.488 ; 0.000         ;
+; data_shift:shift|ready                 ; 0.564 ; 0.000         ;
+; clk_div_data:data_clk_div|clk_out      ; 0.645 ; 0.000         ;
 +----------------------------------------+-------+---------------+
 
 
@@ -258,11 +258,11 @@ No paths to report.
 +----------------------------------------+--------+---------------+
 ; Clock                                  ; Slack  ; End Point TNS ;
 +----------------------------------------+--------+---------------+
-; clk                                    ; -0.420 ; -13.102       ;
-; rpi_clk                                ; -0.394 ; -21.360       ;
-; clk_div_data:data_clk_div|clk_out      ; -0.394 ; -5.946        ;
-; clk_div_master:master_clk_div|count[2] ; -0.394 ; -4.599        ;
-; data_shift:shift|ready                 ; -0.394 ; -3.635        ;
+; clk                                    ; -0.548 ; -19.208       ;
+; rpi_clk                                ; -0.394 ; -46.939       ;
+; clk_div_data:data_clk_div|clk_out      ; -0.394 ; -5.956        ;
+; clk_div_master:master_clk_div|count[2] ; -0.394 ; -4.096        ;
+; data_shift:shift|ready                 ; -0.394 ; -3.700        ;
 +----------------------------------------+--------+---------------+
 
 
@@ -277,25 +277,25 @@ No synchronizer chains to report.
 +----------------------------------------+--------+---------------+
 ; Clock                                  ; Slack  ; End Point TNS ;
 +----------------------------------------+--------+---------------+
-; data_shift:shift|ready                 ; -5.101 ; -34.644       ;
-; clk                                    ; -4.641 ; -12.255       ;
-; clk_div_master:master_clk_div|count[2] ; -1.036 ; -5.966        ;
-; rpi_clk                                ; -0.609 ; -13.587       ;
-; clk_div_data:data_clk_div|clk_out      ; -0.496 ; -4.877        ;
+; data_shift:shift|ready                 ; -5.277 ; -35.757       ;
+; clk                                    ; -4.507 ; -14.687       ;
+; clk_div_data:data_clk_div|clk_out      ; -1.355 ; -7.804        ;
+; clk_div_master:master_clk_div|count[2] ; -0.964 ; -5.152        ;
+; rpi_clk                                ; -0.589 ; -33.720       ;
 +----------------------------------------+--------+---------------+
 
 
-+-----------------------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                              ;
-+----------------------------------------+--------+---------------+
-; Clock                                  ; Slack  ; End Point TNS ;
-+----------------------------------------+--------+---------------+
-; clk_div_data:data_clk_div|clk_out      ; -0.052 ; -0.052        ;
-; clk                                    ; 0.182  ; 0.000         ;
-; rpi_clk                                ; 0.182  ; 0.000         ;
-; clk_div_master:master_clk_div|count[2] ; 0.256  ; 0.000         ;
-; data_shift:shift|ready                 ; 0.330  ; 0.000         ;
-+----------------------------------------+--------+---------------+
++----------------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                             ;
++----------------------------------------+-------+---------------+
+; Clock                                  ; Slack ; End Point TNS ;
++----------------------------------------+-------+---------------+
+; clk_div_data:data_clk_div|clk_out      ; 0.121 ; 0.000         ;
+; rpi_clk                                ; 0.182 ; 0.000         ;
+; clk                                    ; 0.184 ; 0.000         ;
+; data_shift:shift|ready                 ; 0.260 ; 0.000         ;
+; clk_div_master:master_clk_div|count[2] ; 0.269 ; 0.000         ;
++----------------------------------------+-------+---------------+
 
 
 ------------------------------------------
@@ -315,11 +315,11 @@ No paths to report.
 +----------------------------------------+--------+---------------+
 ; Clock                                  ; Slack  ; End Point TNS ;
 +----------------------------------------+--------+---------------+
-; clk                                    ; -0.438 ; -2.567        ;
-; rpi_clk                                ; -0.329 ; -11.625       ;
-; clk_div_data:data_clk_div|clk_out      ; 0.093  ; 0.000         ;
-; data_shift:shift|ready                 ; 0.122  ; 0.000         ;
-; clk_div_master:master_clk_div|count[2] ; 0.159  ; 0.000         ;
+; clk                                    ; -0.528 ; -3.837        ;
+; rpi_clk                                ; -0.342 ; -25.554       ;
+; data_shift:shift|ready                 ; 0.019  ; 0.000         ;
+; clk_div_data:data_clk_div|clk_out      ; 0.059  ; 0.000         ;
+; clk_div_master:master_clk_div|count[2] ; 0.152  ; 0.000         ;
 +----------------------------------------+--------+---------------+
 
 
@@ -334,25 +334,25 @@ No synchronizer chains to report.
 +----------------------------------------+--------+---------------+
 ; Clock                                  ; Slack  ; End Point TNS ;
 +----------------------------------------+--------+---------------+
-; data_shift:shift|ready                 ; -4.904 ; -33.231       ;
-; clk                                    ; -4.207 ; -10.178       ;
-; clk_div_master:master_clk_div|count[2] ; -0.913 ; -5.383        ;
-; rpi_clk                                ; -0.475 ; -10.490       ;
-; clk_div_data:data_clk_div|clk_out      ; -0.421 ; -4.216        ;
+; data_shift:shift|ready                 ; -5.031 ; -34.282       ;
+; clk                                    ; -4.116 ; -12.849       ;
+; clk_div_data:data_clk_div|clk_out      ; -1.185 ; -6.721        ;
+; clk_div_master:master_clk_div|count[2] ; -0.853 ; -4.710        ;
+; rpi_clk                                ; -0.459 ; -26.079       ;
 +----------------------------------------+--------+---------------+
 
 
-+-----------------------------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary                               ;
-+----------------------------------------+--------+---------------+
-; Clock                                  ; Slack  ; End Point TNS ;
-+----------------------------------------+--------+---------------+
-; clk_div_data:data_clk_div|clk_out      ; -0.105 ; -0.105        ;
-; clk                                    ; 0.107  ; 0.000         ;
-; rpi_clk                                ; 0.172  ; 0.000         ;
-; clk_div_master:master_clk_div|count[2] ; 0.216  ; 0.000         ;
-; data_shift:shift|ready                 ; 0.284  ; 0.000         ;
-+----------------------------------------+--------+---------------+
++----------------------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                              ;
++----------------------------------------+-------+---------------+
+; Clock                                  ; Slack ; End Point TNS ;
++----------------------------------------+-------+---------------+
+; clk_div_data:data_clk_div|clk_out      ; 0.058 ; 0.000         ;
+; clk                                    ; 0.114 ; 0.000         ;
+; rpi_clk                                ; 0.172 ; 0.000         ;
+; clk_div_master:master_clk_div|count[2] ; 0.239 ; 0.000         ;
+; data_shift:shift|ready                 ; 0.245 ; 0.000         ;
++----------------------------------------+-------+---------------+
 
 
 -----------------------------------------
@@ -372,11 +372,11 @@ No paths to report.
 +----------------------------------------+--------+---------------+
 ; Clock                                  ; Slack  ; End Point TNS ;
 +----------------------------------------+--------+---------------+
-; clk                                    ; -0.456 ; -2.643        ;
-; rpi_clk                                ; -0.327 ; -11.527       ;
-; clk_div_data:data_clk_div|clk_out      ; 0.106  ; 0.000         ;
-; data_shift:shift|ready                 ; 0.133  ; 0.000         ;
-; clk_div_master:master_clk_div|count[2] ; 0.164  ; 0.000         ;
+; clk                                    ; -0.517 ; -3.733        ;
+; rpi_clk                                ; -0.334 ; -25.087       ;
+; data_shift:shift|ready                 ; 0.045  ; 0.000         ;
+; clk_div_data:data_clk_div|clk_out      ; 0.079  ; 0.000         ;
+; clk_div_master:master_clk_div|count[2] ; 0.159  ; 0.000         ;
 +----------------------------------------+--------+---------------+
 
 
@@ -386,24 +386,24 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                    ;
-+-----------------------------------------+----------+--------+----------+---------+---------------------+
-; Clock                                   ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+-----------------------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack                        ; -9.982   ; -0.105 ; N/A      ; N/A     ; -0.456              ;
-;  clk                                    ; -8.386   ; 0.107  ; N/A      ; N/A     ; -0.456              ;
-;  clk_div_data:data_clk_div|clk_out      ; -1.353   ; -0.105 ; N/A      ; N/A     ; -0.394              ;
-;  clk_div_master:master_clk_div|count[2] ; -2.241   ; 0.216  ; N/A      ; N/A     ; -0.394              ;
-;  data_shift:shift|ready                 ; -9.982   ; 0.284  ; N/A      ; N/A     ; -0.394              ;
-;  rpi_clk                                ; -1.740   ; 0.172  ; N/A      ; N/A     ; -0.394              ;
-; Design-wide TNS                         ; -169.757 ; -0.105 ; 0.0      ; 0.0     ; -48.969             ;
-;  clk                                    ; -26.869  ; 0.000  ; N/A      ; N/A     ; -13.102             ;
-;  clk_div_data:data_clk_div|clk_out      ; -14.030  ; -0.105 ; N/A      ; N/A     ; -6.116              ;
-;  clk_div_master:master_clk_div|count[2] ; -15.622  ; 0.000  ; N/A      ; N/A     ; -4.680              ;
-;  data_shift:shift|ready                 ; -67.522  ; 0.000  ; N/A      ; N/A     ; -3.649              ;
-;  rpi_clk                                ; -46.407  ; 0.000  ; N/A      ; N/A     ; -22.622             ;
-+-----------------------------------------+----------+--------+----------+---------+---------------------+
++-------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                   ;
++-----------------------------------------+----------+-------+----------+---------+---------------------+
+; Clock                                   ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++-----------------------------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack                        ; -10.131  ; 0.058 ; N/A      ; N/A     ; -0.548              ;
+;  clk                                    ; -8.273   ; 0.114 ; N/A      ; N/A     ; -0.548              ;
+;  clk_div_data:data_clk_div|clk_out      ; -2.598   ; 0.058 ; N/A      ; N/A     ; -0.394              ;
+;  clk_div_master:master_clk_div|count[2] ; -2.201   ; 0.239 ; N/A      ; N/A     ; -0.394              ;
+;  data_shift:shift|ready                 ; -10.131  ; 0.245 ; N/A      ; N/A     ; -0.394              ;
+;  rpi_clk                                ; -1.683   ; 0.172 ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS                         ; -251.029 ; 0.0   ; 0.0      ; 0.0     ; -80.955             ;
+;  clk                                    ; -41.131  ; 0.000 ; N/A      ; N/A     ; -19.208             ;
+;  clk_div_data:data_clk_div|clk_out      ; -17.886  ; 0.000 ; N/A      ; N/A     ; -5.992              ;
+;  clk_div_master:master_clk_div|count[2] ; -13.764  ; 0.000 ; N/A      ; N/A     ; -4.175              ;
+;  data_shift:shift|ready                 ; -69.185  ; 0.000 ; N/A      ; N/A     ; -3.700              ;
+;  rpi_clk                                ; -110.032 ; 0.000 ; N/A      ; N/A     ; -49.650             ;
++-----------------------------------------+----------+-------+----------+---------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -425,8 +425,8 @@ No synchronizer chains to report.
 +------------+--------------+-----------------+-----------------+
 ; clk        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; rpi_enable ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; rpi_clk    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; rpi_serial ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rpi_clk    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +------------+--------------+-----------------+-----------------+
 
 
@@ -483,17 +483,17 @@ No synchronizer chains to report.
 +----------------------------------------+----------------------------------------+----------+----------+----------+----------+
 ; From Clock                             ; To Clock                               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +----------------------------------------+----------------------------------------+----------+----------+----------+----------+
-; clk                                    ; clk                                    ; 88       ; 0        ; 0        ; 0        ;
+; clk                                    ; clk                                    ; 226      ; 0        ; 0        ; 0        ;
 ; clk_div_data:data_clk_div|clk_out      ; clk                                    ; 1        ; 1        ; 0        ; 0        ;
 ; clk_div_master:master_clk_div|count[2] ; clk                                    ; 1        ; 1        ; 0        ; 0        ;
-; data_shift:shift|ready                 ; clk                                    ; 31       ; 0        ; 0        ; 0        ;
-; rpi_clk                                ; clk                                    ; 31       ; 0        ; 0        ; 0        ;
-; clk_div_data:data_clk_div|clk_out      ; clk_div_data:data_clk_div|clk_out      ; 49       ; 0        ; 0        ; 0        ;
-; data_shift:shift|ready                 ; clk_div_data:data_clk_div|clk_out      ; 1        ; 0        ; 0        ; 0        ;
-; clk_div_master:master_clk_div|count[2] ; clk_div_master:master_clk_div|count[2] ; 44       ; 0        ; 0        ; 0        ;
-; data_shift:shift|ready                 ; data_shift:shift|ready                 ; 290      ; 0        ; 0        ; 0        ;
-; rpi_clk                                ; data_shift:shift|ready                 ; 276      ; 0        ; 0        ; 0        ;
-; rpi_clk                                ; rpi_clk                                ; 361      ; 0        ; 0        ; 0        ;
+; data_shift:shift|ready                 ; clk                                    ; 10       ; 0        ; 0        ; 0        ;
+; rpi_clk                                ; clk                                    ; 10       ; 0        ; 0        ; 0        ;
+; clk_div_data:data_clk_div|clk_out      ; clk_div_data:data_clk_div|clk_out      ; 51       ; 0        ; 0        ; 0        ;
+; data_shift:shift|ready                 ; clk_div_data:data_clk_div|clk_out      ; 2        ; 1        ; 0        ; 0        ;
+; clk_div_master:master_clk_div|count[2] ; clk_div_master:master_clk_div|count[2] ; 36       ; 0        ; 0        ; 0        ;
+; data_shift:shift|ready                 ; data_shift:shift|ready                 ; 315      ; 0        ; 0        ; 0        ;
+; rpi_clk                                ; data_shift:shift|ready                 ; 316      ; 0        ; 0        ; 0        ;
+; rpi_clk                                ; rpi_clk                                ; 841      ; 0        ; 0        ; 0        ;
 +----------------------------------------+----------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -503,17 +503,17 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +----------------------------------------+----------------------------------------+----------+----------+----------+----------+
 ; From Clock                             ; To Clock                               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +----------------------------------------+----------------------------------------+----------+----------+----------+----------+
-; clk                                    ; clk                                    ; 88       ; 0        ; 0        ; 0        ;
+; clk                                    ; clk                                    ; 226      ; 0        ; 0        ; 0        ;
 ; clk_div_data:data_clk_div|clk_out      ; clk                                    ; 1        ; 1        ; 0        ; 0        ;
 ; clk_div_master:master_clk_div|count[2] ; clk                                    ; 1        ; 1        ; 0        ; 0        ;
-; data_shift:shift|ready                 ; clk                                    ; 31       ; 0        ; 0        ; 0        ;
-; rpi_clk                                ; clk                                    ; 31       ; 0        ; 0        ; 0        ;
-; clk_div_data:data_clk_div|clk_out      ; clk_div_data:data_clk_div|clk_out      ; 49       ; 0        ; 0        ; 0        ;
-; data_shift:shift|ready                 ; clk_div_data:data_clk_div|clk_out      ; 1        ; 0        ; 0        ; 0        ;
-; clk_div_master:master_clk_div|count[2] ; clk_div_master:master_clk_div|count[2] ; 44       ; 0        ; 0        ; 0        ;
-; data_shift:shift|ready                 ; data_shift:shift|ready                 ; 290      ; 0        ; 0        ; 0        ;
-; rpi_clk                                ; data_shift:shift|ready                 ; 276      ; 0        ; 0        ; 0        ;
-; rpi_clk                                ; rpi_clk                                ; 361      ; 0        ; 0        ; 0        ;
+; data_shift:shift|ready                 ; clk                                    ; 10       ; 0        ; 0        ; 0        ;
+; rpi_clk                                ; clk                                    ; 10       ; 0        ; 0        ; 0        ;
+; clk_div_data:data_clk_div|clk_out      ; clk_div_data:data_clk_div|clk_out      ; 51       ; 0        ; 0        ; 0        ;
+; data_shift:shift|ready                 ; clk_div_data:data_clk_div|clk_out      ; 2        ; 1        ; 0        ; 0        ;
+; clk_div_master:master_clk_div|count[2] ; clk_div_master:master_clk_div|count[2] ; 36       ; 0        ; 0        ; 0        ;
+; data_shift:shift|ready                 ; data_shift:shift|ready                 ; 315      ; 0        ; 0        ; 0        ;
+; rpi_clk                                ; data_shift:shift|ready                 ; 316      ; 0        ; 0        ; 0        ;
+; rpi_clk                                ; rpi_clk                                ; 841      ; 0        ; 0        ; 0        ;
 +----------------------------------------+----------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -538,7 +538,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 2     ; 2    ;
-; Unconstrained Input Port Paths  ; 60    ; 60   ;
+; Unconstrained Input Port Paths  ; 140   ; 140  ;
 ; Unconstrained Output Ports      ; 4     ; 4    ;
 ; Unconstrained Output Port Paths ; 4     ; 4    ;
 +---------------------------------+-------+------+
@@ -607,7 +607,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Dec 06 14:07:20 2021
+    Info: Processing started: Wed Dec 08 14:08:20 2021
 Info: Command: quartus_sta i2s-quest -c i2s-quest
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -628,131 +628,131 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -9.982
+Info (332146): Worst-case setup slack is -10.117
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.982             -67.522 data_shift:shift|ready 
-    Info (332119):    -8.386             -26.869 clk 
-    Info (332119):    -2.219             -15.159 clk_div_master:master_clk_div|count[2] 
-    Info (332119):    -1.740             -46.407 rpi_clk 
-    Info (332119):    -1.334             -13.800 clk_div_data:data_clk_div|clk_out 
-Info (332146): Worst-case hold slack is 0.253
+    Info (332119):   -10.117             -69.185 data_shift:shift|ready 
+    Info (332119):    -8.273             -40.054 clk 
+    Info (332119):    -2.598             -17.886 clk_div_data:data_clk_div|clk_out 
+    Info (332119):    -2.165             -13.305 clk_div_master:master_clk_div|count[2] 
+    Info (332119):    -1.683            -110.032 rpi_clk 
+Info (332146): Worst-case hold slack is 0.375
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.253               0.000 clk_div_data:data_clk_div|clk_out 
-    Info (332119):     0.375               0.000 clk 
     Info (332119):     0.375               0.000 rpi_clk 
-    Info (332119):     0.558               0.000 clk_div_master:master_clk_div|count[2] 
-    Info (332119):     0.655               0.000 data_shift:shift|ready 
+    Info (332119):     0.383               0.000 clk 
+    Info (332119):     0.508               0.000 clk_div_master:master_clk_div|count[2] 
+    Info (332119):     0.533               0.000 data_shift:shift|ready 
+    Info (332119):     0.622               0.000 clk_div_data:data_clk_div|clk_out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.394
+Info (332146): Worst-case minimum pulse width slack is -0.506
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -22.622 rpi_clk 
-    Info (332119):    -0.394             -11.902 clk 
-    Info (332119):    -0.394              -6.116 clk_div_data:data_clk_div|clk_out 
-    Info (332119):    -0.394              -4.680 clk_div_master:master_clk_div|count[2] 
-    Info (332119):    -0.394              -3.649 data_shift:shift|ready 
+    Info (332119):    -0.506             -17.459 clk 
+    Info (332119):    -0.394             -49.650 rpi_clk 
+    Info (332119):    -0.394              -5.992 clk_div_data:data_clk_div|clk_out 
+    Info (332119):    -0.394              -4.175 clk_div_master:master_clk_div|count[2] 
+    Info (332119):    -0.394              -3.679 data_shift:shift|ready 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -9.974
+Info (332146): Worst-case setup slack is -10.131
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.974             -67.248 data_shift:shift|ready 
-    Info (332119):    -8.060             -26.151 clk 
-    Info (332119):    -2.241             -15.622 clk_div_master:master_clk_div|count[2] 
-    Info (332119):    -1.656             -45.354 rpi_clk 
-    Info (332119):    -1.353             -14.030 clk_div_data:data_clk_div|clk_out 
-Info (332146): Worst-case hold slack is 0.199
+    Info (332119):   -10.131             -69.038 data_shift:shift|ready 
+    Info (332119):    -7.993             -41.131 clk 
+    Info (332119):    -2.542             -17.677 clk_div_data:data_clk_div|clk_out 
+    Info (332119):    -2.201             -13.764 clk_div_master:master_clk_div|count[2] 
+    Info (332119):    -1.671            -109.419 rpi_clk 
+Info (332146): Worst-case hold slack is 0.335
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.199               0.000 clk_div_data:data_clk_div|clk_out 
-    Info (332119):     0.324               0.000 clk 
-    Info (332119):     0.393               0.000 rpi_clk 
-    Info (332119):     0.506               0.000 clk_div_master:master_clk_div|count[2] 
-    Info (332119):     0.649               0.000 data_shift:shift|ready 
+    Info (332119):     0.335               0.000 clk 
+    Info (332119):     0.392               0.000 rpi_clk 
+    Info (332119):     0.488               0.000 clk_div_master:master_clk_div|count[2] 
+    Info (332119):     0.564               0.000 data_shift:shift|ready 
+    Info (332119):     0.645               0.000 clk_div_data:data_clk_div|clk_out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.420
+Info (332146): Worst-case minimum pulse width slack is -0.548
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.420             -13.102 clk 
-    Info (332119):    -0.394             -21.360 rpi_clk 
-    Info (332119):    -0.394              -5.946 clk_div_data:data_clk_div|clk_out 
-    Info (332119):    -0.394              -4.599 clk_div_master:master_clk_div|count[2] 
-    Info (332119):    -0.394              -3.635 data_shift:shift|ready 
+    Info (332119):    -0.548             -19.208 clk 
+    Info (332119):    -0.394             -46.939 rpi_clk 
+    Info (332119):    -0.394              -5.956 clk_div_data:data_clk_div|clk_out 
+    Info (332119):    -0.394              -4.096 clk_div_master:master_clk_div|count[2] 
+    Info (332119):    -0.394              -3.700 data_shift:shift|ready 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.101
+Info (332146): Worst-case setup slack is -5.277
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.101             -34.644 data_shift:shift|ready 
-    Info (332119):    -4.641             -12.255 clk 
-    Info (332119):    -1.036              -5.966 clk_div_master:master_clk_div|count[2] 
-    Info (332119):    -0.609             -13.587 rpi_clk 
-    Info (332119):    -0.496              -4.877 clk_div_data:data_clk_div|clk_out 
-Info (332146): Worst-case hold slack is -0.052
+    Info (332119):    -5.277             -35.757 data_shift:shift|ready 
+    Info (332119):    -4.507             -14.687 clk 
+    Info (332119):    -1.355              -7.804 clk_div_data:data_clk_div|clk_out 
+    Info (332119):    -0.964              -5.152 clk_div_master:master_clk_div|count[2] 
+    Info (332119):    -0.589             -33.720 rpi_clk 
+Info (332146): Worst-case hold slack is 0.121
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.052              -0.052 clk_div_data:data_clk_div|clk_out 
-    Info (332119):     0.182               0.000 clk 
+    Info (332119):     0.121               0.000 clk_div_data:data_clk_div|clk_out 
     Info (332119):     0.182               0.000 rpi_clk 
-    Info (332119):     0.256               0.000 clk_div_master:master_clk_div|count[2] 
-    Info (332119):     0.330               0.000 data_shift:shift|ready 
+    Info (332119):     0.184               0.000 clk 
+    Info (332119):     0.260               0.000 data_shift:shift|ready 
+    Info (332119):     0.269               0.000 clk_div_master:master_clk_div|count[2] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.438
+Info (332146): Worst-case minimum pulse width slack is -0.528
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.438              -2.567 clk 
-    Info (332119):    -0.329             -11.625 rpi_clk 
-    Info (332119):     0.093               0.000 clk_div_data:data_clk_div|clk_out 
-    Info (332119):     0.122               0.000 data_shift:shift|ready 
-    Info (332119):     0.159               0.000 clk_div_master:master_clk_div|count[2] 
+    Info (332119):    -0.528              -3.837 clk 
+    Info (332119):    -0.342             -25.554 rpi_clk 
+    Info (332119):     0.019               0.000 data_shift:shift|ready 
+    Info (332119):     0.059               0.000 clk_div_data:data_clk_div|clk_out 
+    Info (332119):     0.152               0.000 clk_div_master:master_clk_div|count[2] 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.904
+Info (332146): Worst-case setup slack is -5.031
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.904             -33.231 data_shift:shift|ready 
-    Info (332119):    -4.207             -10.178 clk 
-    Info (332119):    -0.913              -5.383 clk_div_master:master_clk_div|count[2] 
-    Info (332119):    -0.475             -10.490 rpi_clk 
-    Info (332119):    -0.421              -4.216 clk_div_data:data_clk_div|clk_out 
-Info (332146): Worst-case hold slack is -0.105
+    Info (332119):    -5.031             -34.282 data_shift:shift|ready 
+    Info (332119):    -4.116             -12.849 clk 
+    Info (332119):    -1.185              -6.721 clk_div_data:data_clk_div|clk_out 
+    Info (332119):    -0.853              -4.710 clk_div_master:master_clk_div|count[2] 
+    Info (332119):    -0.459             -26.079 rpi_clk 
+Info (332146): Worst-case hold slack is 0.058
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.105              -0.105 clk_div_data:data_clk_div|clk_out 
-    Info (332119):     0.107               0.000 clk 
+    Info (332119):     0.058               0.000 clk_div_data:data_clk_div|clk_out 
+    Info (332119):     0.114               0.000 clk 
     Info (332119):     0.172               0.000 rpi_clk 
-    Info (332119):     0.216               0.000 clk_div_master:master_clk_div|count[2] 
-    Info (332119):     0.284               0.000 data_shift:shift|ready 
+    Info (332119):     0.239               0.000 clk_div_master:master_clk_div|count[2] 
+    Info (332119):     0.245               0.000 data_shift:shift|ready 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.456
+Info (332146): Worst-case minimum pulse width slack is -0.517
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.456              -2.643 clk 
-    Info (332119):    -0.327             -11.527 rpi_clk 
-    Info (332119):     0.106               0.000 clk_div_data:data_clk_div|clk_out 
-    Info (332119):     0.133               0.000 data_shift:shift|ready 
-    Info (332119):     0.164               0.000 clk_div_master:master_clk_div|count[2] 
+    Info (332119):    -0.517              -3.733 clk 
+    Info (332119):    -0.334             -25.087 rpi_clk 
+    Info (332119):     0.045               0.000 data_shift:shift|ready 
+    Info (332119):     0.079               0.000 clk_div_data:data_clk_div|clk_out 
+    Info (332119):     0.159               0.000 clk_div_master:master_clk_div|count[2] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5147 megabytes
-    Info: Processing ended: Mon Dec 06 14:07:25 2021
+    Info: Peak virtual memory: 5144 megabytes
+    Info: Processing ended: Wed Dec 08 14:08:25 2021
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:05
 

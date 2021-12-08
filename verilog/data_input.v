@@ -12,7 +12,7 @@ module data_input(
 	reg [5:0] curr_reg;
 	reg [4:0] counter;
 	reg state;
-	reg [63:0] data_regs [23:0];
+	reg [23:0] data_regs [63:0];
 	reg [5:0] sub;
 	
 	always@(posedge clk)
