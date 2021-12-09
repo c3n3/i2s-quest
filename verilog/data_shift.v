@@ -1,10 +1,10 @@
 module data_shift(
 	input clk,
-	input [23:0] data,
+	input [15:0] data,
 	output reg ready,
 	output reg current);
 	
-	reg [23:0] data_reg;
+	reg [15:0] data_reg;
 	reg [4:0] selector;
 	reg internal_select;
 	
@@ -22,7 +22,7 @@ module data_shift(
 		end
 		else ready = 0;
 		
-		if (selector > 23)
+		if (selector > 15)
 		begin
 			selector = 0;
 		end

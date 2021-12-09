@@ -5,7 +5,7 @@ module data_input(
 	input enable,
 	input ready,
 	output reg rpi_interrupt,
-	output reg [23:0] data,
+	output reg [15:0] data,
 	output reg [9:0] debug
 	);
 	
@@ -13,7 +13,7 @@ module data_input(
 	reg [5:0] curr_reg;
 	reg [4:0] counter;
 	reg state;
-	reg [23:0] data_regs [63:0];
+	reg [15:0] data_regs [63:0];
 	reg [5:0] sub;
 	
 	always@(posedge clk)
@@ -37,7 +37,7 @@ module data_input(
 		debug[5] = ~debug[5];
 		data_regs[reg_selector][counter] = serial;
 		counter = counter + 1;
-		if (counter > 23)
+		if (counter > 15)
 		begin
 			counter = 0;
 			if (reg_selector + 1 - curr_reg > 0) begin
