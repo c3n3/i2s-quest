@@ -3,7 +3,7 @@ clk => clk.IN4
 rpi_clk => rpi_clk.IN1
 rpi_serial => rpi_serial.IN1
 rpi_enable => rpi_enable.IN1
-rpi_interrupt << rpi_interrupt_clk:done.interrupt_enable
+rpi_interrupt << rpi_interrupt_clk:done.clk_out
 master << master.DB_MAX_OUTPUT_PORT_TYPE
 lr_clk << clk_div_LR:lr_clk_div.clk_out
 debug[0] << data_input:rpi_data.debug
@@ -17,7 +17,7 @@ debug[7] << data_input:rpi_data.debug
 debug[8] << data_input:rpi_data.debug
 debug[9] << data_input:rpi_data.debug
 serial << data_shift:shift.current
-dumb << data_input:rpi_data.rpi_interrupt
+dumb << data_clk.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|clk_div_master:master_clk_div
@@ -51,6 +51,12 @@ clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 |top|data_input:rpi_data
 clk => rpi_interrupt~reg0.CLK
+clk => sub[0].CLK
+clk => sub[1].CLK
+clk => sub[2].CLK
+clk => sub[3].CLK
+clk => sub[4].CLK
+clk => sub[5].CLK
 clk => debug[2]~reg0.CLK
 clk => debug[3]~reg0.CLK
 clk => debug[6]~reg0.CLK

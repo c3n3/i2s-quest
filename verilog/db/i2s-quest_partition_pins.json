@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "rpi_interrupt",
+					"strict" : false
+				},
+				{
 					"name" : "master",
 					"strict" : false
 				},

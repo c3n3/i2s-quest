@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu Dec 09 15:51:31 2021
+Analysis & Synthesis Status : Successful - Thu Dec 09 17:01:06 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : i2s-quest
 Top-level Entity Name : top
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 49
+Total registers : 811
 Total pins : 19
 Total virtual pins : 0
-Total block memory bits : 64
+Total block memory bits : 622,656
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

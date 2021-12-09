@@ -40,7 +40,7 @@ module data_input(
 		if (counter > 23)
 		begin
 			counter = 0;
-			if (reg_selector + 1 - curr_reg > 0) begin
+			if (sub + 1 > 0) begin
 				reg_selector = reg_selector + 1;
 				debug[0] = ~debug[0];
 			end
