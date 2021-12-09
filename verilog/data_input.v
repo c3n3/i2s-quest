@@ -6,7 +6,7 @@ module data_input(
 	input ready,
 	output reg rpi_interrupt,
 	output reg [23:0] data,
-	output debug[9:0]
+	output reg [9:0] debug
 	);
 	
 	reg [5:0] reg_selector;
