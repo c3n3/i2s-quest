@@ -52,11 +52,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "rpi_clk",
 					"strict" : false
 				},
 				{
-					"name" : "rpi_clk",
+					"name" : "clk",
 					"strict" : false
 				},
 				{

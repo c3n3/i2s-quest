@@ -16,6 +16,7 @@ module top(
 	wire data_clk;
 	wire interrupt_enable;
 	wire junk;
+	assign dumb = data_clk;
 	always @(posedge clk) begin
 		main_clk = main_clk + 1;
 	end
@@ -24,5 +25,5 @@ module top(
 	clk_div_data data_clk_div(.clk_in(main_clk[3]), .clk_out(data_clk));
 	data_input rpi_data(.clk(main_clk[3]), .rpi_clk(rpi_clk), .serial(rpi_serial), .enable(rpi_enable), .ready(ready), .rpi_interrupt(interrupt_enable), .data(data), .debug(debug));
 	data_shift shift(.clk(data_clk), .data(data), .ready(ready), .current(serial));
-	rpi_interrupt_clk done(.clk_in(main_clk[3]), .interrupt_enable(rpi_interrupt), .clk_out(junk));
+	rpi_interrupt_clk done(.clk_in(main_clk[3]), .interrupt_enable(interrupt_enable), .clk_out(rpi_interrupt));
 endmodule

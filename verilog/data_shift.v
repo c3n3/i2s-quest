@@ -5,7 +5,7 @@ module data_shift(
 	output reg current);
 	
 	reg [15:0] data_reg;
-	reg [4:0] selector;
+	reg [3:0] selector;
 	reg internal_select;
 	
 	always@(posedge clk)
@@ -14,7 +14,7 @@ module data_shift(
 		current = data_reg[selector];
 		selector = selector + 1;
 		
-		if (selector > 22)
+		if (selector > 14)
 		begin
 			internal_select = ~internal_select;
 			if (internal_select)

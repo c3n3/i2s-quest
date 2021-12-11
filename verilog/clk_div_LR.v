@@ -4,7 +4,7 @@ module    clk_div_LR(clk_in, clk_out);
     
     reg [6:0]   count;
 	 
-	 assign clk_out = count[7];
+	 assign clk_out = count[6];
     
     
     always @(posedge clk_in)
