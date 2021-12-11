@@ -10,7 +10,7 @@ module top(
 	output serial,
 	output dumb
 	);
-	wire data;
+	wire [15:0] data;
 	reg [3:0] main_clk;
 	reg signed [15:0] cok;
 	wire ready;
