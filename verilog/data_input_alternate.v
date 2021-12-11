@@ -20,16 +20,8 @@ module data_input_alternate(
 	reg [5:0] readLocation;
 
 	// Debug our read location
-	assign debug[0] = outputBuffer[0];
-	assign debug[1] = outputBuffer[1];
-	assign debug[2] = outputBuffer[2];
-	assign debug[3] = outputBuffer[3];
-	assign debug[4] = outputBuffer[4];
-	assign debug[5] = outputBuffer[5];
-	assign debug[6] = outputBuffer[6];
-	assign debug[7] = outputBuffer[7];
-	assign debug[8] = outputBuffer[8];
-	assign debug[9] = outputBuffer[9];
+	assign debug[0] = rpi_interrupt;
+
 
 	// Where we are writing data
 	reg [5:0] writeLocation;
