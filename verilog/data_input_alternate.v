@@ -5,8 +5,8 @@ module data_input_alternate(
 	input enable, // Not used
 	input ready, // When the next number is ready to be output
 	output reg rpi_interrupt, // When we need more bits 
-	output reg [15:0] data, // The output register
-	output reg [9:0] debug
+	output wire [15:0] data, // The output register
+	output wire [9:0] debug
 	);
 
 	// The internal buffer of data
@@ -20,12 +20,12 @@ module data_input_alternate(
 	reg [5:0] readLocation;
 
 	// Debug our read location
-	assign readLocation[0] = debug[0];
-	assign readLocation[1] = debug[1];
-	assign readLocation[2] = debug[2];
-	assign readLocation[3] = debug[3];
-	assign readLocation[4] = debug[4];
-	assign readLocation[5] = debug[5];
+	assign debug[0] = readLocation[0];
+	assign debug[1] = readLocation[1];
+	assign debug[2] = readLocation[2];
+	assign debug[3] = readLocation[3];
+	assign debug[4] = readLocation[4];
+	assign debug[5] = readLocation[5];
 
 	// Where we are writing data
 	reg [5:0] writeLocation;
@@ -44,14 +44,14 @@ module data_input_alternate(
 		else begin
 			serialBit = serialBit + 1;
 			if (serialBit >= 15)
-				if (writeLocation ~= readLocation - 1) 
+				if (writeLocation != readLocation - 1) 
 					writeLocation = writeLocation + 1;
 		end
 	end
 
 	// Increment the read location
 	always @(posedge ready) begin
-		if (writeLocation ~= readLocation + 1) begin
+		if (writeLocation != readLocation + 1) begin
 			readLocation = readLocation + 1;
 		end
 		outputBuffer = buffer[readLocation];
