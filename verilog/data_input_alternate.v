@@ -20,12 +20,16 @@ module data_input_alternate(
 	reg [5:0] readLocation;
 
 	// Debug our read location
-	assign debug[0] = readLocation[0];
-	assign debug[1] = readLocation[1];
-	assign debug[2] = readLocation[2];
-	assign debug[3] = readLocation[3];
-	assign debug[4] = readLocation[4];
-	assign debug[5] = readLocation[5];
+	assign debug[0] = outpuBuffer[0];
+	assign debug[1] = outpuBuffer[1];
+	assign debug[2] = outpuBuffer[2];
+	assign debug[3] = outpuBuffer[3];
+	assign debug[4] = outpuBuffer[4];
+	assign debug[5] = outpuBuffer[5];
+	assign debug[6] = outpuBuffer[6];
+	assign debug[7] = outpuBuffer[7];
+	assign debug[8] = outpuBuffer[8];
+	assign debug[9] = outpuBuffer[9];
 
 	// Where we are writing data
 	reg [5:0] writeLocation;
@@ -33,13 +37,13 @@ module data_input_alternate(
 	initial begin
 		serialBit = 4'd0;
 		readLocation = 4'd0;
-		serialBit = 4'd0;
 		writeLocation = 4'd32;
 	end
 
 	// When we get a bit, we shift into the read location
 	always @(posedge rpi_clk) begin
-			buffer[writeLocation][serialBit] = serial;
+			//buffer[writeLocation][serialBit] = serial;
+			outputBuffer[serialBit] = serial;
 			serialBit = serialBit + 1;
 			if (serialBit >= 15)
 				if (writeLocation != readLocation - 1) 
@@ -51,7 +55,7 @@ module data_input_alternate(
 		if (writeLocation != readLocation + 1) begin
 			readLocation = readLocation + 1;
 		end
-		outputBuffer = buffer[readLocation];
+		// outputBuffer = buffer[readLocation];
 	end
 
 endmodule
