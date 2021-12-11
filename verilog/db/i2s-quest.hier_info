@@ -6,21 +6,21 @@ clk => main_clk[3].CLK
 rpi_clk => rpi_clk.IN1
 rpi_serial => rpi_serial.IN1
 rpi_enable => rpi_enable.IN1
-rpi_interrupt << rpi_interrupt_clk:done.clk_out
-master << master.DB_MAX_OUTPUT_PORT_TYPE
-lr_clk << lr_clk.DB_MAX_OUTPUT_PORT_TYPE
-debug[0] << data_input_alternate:rpi_data.debug
-debug[1] << data_input_alternate:rpi_data.debug
-debug[2] << data_input_alternate:rpi_data.debug
-debug[3] << data_input_alternate:rpi_data.debug
-debug[4] << data_input_alternate:rpi_data.debug
-debug[5] << data_input_alternate:rpi_data.debug
-debug[6] << data_input_alternate:rpi_data.debug
-debug[7] << data_input_alternate:rpi_data.debug
-debug[8] << data_input_alternate:rpi_data.debug
-debug[9] << data_input_alternate:rpi_data.debug
-serial << data_shift:shift.current
-dumb << data_clk.DB_MAX_OUTPUT_PORT_TYPE
+rpi_interrupt <= rpi_interrupt_clk:done.clk_out
+master <= master.DB_MAX_OUTPUT_PORT_TYPE
+lr_clk <= lr_clk.DB_MAX_OUTPUT_PORT_TYPE
+debug[0] <= data_input_alternate:rpi_data.debug
+debug[1] <= data_input_alternate:rpi_data.debug
+debug[2] <= data_input_alternate:rpi_data.debug
+debug[3] <= data_input_alternate:rpi_data.debug
+debug[4] <= data_input_alternate:rpi_data.debug
+debug[5] <= data_input_alternate:rpi_data.debug
+debug[6] <= data_input_alternate:rpi_data.debug
+debug[7] <= data_input_alternate:rpi_data.debug
+debug[8] <= data_input_alternate:rpi_data.debug
+debug[9] <= data_input_alternate:rpi_data.debug
+serial <= data_shift:shift.current
+dumb <= data_clk.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|clk_div_master:master_clk_div
@@ -49,7 +49,7 @@ clk_out <= count[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|data_input_alternate:rpi_data
-clk => ~NO_FANOUT~
+clk => rpi_interrupt~reg0.CLK
 rpi_clk => buffer.we_a.CLK
 rpi_clk => buffer.waddr_a[9].CLK
 rpi_clk => buffer.waddr_a[8].CLK
@@ -62,6 +62,16 @@ rpi_clk => buffer.waddr_a[2].CLK
 rpi_clk => buffer.waddr_a[1].CLK
 rpi_clk => buffer.waddr_a[0].CLK
 rpi_clk => buffer.data_a.CLK
+rpi_clk => writeLocation[0].CLK
+rpi_clk => writeLocation[1].CLK
+rpi_clk => writeLocation[2].CLK
+rpi_clk => writeLocation[3].CLK
+rpi_clk => writeLocation[4].CLK
+rpi_clk => writeLocation[5].CLK
+rpi_clk => serialBit[0].CLK
+rpi_clk => serialBit[1].CLK
+rpi_clk => serialBit[2].CLK
+rpi_clk => serialBit[3].CLK
 rpi_clk => buffer.CLK0
 serial => buffer.data_a.DATAIN
 serial => buffer.DATAIN
@@ -88,7 +98,7 @@ ready => readLocation[2].CLK
 ready => readLocation[3].CLK
 ready => readLocation[4].CLK
 ready => readLocation[5].CLK
-rpi_interrupt <= <GND>
+rpi_interrupt <= rpi_interrupt~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data[0] <= outputBuffer[0].DB_MAX_OUTPUT_PORT_TYPE
 data[1] <= outputBuffer[1].DB_MAX_OUTPUT_PORT_TYPE
 data[2] <= outputBuffer[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -105,12 +115,12 @@ data[12] <= outputBuffer[12].DB_MAX_OUTPUT_PORT_TYPE
 data[13] <= outputBuffer[13].DB_MAX_OUTPUT_PORT_TYPE
 data[14] <= outputBuffer[14].DB_MAX_OUTPUT_PORT_TYPE
 data[15] <= outputBuffer[15].DB_MAX_OUTPUT_PORT_TYPE
-debug[0] <= readLocation[0].DB_MAX_OUTPUT_PORT_TYPE
-debug[1] <= readLocation[1].DB_MAX_OUTPUT_PORT_TYPE
-debug[2] <= readLocation[2].DB_MAX_OUTPUT_PORT_TYPE
-debug[3] <= readLocation[3].DB_MAX_OUTPUT_PORT_TYPE
-debug[4] <= readLocation[4].DB_MAX_OUTPUT_PORT_TYPE
-debug[5] <= readLocation[5].DB_MAX_OUTPUT_PORT_TYPE
+debug[0] <= rpi_interrupt~reg0.DB_MAX_OUTPUT_PORT_TYPE
+debug[1] <= <GND>
+debug[2] <= <GND>
+debug[3] <= <GND>
+debug[4] <= <GND>
+debug[5] <= <GND>
 debug[6] <= <GND>
 debug[7] <= <GND>
 debug[8] <= <GND>
@@ -162,25 +172,18 @@ current <= current~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|rpi_interrupt_clk:done
-clk_in => clk_out~reg0.CLK
 clk_in => count[0].CLK
 clk_in => count[1].CLK
 clk_in => count[2].CLK
 clk_in => count[3].CLK
 clk_in => count[4].CLK
-clk_in => count[5].CLK
-clk_in => count[6].CLK
-clk_in => count[7].CLK
-clk_in => count[8].CLK
-clk_in => count[9].CLK
-clk_in => count[10].CLK
-clk_in => count[11].CLK
-clk_in => count[12].CLK
-clk_in => count[13].CLK
-clk_in => count[14].CLK
-clk_in => count[15].CLK
-clk_in => count[16].CLK
-interrupt_enable => ~NO_FANOUT~
-clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_in => immediate.CLK
+interrupt_enable => count.OUTPUTSELECT
+interrupt_enable => count.OUTPUTSELECT
+interrupt_enable => count.OUTPUTSELECT
+interrupt_enable => count.OUTPUTSELECT
+interrupt_enable => count.OUTPUTSELECT
+interrupt_enable => immediate.PRESET
+clk_out <= clk_out.DB_MAX_OUTPUT_PORT_TYPE
 
 

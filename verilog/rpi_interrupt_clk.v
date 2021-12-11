@@ -3,7 +3,7 @@ module  rpi_interrupt_clk(clk_in, interrupt_enable, clk_out);
 	 input interrupt_enable;
     output wire clk_out;       // 
     reg immediate;
-    reg [5:0]   count;
+    reg [4:0]   count;
 	  reg flip;
     
     assign clk_out = count[4] ^ immediate; 

@@ -12,7 +12,6 @@ module top(
 	);
 	wire [15:0] data;
 	reg [3:0] main_clk;
-	reg signed [15:0] cok;
 	wire ready;
 	wire data_clk;
 	wire interrupt_enable;
@@ -21,8 +20,6 @@ module top(
 	always @(posedge clk) begin
 		main_clk = main_clk + 1;
 	end
-	
-	always @(posedge data_clk) cok = cok + 1;
 	
 	clk_div_master master_clk_div(.clk_in(main_clk[3]), .clk_out(master));
 	clk_div_LR lr_clk_div(.clk_in(master), .clk_out(lr_clk));
