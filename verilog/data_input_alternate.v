@@ -58,4 +58,15 @@ module data_input_alternate(
 		outputBuffer = buffer[readLocation];
 	end
 
+	always @(posedge clk) begin
+		if (writeLocation - readLocation < 32)
+		begin
+			rpi_interrupt = 1;
+		end
+		else
+		begin
+			rpi_interrupt = 0;
+		end
+	end
+
 endmodule
