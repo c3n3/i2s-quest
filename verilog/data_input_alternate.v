@@ -1,4 +1,4 @@
-module data_input(
+module data_input_alternate(
 	input clk, // The main clock
 	input rpi_clk, // The shift in clock
 	input serial, // Serial data in from the pi
