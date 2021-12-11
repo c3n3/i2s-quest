@@ -52,10 +52,10 @@ unsigned int led_toggle = 0;
 unsigned int GPIO_irqNumber;
 
 
-static void output_data(uint8_t* buffer, size_t size, int pin)
+static void output_data(int16_t* buffer, size_t size, int pin)
 {
   int i;
-  uint8_t bit;
+  uint16_t bit;
   for (i = 0; i < size; i++) {
     for (bit = 0x01; bit != 0; bit = bit << 1) {
       gpio_set_value(pin, buffer[i] & bit);
@@ -71,7 +71,7 @@ static void output_data(uint8_t* buffer, size_t size, int pin)
 #define INCREMENT (MAX_24_BIT / NUM_COUNT)
 #define NUM_COUNT 32
 
-static uint8_t data[NUM_COUNT*BYTES_PER_24_BIT_NUM + 1];
+static int16_t data[32];
 
 static void write24Bit(uint8_t* bytes, uint32_t value)
 {
@@ -248,8 +248,8 @@ static int __init etx_driver_init(void)
 
   int i;
   pr_info("Increment = %x", INCREMENT);
-  for (i = 0; i < NUM_COUNT; i++) {
-    write24Bit(data + BYTES_PER_24_BIT_NUM*i, INCREMENT*i);
+  for (i = -16; i < 16; i++) {
+    data[i] = i * 2000;
   }
 
   //Get the IRQ number for our GPIO
