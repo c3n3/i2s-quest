@@ -58,6 +58,10 @@
 				{
 					"name" : "clk",
 					"strict" : false
+				},
+				{
+					"name" : "rpi_serial",
+					"strict" : false
 				}
 			]
 		}

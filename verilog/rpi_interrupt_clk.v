@@ -12,7 +12,7 @@ module  rpi_interrupt_clk(clk_in, interrupt_enable, clk_out);
         if (1)
         begin
           count = count + 1;
-			 if (count > 66666) 
+			 if (count > 31) 
 			 begin
 				count = 0;
 				clk_out = ~clk_out;
