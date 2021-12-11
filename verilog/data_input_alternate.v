@@ -20,16 +20,16 @@ module data_input_alternate(
 	reg [5:0] readLocation;
 
 	// Debug our read location
-	assign debug[0] = outpuBuffer[0];
-	assign debug[1] = outpuBuffer[1];
-	assign debug[2] = outpuBuffer[2];
-	assign debug[3] = outpuBuffer[3];
-	assign debug[4] = outpuBuffer[4];
-	assign debug[5] = outpuBuffer[5];
-	assign debug[6] = outpuBuffer[6];
-	assign debug[7] = outpuBuffer[7];
-	assign debug[8] = outpuBuffer[8];
-	assign debug[9] = outpuBuffer[9];
+	assign debug[0] = outputBuffer[0];
+	assign debug[1] = outputBuffer[1];
+	assign debug[2] = outputBuffer[2];
+	assign debug[3] = outputBuffer[3];
+	assign debug[4] = outputBuffer[4];
+	assign debug[5] = outputBuffer[5];
+	assign debug[6] = outputBuffer[6];
+	assign debug[7] = outputBuffer[7];
+	assign debug[8] = outputBuffer[8];
+	assign debug[9] = outputBuffer[9];
 
 	// Where we are writing data
 	reg [5:0] writeLocation;
