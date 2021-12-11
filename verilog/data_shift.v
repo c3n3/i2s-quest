@@ -11,7 +11,7 @@ module data_shift(
 	always@(posedge clk)
 	begin
 		if (selector == 0) data_reg = data;
-		current = data_reg[selector];
+		current = data_reg[15 - selector];
 		selector = selector + 1;
 		
 		if (selector > 14)

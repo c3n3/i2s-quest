@@ -1,5 +1,5 @@
 Flow report for i2s-quest
-Sat Dec 11 02:15:44 2021
+Sat Dec 11 03:53:01 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Dec 11 02:15:33 2021       ;
+; Flow Status                     ; Successful - Sat Dec 11 03:52:50 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; i2s-quest                                   ;
 ; Top-level Entity Name           ; top                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 402 / 32,070 ( 1 % )                        ;
-; Total registers                 ; 820                                         ;
+; Logic utilization (in ALMs)     ; 426 / 32,070 ( 1 % )                        ;
+; Total registers                 ; 865                                         ;
 ; Total pins                      ; 19 / 457 ( 4 % )                            ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 623,616 / 4,065,280 ( 15 % )                ;
+; Total block memory bits         ; 622,592 / 4,065,280 ( 15 % )                ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/11/2021 02:14:09 ;
+; Start date & time ; 12/11/2021 03:51:29 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; i2s-quest           ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                     ; Value                                                                                                     ; Default Value ; Entity Name ; Section Id       ;
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 92668493855400.163921044901280                                                                            ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID               ; 92668493855400.163921628807460                                                                            ; --            ; --          ; --               ;
 ; ENABLE_SIGNALTAP                    ; On                                                                                                        ; --            ; --          ; --               ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                                        ; --            ; --          ; --               ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                                         ; --            ; --          ; --               ;
@@ -127,11 +127,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4901 MB             ; 00:00:46                           ;
-; Fitter               ; 00:00:51     ; 1.2                     ; 6655 MB             ; 00:01:56                           ;
-; Assembler            ; 00:00:07     ; 1.0                     ; 4870 MB             ; 00:00:08                           ;
-; Timing Analyzer      ; 00:00:10     ; 1.6                     ; 5203 MB             ; 00:00:15                           ;
-; Total                ; 00:01:30     ; --                      ; --                  ; 00:03:05                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4902 MB             ; 00:00:44                           ;
+; Fitter               ; 00:00:49     ; 1.2                     ; 6638 MB             ; 00:01:56                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 4871 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:10     ; 1.6                     ; 5207 MB             ; 00:00:15                           ;
+; Total                ; 00:01:28     ; --                      ; --                  ; 00:03:02                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
