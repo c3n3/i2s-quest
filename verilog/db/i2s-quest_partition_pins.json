@@ -40,10 +40,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "debug[6]",
-					"strict" : false
-				},
-				{
 					"name" : "serial",
 					"strict" : false
 				},
@@ -52,11 +48,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "rpi_clk",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "rpi_clk",
 					"strict" : false
 				},
 				{

@@ -38,15 +38,12 @@ module data_input_alternate(
 	end
 
 	// When we get a bit, we shift into the read location
-	always @(posedge rpi_clk or negedge rpi_clk) begin
-		if (rpi_clk)
+	always @(posedge rpi_clk) begin
 			buffer[writeLocation][serialBit] = serial;
-		else begin
 			serialBit = serialBit + 1;
 			if (serialBit >= 15)
 				if (writeLocation != readLocation - 1) 
 					writeLocation = writeLocation + 1;
-		end
 	end
 
 	// Increment the read location

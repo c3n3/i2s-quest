@@ -1,16 +1,16 @@
-Fitter Status : Successful - Sat Dec 11 04:53:41 2021
+Fitter Status : Successful - Sat Dec 11 13:33:14 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : i2s-quest
 Top-level Entity Name : top
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 388 / 32,070 ( 1 % )
-Total registers : 786
+Logic utilization (in ALMs) : 364 / 32,070 ( 1 % )
+Total registers : 865
 Total pins : 19 / 457 ( 4 % )
 Total virtual pins : 0
-Total block memory bits : 656,384 / 4,065,280 ( 16 % )
-Total RAM Blocks : 81 / 397 ( 20 % )
+Total block memory bits : 3,712 / 4,065,280 ( < 1 % )
+Total RAM Blocks : 2 / 397 ( < 1 % )
 Total DSP Blocks : 0 / 87 ( 0 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
