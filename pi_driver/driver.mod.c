@@ -47,8 +47,8 @@ __used __section("__versions") = {
 	{ 0x2cfde9a2, "warn_slowpath_fmt" },
 	{ 0xae353d77, "arm_copy_from_user" },
 	{ 0x8f678b07, "__stack_chk_guard" },
-	{ 0xd697e69a, "trace_hardirqs_on" },
 	{ 0xec3d2e1b, "trace_hardirqs_off" },
+	{ 0xd697e69a, "trace_hardirqs_on" },
 	{ 0xba4c293, "gpiod_set_raw_value" },
 	{ 0xe30324cf, "gpio_to_desc" },
 	{ 0xc5850110, "printk" },
@@ -58,4 +58,4 @@ __used __section("__versions") = {
 MODULE_INFO(depends, "");
 
 
-MODULE_INFO(srcversion, "0DB494C6ED26E602F9ADFB1");
+MODULE_INFO(srcversion, "9B58D828E4647C9F5947D85");
