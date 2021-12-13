@@ -20,30 +20,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "debug[1]",
-					"strict" : false
-				},
-				{
-					"name" : "debug[2]",
-					"strict" : false
-				},
-				{
-					"name" : "debug[3]",
-					"strict" : false
-				},
-				{
-					"name" : "debug[4]",
-					"strict" : false
-				},
-				{
-					"name" : "debug[5]",
-					"strict" : false
-				},
-				{
-					"name" : "debug[6]",
-					"strict" : false
-				},
-				{
 					"name" : "serial",
 					"strict" : false
 				},
@@ -52,11 +28,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
 					"name" : "rpi_clk",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "rpi_serial",
 					"strict" : false
 				}
 			]

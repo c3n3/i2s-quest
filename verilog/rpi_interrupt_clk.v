@@ -1,29 +1,26 @@
 module  rpi_interrupt_clk(clk_in, interrupt_enable, clk_out);
     input clk_in;         // 50 MHz for audio codec on DE2 board
 	 input interrupt_enable;
-    output reg clk_out;       // 
+    output wire clk_out;       // 
     reg immediate;
-    reg [16:0]   count;
-	 reg flip;
+    reg [4:0]   count;
+	  reg flip;
     
+    assign clk_out = count[4] ^ immediate; 
     
     always @(posedge clk_in)
       begin
-        if (1)
+        if (interrupt_enable)
         begin
           count = count + 1;
-			 if (count > 66666) 
-			 begin
-				count = 0;
-				clk_out = ~clk_out;
-			 end
 			end
         else
 		  begin
           count = 0;
         end
       end
-      always @(posedge interrupt_enable)
+
+      always @(posedge interrupt_enable or negedge clk_in)
       begin
         if (interrupt_enable)
           immediate = 1;
