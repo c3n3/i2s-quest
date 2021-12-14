@@ -10,10 +10,12 @@ module data_shift(
 	
 	always@(posedge clk)
 	begin
+		// refills register when selector = 0
 		if (selector == 0) data_reg = data;
 		current = data_reg[15 - selector];
 		selector = selector + 1;
 		
+		// signal sent to get new data
 		if (selector > 14)
 		begin
 			internal_select = ~internal_select;

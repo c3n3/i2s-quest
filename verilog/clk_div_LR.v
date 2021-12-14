@@ -6,7 +6,7 @@ module    clk_div_LR(clk_in, clk_out);
 	 
 	 assign clk_out = count[6];
     
-    
+    // divides clock by 128
     always @(posedge clk_in)
       begin
 			count = count + 1;

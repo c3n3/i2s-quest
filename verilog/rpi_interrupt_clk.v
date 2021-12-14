@@ -19,7 +19,8 @@ module  rpi_interrupt_clk(clk_in, interrupt_enable, clk_out);
           count = 0;
         end
       end
-
+		
+		// if interrupt enable a interrupt is sent immediately
       always @(posedge interrupt_enable or negedge clk_in)
       begin
         if (interrupt_enable)

@@ -6,7 +6,7 @@ module    clk_div_master(clk_in, clk_out);
 	 
 	 assign clk_out = count[3];
     
-    
+    divides by 16
     always @(posedge clk_in)
       begin
 			count = count + 1;
